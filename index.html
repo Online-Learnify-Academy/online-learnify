@@ -1,0 +1,2386 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" href="assests\courses and logo\logo.png" />
+  <!-- Google Font - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="./output.css" rel="stylesheet" />
+  <title>
+    Online Learnify Academy - Graphic Design & Digital Skills Training
+  </title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="header" class="sticky top-0 z-50 bg-[#071B3A] text-white dark:bg-[#050B16]">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <!-- NAVBAR MAIN ROW -->
+      <div class="flex items-center justify-between h-20">
+        <!-- LOGO -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+            class="w-11 h-11 object-contain" />
+          <div class="leading-tight">
+            <span class="block text-base sm:text-lg font-semibold tracking-tight text-white">Online Learnify</span>
+            <span class="block text-[11px] sm:text-xs text-blue-200 dark:text-blue-300">Academy</span>
+          </div>
+        </a>
+        <!-- DESKTOP NAVIGATION -->
+        <div class="hidden lg:flex items-center gap-7">
+          <!-- About Dropdown -->
+          <div class="relative group">
+            <!-- About Button -->
+            <button type="button"
+              class="flex items-center gap-1.5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:text-yellow-400">
+              About<i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="invisible absolute left-0 top-full z-50 mt-2 w-52 translate-y-2 rounded-xl bg-white p-2 opacity-0 shadow-xl ring-1 ring-black/5 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#102E55] dark:ring-white/10">
+              <a href="about.html"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Journey
+              </a>
+              <a href="index.html#founder"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Founder
+              </a>
+              <a href="index.html#co-founder"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Co-Founder
+              </a>
+              <div class="my-1 border-t border-gray-100 dark:border-white/10"></div>
+              <a href="inspiration.html"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-yellow-50 hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Fonders' Message
+              </a>
+            </div>
+          </div>
+          <a href="#courses"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Courses
+          </a>
+          <a href="#students"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Students
+          </a>
+          <a href="project.html"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Projects
+          </a>
+          <a href="#success"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Stories
+          </a>
+          <a href="events.html"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Workshops & Events
+          </a>
+          <a href="#gallery"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Gallery
+          </a>
+        </div>
+        <!-- DESKTOP CTA -->
+        <a href="contact.html"
+          class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-yellow-400 text-[#071B3A] dark:bg-yellow-400 dark:text-[#071B3A] text-sm font-semibold hover:bg-yellow-300 transition-colors duration-200">
+          Join Academy
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="menuBtn" type="button"
+          class="lg:hidden flex items-center justify-center w-10 h-10 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors"
+          aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+
+          <!-- Hamburger -->
+          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE NAVIGATION -->
+      <div id="navMenu" class="hidden lg:hidden border-t border-white/10 dark:border-white/10">
+        <div class="py-4 flex flex-col gap-1">
+
+          <!-- Mobile About Dropdown -->
+          <div>
+            <button id="mobileAboutBtn" type="button"
+              class="flex w-full items-center justify-between py-3 text-blue-100 transition hover:text-yellow-400">
+              <span>About</span>
+              <i id="mobileAboutIcon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+            <div id="mobileAboutMenu" class="hidden pl-4">
+              <a href="about.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Journey
+              </a>
+
+              <a href="index.html#founder" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Founder
+              </a>
+
+              <a href="index.html#co-founder"
+                class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Co-Founder
+              </a>
+
+              <a href="inspiration.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Founder's Message
+              </a>
+
+            </div>
+          </div>
+
+          <a href="#courses"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Courses
+          </a>
+
+          <a href="#students"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Students
+          </a>
+
+          <a href="project.html"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Projects
+          </a>
+
+          <a href="#success"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Stories
+          </a>
+
+          <a href="events.html"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Workshops & Events
+          </a>
+
+          <a href="#gallery"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Gallery
+          </a>
+
+          <!-- Mobile CTA -->
+          <a href="contact.html"
+            class="mobile-nav-link mt-3 mx-4 px-5 py-3 text-center rounded-md bg-yellow-400 text-[#071B3A] text-sm font-semibold hover:bg-yellow-300 transition-all duration-200">
+            Join Academy
+          </a>
+
+        </div>
+      </div>
+
+    </nav>
+  </header>
+  <!-- HERO SECTION -->
+  <section id="home"
+    class="relative overflow-hidden bg-[#EFF8FC] text-[#071B3A] dark:bg-[#050B16] dark:text-white transition-colors duration-300">
+
+    <!-- Background Decorations -->
+    <div class="absolute -left-20 top-28 h-44 w-44 rounded-full bg-[#9cc8f5]/20 dark:bg-[#245DAA]/15"></div>
+    <div class="absolute -right-25 top-20 h-80 w-80 rounded-full bg-[#9cc8f5]/20 dark:bg-[#245DAA]/15"></div>
+    <div class="absolute right-20 bottom-10 h-24 w-24 rotate-12 rounded-2xl bg-[#9cc8f5]/20 dark:bg-[#245DAA]/15"></div>
+    <div class="relative mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-10 lg:px-8 lg:py-10">
+
+      <div class="grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
+        <!-- LEFT SIDE -->
+        <div class="relative z-10">
+          <!-- Small Heading -->
+          <div class="mb-5 flex items-center gap-3">
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#3678AA] dark:text-[#9cc8f5] sm:text-sm">About Online Learnify Academy</p>
+          </div>
+          <!-- Main Heading -->
+          <h1 class="max-w-2xl text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+            <span class="block text-[#102E55] dark:text-white">Learn Today,</span>
+            <span class="mt-2 block">
+              <span class="text-[#102E55] dark:text-white">Build Your</span>
+              <span class="text-[#F5B82E]">Creative Future</span>
+            </span>
+          </h1>
+          <!-- Description -->
+          <p class="mt-7 max-w-2xl text-base leading-8 text-[#102E55] dark:text-[#CBD5E1] sm:text-lg">
+            Online Learnify Academy is a platform created to empower students with practical graphic design education
+            and help them build successful careers. We focus on real-world projects, hands-on learning, and
+            industry-relevant skills — not just theory.
+          </p>
+
+          <!-- Features -->
+          <div class="mt-8 grid max-w-2xl grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-3">
+            <!-- Feature 1 -->
+            <div class="group flex items-center gap-3">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-[#102E55] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#102E55] group-hover:shadow-md group-hover:text-yellow-400 dark:bg-yellow-400 dark:text-[#071B3A] dark:group-hover:bg-[#245DAA] dark:group-hover:text-yellow-400">
+                <i class="fa-solid fa-palette text-lg"></i>
+              </div>
+              <span class="text-sm font-medium leading-5 text-[#071B3A] dark:text-white">Practical<br>Learning</span>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="group flex items-center gap-3">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-[#102E55] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#102E55] group-hover:shadow-md group-hover:text-yellow-400 dark:bg-yellow-400 dark:text-[#071B3A] dark:group-hover:bg-[#245DAA] dark:group-hover:text-yellow-400">
+                <i class="fa-solid fa-graduation-cap text-lg"></i>
+              </div>
+              <span class="text-sm font-medium leading-5 text-[#071B3A] dark:text-white">Expert<br>Guidance</span>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="group flex items-center gap-3">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-[#102E55] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#102E55] group-hover:shadow-md group-hover:text-yellow-400 dark:bg-yellow-400 dark:text-[#071B3A] dark:group-hover:bg-[#245DAA] dark:group-hover:text-yellow-400">
+                <i class="fa-solid fa-briefcase text-lg"></i>
+              </div>
+              <span class="text-sm font-medium leading-5 text-[#071B3A] dark:text-white">Career<br>Support</span>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="group flex items-center gap-3">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-[#102E55] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#102E55] group-hover:shadow-md group-hover:text-yellow-400 dark:bg-yellow-400 dark:text-[#071B3A] dark:group-hover:bg-[#245DAA] dark:group-hover:text-yellow-400">
+                <i class="fa-solid fa-users text-lg"></i>
+              </div>
+              <span class="text-sm font-medium leading-5 text-[#071B3A] dark:text-white">1000+<br>Students Trained</span>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="group flex items-center gap-3">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-[#102E55] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#102E55] group-hover:shadow-md group-hover:text-yellow-400 dark:bg-yellow-400 dark:text-[#071B3A] dark:group-hover:bg-[#245DAA] dark:group-hover:text-yellow-400">
+                <i class="fa-solid fa-star text-lg"></i>
+              </div>
+              <span class="text-sm font-medium leading-5 text-[#071B3A] dark:text-white">Real Projects<br>& Portfolio</span>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="group flex items-center gap-3">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-[#102E55] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#102E55] group-hover:shadow-md group-hover:text-yellow-400 dark:bg-yellow-400 dark:text-[#071B3A] dark:group-hover:bg-[#245DAA] dark:group-hover:text-yellow-400">
+                <i class="fa-solid fa-chart-line text-lg"></i>
+              </div>
+              <span class="text-sm font-medium leading-5 text-[#071B3A] dark:text-white">Freelancing &<br>Job Opportunities</span>
+            </div>
+          </div>
+
+          <!-- Tagline -->
+          <div class="mt-9">
+            <p class="text-3xl italic text-[#071B3A] dark:text-[#9cc8f5] sm:text-4xl"
+              style="font-family: 'Brush Script MT', 'Segoe Script', cursive;">
+              Learn. Create. Earn. Lead.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE - FOUNDER -->
+        <div class="relative z-10 mx-auto w-full max-w-2xl lg:ml-auto">
+          <div class="relative min-h-142.5 sm:min-h-155">
+            <div class="group relative w-full max-w-sm">
+              <!-- Offset Frame -->
+              <div class="absolute -bottom-4 -right-4 h-full w-full rounded-2xl bg-[#9cc8f5] dark:bg-[#245DAA]"></div>
+              <!-- Founder Image -->
+              <div
+                class="relative overflow-hidden rounded-2xl bg-[#102E55] shadow-xl dark:bg-[#102E55] dark:shadow-black/40">
+                <img src="assests\founder 04.jpg" alt="Muhammad Hamza Awais - Founder and Lead Trainer"
+                  class="aspect-4/5 w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]">
+              </div>
+            </div>
+
+            <!-- Founder Information Card -->
+            <div
+              class="absolute right-0 top-[27%] z-30 w-[47%] rounded-2xl bg-white p-5 shadow-2xl shadow-slate-900/15 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:shadow-black/40 sm:p-7">
+              <p class="text-[9px] font-semibold uppercase tracking-[0.16em] text-[#3678AA] sm:text-xs">Founder & Lead Trainer</p>
+              <h2 class="mt-3 text-xl font-bold leading-tight text-[#071B3A] sm:text-2xl">Muhammad<br class="sm:hidden"> Hamza Awais</h2>
+
+              <p class="mt-4 text-xs leading-6 text-slate-600 sm:text-sm sm:leading-7">
+                A passionate graphic designer and educator, dedicated to helping students build practical skills and achieve
+                their career goals through hands-on training and real-world projects.
+              </p>
+
+              <p class="mt-5 text-2xl italic text-[#102E55] sm:text-3xl"
+                style="font-family: 'Brush Script MT', 'Segoe Script', cursive;">Hamza Awais</p>
+            </div>
+          </div>
+
+          <!-- STATISTICS -->
+          <div
+            class="relative z-40 -mt-12 mx-auto w-[96%] overflow-hidden rounded-3xl bg-[#071B3A] shadow-2xl dark:bg-[#102E55] dark:shadow-black/50 sm:-mt-20">
+            <div class="grid grid-cols-2 sm:grid-cols-4">
+              <!-- Stat 1 -->
+              <div class="flex flex-col items-center justify-center border-b border-r border-white/10 px-3 py-5 text-center sm:border-b-0 sm:py-6">
+                <i class="fa-solid fa-users text-xl text-yellow-400 sm:text-2xl"></i>
+                <span class="hero-stat mt-2 text-xl font-bold text-yellow-400 sm:text-2xl" data-target="1000" data-suffix="+">0+</span>
+                <span class="mt-1 text-[10px] text-blue-100 dark:text-[#CBD5E1] sm:text-xs">Students Trained</span>
+              </div>
+
+              <!-- Stat 2 -->
+              <div
+                class="flex flex-col items-center justify-center border-b border-white/10 px-3 py-5 text-center sm:border-b-0 sm:border-r sm:py-6">
+                <i class="fa-solid fa-folder-open text-xl text-yellow-400 sm:text-2xl"></i>
+                <span class="hero-stat mt-2 text-xl font-bold text-yellow-400 sm:text-2xl" data-target="100" data-suffix="+">0+</span>
+                <span class="mt-1 text-[10px] text-blue-100 dark:text-[#CBD5E1] sm:text-xs">Student Projects</span>
+              </div>
+
+              <!-- Stat 3 -->
+              <div
+                class="flex flex-col items-center justify-center border-r border-white/10 px-3 py-5 text-center sm:py-6">
+                <i class="fa-solid fa-pen-nib text-xl text-yellow-400 sm:text-2xl"></i>
+                <span class="hero-stat mt-2 text-xl font-bold text-yellow-400 sm:text-2xl" data-target="3"data-suffix="+">0+</span>
+                <span class="mt-1 text-[10px] text-blue-100 dark:text-[#CBD5E1] sm:text-xs">Design Tools</span>
+              </div>
+
+              <!-- Stat 4 -->
+              <div class="flex flex-col items-center justify-center px-3 py-5 text-center sm:py-6">
+                <i class="fa-solid fa-star text-xl text-yellow-400 sm:text-2xl"></i>
+                <span class="hero-stat mt-2 text-xl font-bold text-yellow-400 sm:text-2xl" data-target="100" data-suffix="%">0%</span>
+                <span class="mt-1 text-[10px] text-blue-100 dark:text-[#CBD5E1] sm:text-xs">Practical Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT THE ACADEMY -->
+  <section id="about"
+    class="relative overflow-hidden bg-gray-100 py-20 text-[#071B3A] transition-colors duration-300 dark:bg-gray-900 dark:text-white sm:py-24 lg:py-10">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <!-- LEFT IMAGE / LOGO -->
+        <div
+          class="relative mx-auto flex min-h-85 w-full max-w-lg items-center justify-center sm:min-h-100 lg:min-h-105 lg:mx-0">
+          <!-- Decorative background -->
+          <div
+            class="absolute left-0 top-2 z-0 h-20 w-20 rounded-full bg-blue-50 transition-colors duration-300 dark:bg-[#245DAA]/20 sm:left-2 sm:h-24 sm:w-24">
+          </div>
+          <!-- Main circular logo background -->
+          <div
+            class="group relative z-10 flex h-80 w-80 items-center justify-center overflow-hidden rounded-full border-8 border-[#071B3A] shadow-[0_30px_80px_rgba(7,27,58,0.70)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(7,27,58,0.30)] dark:border-[#245DAA] dark:shadow-[0_30px_80px_rgba(0,0,0,0.55)] dark:hover:shadow-[0_25px_60px_rgba(0,0,0,0.70)] sm:h-95 sm:w-95 lg:h-105 lg:w-105">
+            <!-- Academy Logo -->
+            <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+              class="relative z-10 h-full w-full object-contain drop-shadow-xl/30 transition-transform duration-500 group-hover:scale-105" />
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="max-w-2xl">
+          <!-- Small heading -->
+          <div class="mb-5 flex items-center gap-3">
+            <span class="h-0.5 w-10 bg-yellow-400"></span>
+            <p class="text-sm font-semibold text-[#245DAA] transition-colors duration-300 dark:text-[#9cc8f5] sm:text-base">About the Academy</p>
+          </div>
+
+          <!-- Main heading -->
+          <h2 class="text-3xl font-semibold leading-[1.08] tracking-tight text-[#102E55] transition-colors duration-300 dark:text-white sm:text-4xl lg:text-3xl xl:text-3xl">
+            Practical design education,<br class="hidden sm:block" />without the fluff
+          </h2>
+
+          <!-- First paragraph -->
+          <p class="mt-7 text-base leading-8 text-slate-500 transition-colors duration-300 dark:text-[#CBD5E1] sm:text-lg">
+            Online Learnify Academy was founded to close the gap between design theory and real client work. Instead of long lectures,
+            every course is built around briefs, feedback and portfolio pieces — so students leave with skills they can use the same week.
+          </p>
+
+          <!-- Second paragraph -->
+          <p class="mt-5 text-base leading-8 text-slate-500 transition-colors duration-300 dark:text-[#CBD5E1] sm:text-lg">
+            Since our first batch, we've trained more than a thousand students across Canva, Adobe Photoshop and Adobe Illustrator, with a curriculum
+            that keeps pace with what studios and freelance clients actually ask for.
+          </p>
+
+          <!-- FEATURE BADGES -->
+          <div class="mt-8 flex gap-2 whitespace-nowrap">
+            <!-- Badge 1 -->
+            <div class="inline-flex items-center rounded-full border border-yellow-800 bg-yellow-100 px-4 py-2 text-xs font-semibold text-yellow-800 transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-100 dark:border-yellow-400/40 dark:bg-yellow-400/10 dark:text-yellow-400 dark:hover:bg-yellow-400/20">
+              Project-based curriculum
+            </div>
+
+            <!-- Badge 2 -->
+            <div class="inline-flex items-center rounded-full border border-yellow-800 bg-yellow-100 px-4 py-2 text-xs font-semibold text-yellow-800 transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-100 dark:border-yellow-400/40 dark:bg-yellow-400/10 dark:text-yellow-400 dark:hover:bg-yellow-400/20">
+              Small live batches
+            </div>
+
+            <!-- Badge 3 -->
+            <div class="inline-flex items-center rounded-full border border-yellow-800 bg-yellow-100 px-4 py-2 text-xs font-semibold text-yellow-800 transition-all duration-200 hover:-translate-y-0.5 hover:bg-yellow-100 dark:border-yellow-400/40 dark:bg-yellow-400/10 dark:text-yellow-400 dark:hover:bg-yellow-400/20">
+              Portfolio-ready outcomes
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER SECTION -->
+  <section id="founder"
+    class="relative overflow-hidden bg-[#102E55] py-10 text-white transition-colors duration-300 dark:bg-[#071B3A] sm:py-24 lg:py-15">
+
+    <!-- Decorative circles -->
+    <div class="absolute -right-32 -top-32 h-80 w-80 rounded-full border border-white/10 dark:border-blue-300/10"></div>
+    <div class="absolute -bottom-10 -left-32 h-96 w-96 rounded-full border border-yellow-400/10 dark:border-yellow-400/10"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+        <!-- FOUNDER IMAGE -->
+        <div class="relative mx-auto w-full max-w-md lg:mx-0">
+          <!-- Yellow decorative block -->
+          <div class="absolute -bottom-5 -left-5 h-24 w-24 rounded-xl bg-yellow-400"></div>
+          <!-- Image card -->
+          <div
+            class="relative z-10 overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-2 shadow-2xl shadow-black/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-black/50 dark:border-blue-200/10 dark:bg-[#102E55] dark:shadow-black/50">
+            <img src="assests\founder.png" alt="Muhammad Hamza Awais"
+              class="h-105 w-full rounded-2xl object-cover sm:h-125" />
+          </div>
+
+          <!-- Small floating badge -->
+          <div class="absolute -right-4 top-8 z-20 rounded-xl bg-yellow-400 px-5 py-3 shadow-xl shadow-black/20 transition-transform duration-300 hover:-translate-y-1">
+            <p class="text-xs font-semibold uppercase tracking-wider text-[#071B3A]">Founder & CEO</p>
+            <p class="mt-0.5 text-sm font-bold text-[#071B3A]">Online Learnify</p>
+          </div>
+        </div>
+        <!-- FOUNDER CONTENT -->
+        <div class="max-w-2xl">
+          <!-- Section label -->
+          <div class="mb-5 flex items-center gap-3">
+            <span class="h-0.5 w-10 bg-yellow-400"></span>
+            <p class="text-sm font-semibold text-yellow-400">Meet the Founder</p>
+          </div>
+          <!-- Heading -->
+          <h2 class="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
+            style="font-family: Georgia, &quot;Times New Roman&quot;, serif">Muhammad Hamza Awais
+          </h2>
+          <!-- Founder title -->
+          <p class="mt-4 text-base font-semibold text-yellow-400 sm:text-lg">Founder & CEO, Online Learnify Academy</p>
+
+          <!-- First paragraph -->
+          <p class="mt-7 text-base leading-8 text-blue-100/80 transition-colors duration-300 dark:text-[#CBD5E1] sm:text-lg">
+            Muhammad Hamza Awais is the Founder & CEO of Online Learnify, established with a vision to empower students through practical graphic design
+            education and help them build successful creative careers. Through hands-on learning, real-world projects, and industry-focused training, 
+            he has trained 1K+ students in tools including Canva, Adobe Illustrator, and Adobe Photoshop.
+          </p>
+
+          <!-- Second paragraph -->
+          <p
+            class="mt-5 text-base leading-8 text-blue-100/80 transition-colors duration-300 dark:text-[#CBD5E1] sm:text-lg">
+            Beyond design training, his focus is helping students move from learning to earning. Through mentorship,career guidance, internships, 
+            and work opportunities, he has helped 50+ students take their first steps toward professional careers in graphic design, freelancing, 
+            and creative work.
+          </p>
+
+          <!-- Skills & Expertise -->
+          <div>
+            <h4 class="mb-4 text-lg font-semibold text-yellow-400">Skills & Expertise</h4>
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <!-- Skill 1 -->
+              <div class="group flex cursor-default items-center gap-3 rounded-lg bg-yellow-100 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:bg-[#102E55] dark:hover:bg-[#163b68]">
+                <i class="fa-solid fa-pen-nib text-[#102E55] transition-transform duration-300 group-hover:scale-110 dark:text-yellow-400"></i>
+                <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Graphic Design Training</span>
+              </div>
+
+              <!-- Skill 2 -->
+              <div class="group flex cursor-default items-center gap-3 rounded-lg bg-yellow-100 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:bg-[#102E55] dark:hover:bg-[#163b68]">
+                <i class="fa-solid fa-user-graduate text-[#102E55] transition-transform duration-300 group-hover:scale-110 dark:text-yellow-400"></i>
+                <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Student Mentorship</span>
+              </div>
+
+              <!-- Skill 3 -->
+              <div class="group flex cursor-default items-center gap-3 rounded-lg bg-yellow-100 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:bg-[#102E55] dark:hover:bg-[#163b68]">
+                <i class="fa-solid fa-diagram-project text-[#102E55] transition-transform duration-300 group-hover:scale-110 dark:text-yellow-400"></i>
+                <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Practical Projects</span>
+              </div>
+
+              <!-- Skill 4 -->
+              <div class="group flex cursor-default items-center gap-3 rounded-lg bg-yellow-100 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:bg-[#102E55] dark:hover:bg-[#163b68]">
+                <i class="fa-solid fa-chalkboard-user text-[#102E55] transition-transform duration-300 group-hover:scale-110 dark:text-yellow-400"></i>
+                <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Workshops</span>
+              </div>
+
+              <!-- Skill 5 -->
+              <div class="group flex cursor-default items-center gap-3 rounded-lg bg-yellow-100 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:bg-[#102E55] dark:hover:bg-[#163b68]">
+                <i class="fa-solid fa-briefcase text-[#102E55] transition-transform duration-300 group-hover:scale-110 dark:text-yellow-400"></i>
+                <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Portfolio Development</span>
+              </div>
+
+              <!-- Skill 6 -->
+              <div class="group flex cursor-default items-center gap-3 rounded-lg bg-yellow-100 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:bg-[#102E55] dark:hover:bg-[#163b68]">
+                <i class="fa-solid fa-laptop-code text-[#102E55] transition-transform duration-300 group-hover:scale-110 dark:text-yellow-400"></i>
+                <span class="text-sm font-medium text-slate-700 dark:text-slate-200">Digital Skills Education</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <h4 class="mb-2 mt-2 text-base font-semibold text-white">Connect With</h4>
+            <div class="flex flex-wrap gap-3">
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/online-learnify-3a59b3424?utm_source=share_via&utm_content=profile&utm_medium=member_android" aria-label="LinkedIn"
+                class="group flex h-11 w-11 items-center justify-center rounded-full bg-[#EEF5FC] text-[#102E55] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-[#102E55] hover:shadow-lg dark:bg-[#102E55] dark:text-white dark:hover:bg-yellow-400 dark:hover:text-[#071B3A]">
+                <i class="fa-brands fa-linkedin-in text-lg transition-transform duration-300 group-hover:scale-110"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/____online_learnify?stkn=MThmZDN2dTJuNjlyZQ==" aria-label="Instagram"
+                class="group flex h-11 w-11 items-center justify-center rounded-full bg-[#EEF5FC] text-[#102E55] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-[#102E55] hover:shadow-lg dark:bg-[#102E55] dark:text-white dark:hover:bg-yellow-400 dark:hover:text-[#071B3A]">
+                <i class="fa-brands fa-instagram text-lg transition-transform duration-300 group-hover:scale-110"></i>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CO-FOUNDER SECTION -->
+
+  <section id="co-founder"
+    class="relative overflow-hidden bg-gray-200 py-20 text-[#071B3A] transition-colors duration-300 dark:bg-[#0A1628] dark:text-white sm:py-24 lg:py-28">
+    <!-- DECORATIVE BACKGROUND -->
+    <div class="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full border-2 border-[#245DAA]/10 animate-float dark:border-[#245DAA]/20"></div>
+    <div class="pointer-events-none absolute left-10 -top-16 h-64 w-64 rounded-full border border-yellow-400/20 animate-float dark:border-yellow-400/15"></div>
+    <div class="pointer-events-none absolute -right-40 -bottom-40 h-125 w-125 rounded-full border-2 border-[#245DAA]/10 animate-float dark:border-[#245DAA]/20"></div>
+    <div class="pointer-events-none absolute -right-20 -bottom-20 h-80 w-80 rounded-full border border-yellow-400/20 animate-float dark:border-yellow-400/15"></div>
+    <div class="pointer-events-none absolute right-[12%] top-12 h-16 w-16 rotate-12 rounded-xl border-2 border-[#245DAA]/10 animate-float dark:border-[#245DAA]/20"></div>
+    <div class="pointer-events-none absolute right-[8%] top-32 h-5 w-5 rotate-45 bg-yellow-400/30 animate-float dark:bg-yellow-400/20"></div>
+    <div class="pointer-events-none absolute bottom-16 left-[8%] h-20 w-20 -rotate-12 rounded-xl border-2 border-[#245DAA]/10 animate-float dark:border-[#245DAA]/20"></div>
+    <div class="pointer-events-none absolute bottom-32 left-[15%] h-4 w-4 rotate-45 bg-[#245DAA]/20 animate-float dark:bg-[#245DAA]/30"></div>
+    <div class="pointer-events-none absolute right-[28%] top-20 h-2 w-2 rounded-full bg-yellow-400/50 animate-float"></div>
+    <div class="pointer-events-none absolute right-[25%] top-28 h-2 w-2 rounded-full bg-[#245DAA]/30 animate-float"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <!-- Main Grid -->
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <!-- LEFT CONTENT -->
+        <div class="order-2 max-w-2xl lg:order-1">
+          <!-- Section Label -->
+          <div class="mb-5 flex items-center gap-3">
+            <span class="h-0.5 w-10 bg-yellow-400"></span>
+            <p class="text-sm font-semibold text-[#245DAA] transition-colors duration-300 dark:text-[#9cc8f5]">Co-Founder & Academy Coordinator</p>
+          </div>
+
+          <!-- Main Heading -->
+          <h2 class="text-4xl font-bold leading-tight tracking-tight text-[#102E55] transition-colors duration-300 dark:text-white sm:text-5xl lg:text-6xl"
+            style="font-family: Georgia, &quot;Times New Roman&quot;, serif">Gul Fatima
+          </h2>
+
+          <!-- Role -->
+          <p class="mt-4 text-base font-semibold text-yellow-600 transition-colors duration-300 dark:text-yellow-400 sm:text-lg">Co-Founder & Academy Coordinator</p>
+
+          <!-- First Paragraph -->
+          <p class="mt-7 text-base leading-8 text-slate-600 transition-colors duration-300 dark:text-[#CBD5E1] sm:text-lg">
+            Gul Fatima is the Co-Founder & Academy Coordinator at Online Learnify, responsible for coordinating academy operations and ensuring 
+            a smooth learning experience for every batch. She manages student communication,
+            registrations, class schedules, and provides continuous support throughout the learning journey.
+          </p>
+
+          <!-- Second Paragraph -->
+          <p class="mt-5 text-base leading-8 text-slate-600 transition-colors duration-300 dark:text-[#CBD5E1] sm:text-lg">
+            Working closely with the team, she helps create a professional, organized, and student-friendly environment
+            where learners receive the guidance and assistance they need. Her dedication to coordination, teamwork, and
+            student support contributes to the academy's mission of empowering aspiring designers with practical skills and opportunities.
+          </p>
+
+          <!-- Small Highlight -->
+          <div class="mt-8 flex items-center gap-4 rounded-2xl border border-black bg-blue-100 px-5 py-4 shadow-sm transition-all duration-300 hover:shadow-2xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/20 dark:hover:bg-[#163b68]">
+
+            <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#102E55] text-lg font-bold text-yellow-400 dark:bg-yellow-400 dark:text-[#071B3A]">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-blue-950 transition-colors duration-300 dark:text-white">Student-first coordination</p>
+              <p class="mt-1 text-xs text-yellow-600 transition-colors duration-300 dark:text-yellow-400">
+                Supporting students, strengthening the learning experience, and helping Online Learnify grow.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="order-1 relative mx-auto w-full max-w-md lg:order-2 lg:ml-auto">
+          <!-- Decorative yellow shape -->
+          <div class="absolute -right-5 -top-5 h-24 w-24 rounded-2xl bg-yellow-400"></div>
+          <!-- Image Card -->
+          <div class="relative z-10 overflow-hidden rounded-3xl bg-blue-900 p-2 shadow-2xl shadow-slate-900/15 transition-all duration-500 hover:-translate-y-2 hover:shadow-slate-900/30 dark:bg-[#102E55] dark:shadow-black/40 dark:hover:shadow-black/60">
+            <img src="assests\co founder.png" alt="Gul Fatima"
+              class="h-105 w-full rounded-2xl object-cover sm:h-125" />
+          </div>
+
+          <!-- Floating Role Badge -->
+          <div
+            class="absolute -bottom-5 -left-5 z-20 rounded-2xl bg-[#102E55] px-5 py-4 shadow-xl transition-transform duration-300 hover:-translate-y-1 dark:bg-[#245DAA] dark:shadow-black/40">
+            <p class="text-xs uppercase tracking-wider text-blue-200">Academy</p>
+            <p class="mt-1 text-sm font-bold text-white">Coordinator</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section id="courses"
+    class="relative overflow-hidden bg-white py-20 text-[#071B3A] transition-colors duration-300 dark:bg-[#050B16] dark:text-white sm:py-15 lg:py-10">
+    <!-- Large circle -->
+    <div class="pointer-events-none absolute -right-40 -top-40 h-96 w-96 rounded-full border-2 border-[#245DAA]/10 animate-float dark:border-[#245DAA]/20"></div>
+    <!-- Small yellow circle -->
+    <div class="pointer-events-none absolute left-[8%] top-32 h-5 w-5 rounded-full bg-yellow-400/40 animate-float dark:bg-yellow-400/30"></div>
+    <!-- Decorative square -->
+    <div class="pointer-events-none absolute bottom-20 right-[8%] h-20 w-20 rotate-12 rounded-xl border-2 border-[#245DAA]/10 dark:border-[#245DAA]/20"></div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <!-- Section Heading -->
+      <div class="mx-auto max-w-2xl text-center">
+        <!-- Small Label -->
+        <div class="mb-5 flex items-center justify-center gap-3">
+          <span class="h-0.5 w-10 bg-yellow-400"></span>
+          <p class="text-sm font-semibold text-[#245DAA] transition-colors duration-300 dark:text-[#9cc8f5]">Our Courses</p>
+          <span class="h-0.5 w-10 bg-yellow-400"></span>
+        </div>
+
+        <!-- Main Heading -->
+        <h2 class="text-2xl font-bold leading-tight tracking-tight text-[#102E55] transition-colors duration-300 dark:text-white sm:text-3xl lg:text-4xl">
+          Learn skills that turn ideas<br /><span class="text-[#245DAA] dark:text-[#9cc8f5]"> into real opportunities </span>
+        </h2>
+
+        <!-- Description -->
+        <p class="mx-auto mt-4 max-w-2xl text-sm leading-8 text-slate-500 transition-colors duration-300 dark:text-[#CBD5E1] sm:text-base">
+          Practical, affordable courses designed to help you build valuable digital skills through focused learning and hands-on practice.
+        </p>
+      </div>
+
+      <!-- COURSE CARDS -->
+      <div class="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <!-- CARD 1 -->
+        <article
+          class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5 transition-all duration-500 hover:-translate-y-2 hover:border-blue-950 hover:shadow-2xl hover:shadow-[#102E55]/15 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <!-- Image -->
+          <div class="relative h-52 overflow-hidden bg-[#EEF5FC] dark:bg-[#071B3A]">
+            <img src="assests\courses and logo\graphic designing.png" alt="Graphic Designing with AI course"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <!-- Course Number -->
+            <span
+              class="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#102E55] text-xs font-bold text-white dark:bg-yellow-400 dark:text-[#071B3A]">01</span>
+          </div>
+          <!-- Card Content -->
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-xl font-bold text-[#102E55] dark:text-white">Graphic Designing with AI</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-500 dark:text-[#CBD5E1]">
+              Learn modern graphic design principles while using AI tools to create professional, creative and portfolio-ready designs.
+            </p>
+            <!-- Course Details -->
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="rounded-full border border-blue-950 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-[#245DAA] dark:border-[#9cc8f5]/30 dark:bg-[#071B3A] dark:text-[#9cc8f5]">
+                2.5 Months
+              </span>
+
+              <span class="rounded-full border border-yellow-800 bg-yellow-50 px-3 py-1.5 text-xs font-semibold text-yellow-700 dark:border-yellow-400/30 dark:bg-yellow-400/10 dark:text-yellow-400">
+                AI-Assisted
+              </span>
+
+              <span class="rounded-full border border-slate-700 bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:border-white/10 dark:bg-[#071B3A] dark:text-[#CBD5E1]">
+                Batch 07
+              </span>
+            </div>
+
+            <!-- Enroll Button -->
+            <a href="contact.html" class="mt-auto pt-6">
+              <span class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#102E55] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-lg dark:bg-yellow-400 dark:text-[#071B3A] dark:hover:bg-yellow-300">
+                Enroll Now<i class="fa-solid fa-arrow-right text-xs"></i>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article
+          class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5 transition-all duration-500 hover:-translate-y-2 hover:border-blue-950 hover:shadow-2xl hover:shadow-[#102E55]/15 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+
+          <!-- Image -->
+          <div class="relative h-52 overflow-hidden bg-[#EEF5FC] dark:bg-[#071B3A]">
+            <img src="assests\courses and logo\web development.jpg" alt="Web Development course"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+            <!-- Course Number -->
+            <span class="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#102E55] text-xs font-bold text-white dark:bg-yellow-400 dark:text-[#071B3A]">
+              02
+            </span>
+          </div>
+
+          <!-- Card Content -->
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-xl font-bold text-[#102E55] dark:text-white">Web Development</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-500 dark:text-[#CBD5E1]">
+              Build responsive and interactive websites while learning HTML, CSS, Tailwind CSS and JavaScript through practical projects.
+            </p>
+            <!-- Course Details -->
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="rounded-full border border-blue-950 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-[#245DAA] dark:border-[#9cc8f5]/30 dark:bg-[#071B3A] dark:text-[#9cc8f5]">
+                2.5 Months
+              </span>
+
+              <span class="rounded-full border border-yellow-800 bg-yellow-50 px-3 py-1.5 text-xs font-semibold text-yellow-700 dark:border-yellow-400/30 dark:bg-yellow-400/10 dark:text-yellow-400">
+                Beginner Friendly
+              </span>
+
+              <span class="rounded-full border border-slate-700 bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:border-white/10 dark:bg-[#071B3A] dark:text-[#CBD5E1]">
+                Batch 01
+              </span>
+
+            </div>
+
+            <!-- Enroll Button -->
+            <a href="contact.html" class="mt-auto pt-6">
+              <span class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#102E55] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-lg dark:bg-yellow-400 dark:text-[#071B3A] dark:hover:bg-yellow-300">
+                Enroll Now<i class="fa-solid fa-arrow-right text-xs"></i>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article
+          class="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5 transition-all duration-500 hover:-translate-y-2 hover:border-blue-950 hover:shadow-2xl hover:shadow-[#102E55]/15 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+
+          <!-- Image -->
+          <div class="relative h-52 overflow-hidden bg-[#EEF5FC] dark:bg-[#071B3A]">
+            <img src="assests\courses and logo\prompt engineering.jpg" alt="Prompt Engineering course"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+            <!-- Course Number -->
+            <span class="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-[#102E55] text-xs font-bold text-white dark:bg-yellow-400 dark:text-[#071B3A]">
+              03
+            </span>
+          </div>
+
+          <!-- Card Content -->
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="text-xl font-bold text-[#102E55] dark:text-white">Prompt Engineering</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-500 dark:text-[#CBD5E1]">
+              Learn how to write effective prompts and use AI tools strategically for content creation, design, productivity and problem solving.
+            </p>
+
+            <!-- Course Details -->
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="rounded-full border border-blue-950 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-[#245DAA] dark:border-[#9cc8f5]/30 dark:bg-[#071B3A] dark:text-[#9cc8f5]">
+                1 Month
+              </span>
+              <span class="rounded-full border border-yellow-800 bg-yellow-50 px-3 py-1.5 text-xs font-semibold text-yellow-700 dark:border-yellow-400/30 dark:bg-yellow-400/10 dark:text-yellow-400">
+                AI Skills
+              </span>
+
+              <span class="rounded-full border border-slate-700 bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 dark:border-white/10 dark:bg-[#071B3A] dark:text-[#CBD5E1]">
+                Batch 01
+              </span>
+            </div>
+            <!-- Enroll Button -->
+            <a href="contact.html" class="mt-auto pt-6">
+              <span class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#102E55] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-lg dark:bg-yellow-400 dark:text-[#071B3A] dark:hover:bg-yellow-300">
+                Enroll Now<i class="fa-solid fa-arrow-right text-xs"></i>
+              </span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  <!-- Students -->
+  <section id="students"
+    class="relative overflow-hidden bg-[#102E55] py-5 text-white transition-colors duration-300 dark:bg-[#102E55]">
+
+    <!-- Section Heading -->
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto mb-14 max-w-2xl text-center">
+        <span class="mb-2 inline-block rounded-full px-4 py-2 text-sm font-semibold text-yellow-400 dark:text-yellow-400">Our Students</span>
+        <h2 class="mb-4 text-2xl font-bold text-white sm:text-3xl lg:text-4xl">Meet Our Creative Students</h2>
+        <p class="text-base leading-relaxed text-yellow-400 sm:text-lg dark:text-yellow-400">Discover the talented designers who are turning their skills, creativity, and ideas into meaningful work.
+        </p>
+      </div>
+    </div>
+
+    <!-- Student Slider -->
+    <div id="studentSliderWrapper" class="relative w-full overflow-hidden">
+      <!-- Sliding Track -->
+      <div id="studentTrack" class="flex transition-transform duration-700 ease-in-out">
+        <!-- Student 1 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+              <!-- Content -->
+              <div class="text-white md:order-1">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">Student Spotlight</span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">Hamna Islam</h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">Web Developer & Graphic Designer</p>
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Hamna Islam is a creative Web Developer and Graphic Designer with a strong interest in building modern, responsive, and visually
+                  engaging digital experiences. She combines her design skills with front-end development to create websites that are both functional
+                  and visually appealing.
+                </p>
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">Current Focus</h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p><i class="fa-solid fa-code mr-2 text-[#9cc8f5]"></i>Building the Online Learnify Academy website</p>
+                    <p><i class="fa-solid fa-laptop-code mr-2 text-[#9cc8f5]"></i>Front-end Web Development & Responsive Design</p>
+                    <p><i class="fa-solid fa-pen-nib mr-2 text-[#9cc8f5]"></i>Graphic Design & Visual Content Creation</p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">HTML</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Tailwind CSS</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">JavaScript</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Graphic Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Illustrator</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Canva</span>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="relative md:order-2">
+                <div class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\1.png"
+                    alt="Hamna Islam - Web Developer and Graphic Designer" class="h-full w-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Student 2 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Image -->
+              <div class="relative">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\2.webp" alt="Noor Fatima"
+                    class="h-full w-full scale-[1.03] object-cover opacity-85 transition-all duration-700 ease-out">
+                </div>
+              </div>
+              <!-- Content -->
+              <div>
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5] dark:text-[#9cc8f5]">Student Spotlight</span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">Noor Fatima</h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5] dark:text-[#9cc8f5]">Graphic Designer</p>
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Noor Fatima is a passionate Graphic Designer with 1.5 years of experience in creating modern and impactful designs. A graduate of
+                  Online Learnify Academy, she has developed strong skills in branding, social media graphics, marketing materials, posters, banners, and
+                  presentation design.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">Current Roles</h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p><i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>
+                      Head of Graphic Team — Character Building Society (CBS), IUB
+                    </p>
+                    <p><i class="fa-solid fa-palette mr-2 text-[#9cc8f5]"></i>
+                      Graphic Designer — Rise and Rights Initiative (RRI)
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5] dark:bg-[#071B3A]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5] dark:bg-[#071B3A]">SocialMedia</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5] dark:bg-[#071B3A]">Photoshop</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5] dark:bg-[#071B3A]">Illustrator</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5] dark:bg-[#071B3A]">Canva</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 3 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Content -->
+              <div class="text-white md:order-1">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">Student Spotlight</span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">Esha Samar</h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">Graphic Designer</p>
+
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Esha Samar is a creative and detail-oriented Graphic Designer with one year of hands-on experience gained through professional training
+                  and creative projects at Online Learnify Academy. She specializes in branding, logo design, social media graphics, posters, flyers,
+                  YouTube thumbnails, and presentation designs.
+                </p>
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">Current Roles</h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p><i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>Graphic Designer at Rise and Rights Initiative (RRI)</p>
+                    <p><i class="fa-solid fa-users mr-2 text-[#9cc8f5]"></i>Member of Social Media & Digital Society</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Logo Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Photoshop</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Illustrator</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Canva</span>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="relative md:order-2">
+                <div class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\3.webp" alt="Esha Samar - Graphic Designer" class="h-full w-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 4 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Image -->
+              <div class="relative">
+                <div class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\4.webp" alt="Laiba Ahmad - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="text-white">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">Student Spotlight</span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">Laiba Ahmad</h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">Graphic Designer</p>
+
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Laiba Ahmad is a passionate Graphic Designer who developed her creative and technical skills through her training at Online
+                  Learnify Academy. She specializes in branding, social media post design, logo design, and creative visual content.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">Current Role</h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>Graphic Designer at IUB Social Welfare and Human Rights Society
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-palette mr-2 text-[#9cc8f5]"></i>Branding & Creative Visual Design
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Social Media</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Logo Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Creative Design</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 5 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Content -->
+              <div class="text-white md:order-1">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">Student Spotlight</span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">Um E Habiba</h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">Graphic Designer</p>
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Um E Habiba is a passionate and creative Graphic Designer with one year of experience in creating visually appealing and impactful
+                  designs. She developed her skills through practical training at Online Learnify Academy, specializing in social media posts,
+                  posters, banners, presentation designs, and branding materials.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">Current Role</h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>Graphic Designer at Social Welfare Society
+                    </p>
+
+                    <p>
+                      <i class="fa-solid fa-palette mr-2 text-[#9cc8f5]"></i>Social Media & Creative Design
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Social Media Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Photoshop</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Illustrator</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Canva</span>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="relative md:order-2">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\5.webp" alt="Um E Habiba - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 6 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Image -->
+              <div class="relative">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\6.webp" alt="Ayeza Asghar - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="text-white">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">Student Spotlight</span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">Ayeza Asghar</h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">Graphic Designer</p>
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Ayeza Asghar is a passionate and creative Graphic Designer with 1.5 years of experience in creating modern, visually appealing,
+                  and impactful designs. After attending workshops in the IT Department, she was inspired to further develop her skills by
+                  completing a Graphic Design course at Online Learnify Academy.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">Professional Experience</h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>Graphic Designer in Various IUB Societies
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-palette mr-2 text-[#9cc8f5]"></i>Branding, Social Media & Marketing Design
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Social Media</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Marketing Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Creative Design</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 7 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Content -->
+              <div class="text-white md:order-1">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">
+                  Student Spotlight
+                </span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">
+                  Rameesa Javed
+                </h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">
+                  Graphic Designer
+                </p>
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Rameesa Javed is a passionate and creative Graphic Designer with one year of hands-on experience gained through professional training
+                  and personal projects. She specializes in branding identities, logo designs, social media graphics, marketing materials, posters,
+                  flyers, YouTube thumbnails, and presentation designs.
+                </p>
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">Design Expertise</h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>Branding & Visual Identity Design
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-palette mr-2 text-[#9cc8f5]"></i>Social Media & Marketing Design
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Logo Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Canva</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Illustrator</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">AI Design Tools</span>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="relative md:order-2">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\7.webp" alt="Rameesa Javed - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 8 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Image -->
+              <div class="relative">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\8.webp" alt="Zainab Imran - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="text-white">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">
+                  Student Spotlight
+                </span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">
+                  Zainab Imran
+                </h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">
+                  Graphic Designer
+                </p>
+
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Zainab Imran is a passionate Graphic Designer with a creative mindset who developed her design foundation through Online Learnify
+                  Academy. Her training helped her build strong skills in branding, logo design, social media creatives, and visual communication while
+                  strengthening her creativity and technical abilities.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">
+                    Current Role
+                  </h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>
+                      Graphic Designer at IUB Character Building Society
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-palette mr-2 text-[#9cc8f5]"></i>
+                      Branding, Social Media & Visual Communication
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Logo Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Social Media</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Visual Communication</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 9 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Content -->
+              <div class="text-white md:order-1">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">
+                  Student Spotlight
+                </span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">
+                  Amina Arshad
+                </h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">
+                  Learner & Professional
+                </p>
+
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Amina Arshad describes her journey with Online Learnify Academy as truly transformative. Through expert-led lectures, practical
+                  projects, and a flexible learning environment, she developed valuable skills while building confidence in her abilities. The
+                  experience has played an important role in her professional and academic growth.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">
+                    Areas of Growth
+                  </h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>
+                      Teaching & Professional Development
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-users mr-2 text-[#9cc8f5]"></i>
+                      Leadership, Teamwork & Communication
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Professional Growth</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Leadership</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Teamwork</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Communication</span>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="relative md:order-2">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\9.webp" alt="Amina Arshad" class="h-full w-full object-cover">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 10 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Image -->
+              <div class="relative">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\10.webp" alt="Manal Rafique - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="text-white">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">
+                  Student Spotlight
+                </span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">
+                  Manal Rafique
+                </h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">
+                  Graphic Designer
+                </p>
+
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Manal Rafique is a passionate Graphic Designer dedicated to creating modern, creative, and impactful visual designs. She specializes in
+                  social media graphics, branding, packaging designs, posters, banners, and presentation designs, combining creativity with clear
+                  and effective visual communication.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">
+                    Professional Achievements
+                  </h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>
+                      Graphic Designer at GRIN
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-trophy mr-2 text-[#9cc8f5]"></i>
+                      1st Position in Poster Design Competition
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Social Media</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Packaging</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Photoshop</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Illustrator</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 11 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Content -->
+              <div class="text-white md:order-1">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">
+                  Student Spotlight
+                </span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">
+                  Sannia Noor
+                </h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">
+                  Graphic Designer
+                </p>
+
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Sannia Noor is a passionate and creative Graphic Designer with a strong interest in visual storytelling and digital design. Through
+                  professional training at Online Learnify Academy, she gained hands-on experience by working on creative projects and practical
+                  design assignments, strengthening her creativity and technical skills.
+                </p>
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">
+                    Design Expertise
+                  </h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-palette mr-2 text-[#9cc8f5]"></i>
+                      Logo Design, Branding & Digital Content
+                    </p>
+
+                    <p>
+                      <i class="fa-solid fa-pen-nib mr-2 text-[#9cc8f5]"></i>
+                      Typography, Color Theory & Visual Storytelling
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Logo Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Branding</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Social Media</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Typography</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Color Theory</span>
+                </div>
+              </div>
+
+              <!-- Image -->
+              <div class="relative md:order-2">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\11.webp" alt="Sannia Noor - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Student 12 -->
+        <div class="student-slide min-w-full">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-2 lg:gap-20">
+
+              <!-- Image -->
+              <div class="relative">
+                <div
+                  class="relative h-100 overflow-hidden rounded-4xl shadow-2xl shadow-black/20 sm:h-120 lg:h-130 dark:shadow-black/50">
+                  <img src="assests\Students Images\12.webp" alt="Fiza Yaseen - Graphic Designer"
+                    class="h-full w-full object-cover">
+                </div>
+              </div>
+              <!-- Content -->
+              <div class="text-white">
+                <span class="text-sm font-semibold uppercase tracking-widest text-[#9cc8f5]">
+                  Student Spotlight
+                </span>
+                <h3 class="mt-3 mb-3 font-serif text-4xl font-bold text-yellow-400 sm:text-5xl">
+                  Fiza Yaseen
+                </h3>
+                <p class="mb-6 text-lg font-semibold text-[#9cc8f5]">
+                  Graphic Designer
+                </p>
+
+                <p class="mb-7 max-w-xl leading-relaxed text-blue-100 dark:text-[#CBD5E1]">
+                  Starting as a complete beginner with no prior experience in Canva or Adobe Illustrator, this student developed strong graphic design
+                  skills through the guidance, consistent practice, and support of Online Learnify Academy. The learning journey transformed a passion
+                  for design into practical and professional skills.
+                </p>
+
+                <div class="mb-7">
+                  <h4 class="mb-3 font-semibold text-white">
+                    Current Roles
+                  </h4>
+                  <div class="space-y-2 text-blue-100 dark:text-[#CBD5E1]">
+                    <p>
+                      <i class="fa-solid fa-briefcase mr-2 text-[#9cc8f5]"></i>
+                      Graphic Designer at IUB Culture Promotion Society
+                    </p>
+                    <p>
+                      <i class="fa-solid fa-flag mr-2 text-[#9cc8f5]"></i>
+                      Graphic Designer at IUB Scouts Group
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Canva</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Adobe Illustrator</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Poster Design</span>
+                  <span class="rounded-full bg-[#071B3A] px-4 py-2 text-sm text-[#9cc8f5]">Creative Design</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Previous Button -->
+      <button id="studentPrev" type="button" aria-label="Previous student"
+        class="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#071B3A] text-white shadow-lg transition duration-300 hover:bg-[#245DAA] sm:left-6 sm:h-14 sm:w-14 lg:left-10 dark:bg-[#050B16] dark:hover:bg-[#245DAA]">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!-- Next Button -->
+      <button id="studentNext" type="button" aria-label="Next student"
+        class="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#071B3A] text-white shadow-lg transition duration-300 hover:bg-[#245DAA] sm:right-6 sm:h-14 sm:w-14 lg:right-10 dark:bg-[#050B16] dark:hover:bg-[#245DAA]">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+    <!-- Slider Indicators -->
+    <div id="studentIndicators" class="mt-10 flex items-center justify-center gap-2">
+      <button class="student-indicator h-2 w-8 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 1"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 2"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 3"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 4"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 5"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 6"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 7"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 8"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 9"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 10"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 11"></button>
+      <button class="student-indicator h-2 w-2 rounded-full bg-yellow-400 transition-all duration-300" aria-label="Student 12"></button>
+    </div>
+
+  </section>
+  <!-- Our Collaborations -->
+  <section id="collaborations"
+    class="w-full bg-white py-10 text-[#071B3A] transition-colors duration-300 sm:py-10 lg:py-15 dark:bg-[#050B16] dark:text-white">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-8">
+      <!-- Section Heading -->
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">Our Collaborations</p>
+        <h2 class="mt-3 text-2xl font-bold leading-tight text-[#102E55] sm:text-3xl lg:text-4xl dark:text-white">
+          Connecting learning with
+          <span class="text-yellow-400">opportunities</span>
+        </h2>
+        <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+        <p class="mt-6 text-base leading-7 text-slate-600 sm:text-lg dark:text-[#CBD5E1]">
+          Online Learnify Academy works with teams and organizations to create practical learning experiences and professional opportunities for aspiring designers.
+        </p>
+      </div>
+
+      <!-- Collaborations -->
+      <div class="mt-14 space-y-8">
+        <!-- Artiflex Collaboration -->
+        <article
+          class="group relative overflow-hidden rounded-3xl bg-white p-6 shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:p-8 lg:p-10 dark:shadow-black/40">
+          <!-- Decorative Shape -->
+          <div class="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#9cc8f5]/20 transition-transform duration-700 group-hover:scale-125">
+          </div>
+          <div class="relative z-10">
+            <!-- Logos -->
+            <div class="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
+              <!-- Learnify Logo -->
+              <div
+                class="flex h-32 w-44 items-center justify-center rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-100 transition-all duration-500 group-hover:-translate-x-1 ">
+                <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy logo"
+                  class="max-h-24 max-w-37.5 object-contain">
+              </div>
+
+              <!-- Collaboration Icon -->
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-[#071B3A] shadow-lg transition-transform duration-500 group-hover:scale-110">
+                <i class="fa-solid fa-handshake text-lg"></i>
+              </div>
+              <!-- Artiflex Logo -->
+              <div
+                class="flex h-32 w-44 items-center justify-center rounded-2xl bg-white p-4 shadow-md ring-1 ring-slate-100 transition-all duration-500 group-hover:translate-x-1">
+                <img src="assests\courses and logo\artiflex.jpeg" alt="Artiflex Designs logo"
+                  class="max-h-28 max-w-42.5 object-contain transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="mx-auto mt-9 max-w-3xl text-center">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#2684E8]">
+                Collaboration 01
+              </p>
+              <h3 class="mt-3 text-2xl font-bold text-[#102E55] sm:text-3xl ">
+                Artiflex Designs, Bahawalpur
+              </h3>
+              <h4 class="mt-3 text-base font-semibold text-[#2684E8] sm:text-lg ">
+                Graphic Designing Workshop
+              </h4>
+              <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base ">
+                A two-day practical workshop focused on graphic design,
+                Canva, Adobe Photoshop, and creative skill development.
+              </p>
+              <!-- Focus -->
+              <div class="mt-6 flex flex-wrap justify-center gap-2">
+                <span class="rounded-full bg-[#EEF5FC] px-4 py-2 text-xs font-semibold text-[#102E55]">
+                  Canva
+                </span>
+                <span class="rounded-full bg-[#EEF5FC] px-4 py-2 text-xs font-semibold text-[#102E55]">
+                  Adobe Photoshop
+                </span>
+                <span class="rounded-full bg-[#EEF5FC] px-4 py-2 text-xs font-semibold text-[#102E55] ">
+                  Practical Learning
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- SCDS Collaboration -->
+        <article
+          class="group relative overflow-hidden rounded-3xl bg-[#102E55] p-6 shadow-2xl transition-all duration-500 hover:-translate-y-2 sm:p-8 lg:p-10 dark:bg-[#071B3A] dark:shadow-black/50">
+          <!-- Decorative Shape -->
+          <div
+            class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-[#2684E8]/20 transition-transform duration-700 group-hover:scale-125 dark:bg-[#245DAA]/20">
+          </div>
+          <div class="relative z-10">
+            <!-- Logos -->
+            <div class="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-8">
+              <!-- Learnify Logo -->
+              <div
+                class="flex h-32 w-44 items-center justify-center rounded-2xl bg-white p-5 transition-all duration-500 group-hover:-translate-x-1">
+                <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy logo"
+                  class="max-h-24 max-w-37.5 object-contain">
+              </div>
+              <!-- Collaboration Icon -->
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-[#071B3A] shadow-lg transition-transform duration-500 group-hover:scale-110">
+                <i class="fa-solid fa-handshake text-lg"></i>
+              </div>
+              <!-- SCDS Logo -->
+              <div
+                class="flex h-32 w-44 items-center justify-center rounded-2xl bg-white p-4 shadow-md ring-1 ring-slate-100 transition-all duration-500 group-hover:translate-x-1 dark:ring-white/10">
+                <img src="assests\courses and logo\SCDS.jpeg" alt="Skills & Career Development Society logo"
+                  class="max-h-28 max-w-42.5 object-contain transition-transform duration-500 group-hover:scale-105">
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="mx-auto mt-9 max-w-3xl text-center">
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#9cc8f5]">
+                Collaboration 02
+              </p>
+              <h3 class="mt-3 text-2xl font-bold text-white sm:text-3xl">
+                Skills & Career Development Society
+              </h3>
+              <p class="mt-1 text-sm font-medium text-blue-200 dark:text-[#9cc8f5]">
+                The Islamia University of Bahawalpur
+              </p>
+              <h4 class="mt-4 text-base font-semibold text-yellow-400 sm:text-lg">
+                Canva Design Masterclass
+              </h4>
+              <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-blue-100 sm:text-base dark:text-[#CBD5E1]">
+                A professional Canva masterclass focused on practical design skills, creative work, and career development for university students.
+              </p>
+
+              <!-- Focus -->
+              <div class="mt-6 flex flex-wrap justify-center gap-2">
+                <span class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
+                  Canva
+                </span>
+
+                <span class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
+                  Social Media Design
+                </span>
+
+                <span class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
+                  Branding
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </section>
+  <!-- Students' Projects -->
+  <section id="projects"
+    class="relative overflow-hidden bg-[#EEF5FC] py-10 text-[#071B3A] transition-colors duration-300 sm:py-10 dark:bg-slate-900 dark:text-white">
+    <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <!-- Section Heading -->
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-[#245DAA] dark:text-[#9cc8f5]">
+          Students' Projects
+        </p>
+        <h2 class="text-2xl font-bold leading-tight text-[#071B3A] sm:text-3xl lg:text-4xl dark:text-white">
+          Creative work by our <span class="text-[#245DAA] dark:text-[#9cc8f5]">students</span>
+        </h2>
+        <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base dark:text-[#CBD5E1]">
+          Explore selected projects created by our students during their learning journey.
+        </p>
+      </div>
+      <!-- Projects Grid -->
+      <div class="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+
+        <!-- Project 1 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 1.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Box Packaging Design
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 2.webp" alt="Logo Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Logo Design
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 3.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Packaging Design
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 4.webp" alt="Social Media Post"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 5.webp" alt="Poster Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              social media
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 6.webp" alt="Creative Post"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 7.webp" alt="Logo Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+        <!-- Project 8 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 8.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Branding
+            </span>
+          </div>
+        </article>
+
+      </div>
+      <!-- View All Projects -->
+      <div class="mt-12 text-center">
+        <a href="project.html"
+          class="inline-flex items-center gap-2 rounded-full bg-[#071B3A] px-7 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#245DAA] hover:shadow-xl dark:bg-yellow-400 dark:text-[#071B3A] dark:hover:bg-yellow-300">
+          View All Projects
+          <i class="fa-solid fa-arrow-right text-xs transition-transform duration-300"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Success Stories -->
+  <section id="success" class="relative overflow-hidden bg-[#102E55] py-10 sm:py-10">
+
+    <!-- Decorative elements -->
+    <div class="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#245DAA]/30 blur-3xl"></div>
+    <div class="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-yellow-400/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute right-20 top-20 h-20 w-20 rounded-full border border-yellow-400/20"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+      <!-- Heading -->
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="mb-4 text-sm font-semibold text-yellow-400">Success Stories</p>
+        <h2 class="text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">
+          From student briefs to <span class="text-yellow-400">paid work</span>
+        </h2>
+      </div>
+
+      <!-- Carousel -->
+      <div class="relative mt-12">
+        <!-- Previous Button -->
+        <button id="successCarouselPrev"
+          class="absolute left-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#071B3A] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:border-yellow-400 hover:text-yellow-400">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <!-- Viewport -->
+        <div id="successCarousel" class="overflow-hidden px-10 sm:px-12">
+          <!-- Track -->
+          <div id="successCarouselTrack" class="flex items-stretch transition-transform duration-700 ease-out">
+            <!-- Story 1 -->
+            <article class="success-story shrink-0 w-full px-3 md:w-1/3">
+              <div
+                class="success-story-card h-full rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm transition-all duration-700">
+                <div class="mb-5 flex items-center justify-between">
+                  <span class="text-4xl text-yellow-400">“</span>
+                  <span class="h-px w-12 bg-yellow-400/40"></span>
+                </div>
+
+                <p class="text-sm font-medium leading-7 text-slate-200 sm:text-base">
+                  My journey at Online Learnify Academy helped me turn my creativity into practical graphic design skills. Through hands-on projects, 
+                  I learned branding, logo design, social media, packaging, and professional layouts while building my confidence and portfolio.
+                </p>
+                <div class="mt-7 border-t border-white/10 pt-5">
+                  <h3 class="text-sm font-bold text-yellow-400">Maryum Gillani</h3>
+                  <p class="mt-1 text-xs text-slate-400">Graphic Design Student</p>
+                </div>
+              </div>
+            </article>
+            <!-- Story 2 -->
+            <article class="success-story shrink-0 w-full px-3 md:w-1/3">
+              <div
+                class="success-story-card h-full rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm transition-all duration-700">
+                <div class="mb-5 flex items-center justify-between">
+                  <span class="text-4xl text-yellow-400">“</span>
+                  <span class="h-px w-12 bg-yellow-400/40"></span>
+                </div>
+                <p class="text-sm font-medium leading-7 text-slate-200 sm:text-base">
+                  Just one month after completing her course, Mahnoor secured an internship. Her dedication,
+                  consistency, and commitment to learning helped turn her hard work into a meaningful career
+                  opportunity.
+                </p>
+                <div class="mt-7 border-t border-white/10 pt-5">
+                  <h3 class="text-sm font-bold text-yellow-400">Mahnoor</h3>
+                  <p class="mt-1 text-xs text-slate-400">Student Achievement</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Story 3 -->
+            <article class="success-story shrink-0 w-full px-3 md:w-1/3">
+              <div
+                class="success-story-card h-full rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm transition-all duration-700">
+                <div class="mb-5 flex items-center justify-between">
+                  <span class="text-4xl text-yellow-400">“</span>
+                  <span class="h-px w-12 bg-yellow-400/40"></span>
+                </div>
+                <p class="text-sm font-medium leading-7 text-slate-200 sm:text-base">
+                  Just one month after completing her course, Adeeba Noor secured an internship and started her earning
+                  journey. Her dedication, consistency, and determination helped turn her learning into a meaningful career opportunity.
+                </p>
+
+                <div class="mt-7 border-t border-white/10 pt-5">
+                  <h3 class="text-sm font-bold text-yellow-400">Adeeba Noor</h3>
+                  <p class="mt-1 text-xs text-slate-400">Student Achievement</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Story 4 -->
+            <article class="success-story shrink-0 w-full px-3 md:w-1/3">
+              <div
+                class="success-story-card h-full rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm transition-all duration-700">
+                <div class="mb-5 flex items-center justify-between">
+                  <span class="text-4xl text-yellow-400">“</span>
+                  <span class="h-px w-12 bg-yellow-400/40"></span>
+                </div>
+                <p class="text-sm font-medium leading-7 text-slate-200 sm:text-base">
+                  During her course, Khazeema Ahmed was selected as an Ambassador at Times Consultant. Her confidence,
+                  communication skills, dedication, and professional approach helped her secure this opportunity.
+                </p>
+
+                <div class="mt-7 border-t border-white/10 pt-5">
+                  <h3 class="text-sm font-bold text-yellow-400">Khuzaima Ahmed</h3>
+                  <p class="mt-1 text-xs text-slate-400">Student Achievement</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Story 5 -->
+            <article class="success-story shrink-0 w-full px-3 md:w-1/3">
+              <div
+                class="success-story-card h-full rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm transition-all duration-700">
+                <div class="mb-5 flex items-center justify-between">
+                  <span class="text-4xl text-yellow-400">“</span>
+                  <span class="h-px w-12 bg-yellow-400/40"></span>
+                </div>
+                <p class="text-sm font-medium leading-7 text-slate-200 sm:text-base">
+                  Syeda Wajiha Fatima started earning after completing just four lectures of the course. Her first
+                  earning came through a small folding card design project — a small beginning that marked an important step in her journey.
+                </p>
+
+                <div class="mt-7 border-t border-white/10 pt-5">
+                  <h3 class="text-sm font-bold text-yellow-400">Syeda Wajiha Fatima</h3>
+                  <p class="mt-1 text-xs text-slate-400">Student Success Story</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Story 6 -->
+            <article class="success-story shrink-0 w-full px-3 md:w-1/3">
+              <div
+                class="success-story-card h-full rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm transition-all duration-700">
+                <div class="mb-5 flex items-center justify-between">
+                  <span class="text-4xl text-yellow-400">“</span>
+                  <span class="h-px w-12 bg-yellow-400/40"></span>
+                </div>
+
+                <p class="text-sm font-medium leading-7 text-slate-200 sm:text-base">
+                  During her course, Manal Rafique was appointed as a Graphic Designer at GRIN and has now been promoted
+                  to Head of the Graphic Department. Her skills, dedication, and leadership reflect her remarkable growth in graphic designing.
+                </p>
+
+                <div class="mt-7 border-t border-white/10 pt-5">
+                  <h3 class="text-sm font-bold text-yellow-400">Manal Rafique</h3>
+                  <p class="mt-1 text-xs text-slate-400">Student Achievement</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Next Button -->
+        <button id="successCarouselNext"
+          class="absolute right-0 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-[#071B3A] text-white shadow-lg transition-all duration-300 hover:scale-110 hover:border-yellow-400 hover:text-yellow-400">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshops & Events -->
+  <section id="events"
+    class="relative overflow-hidden bg-white py-10 text-[#071B3A] transition-colors duration-300 sm:py-10 lg:py-10 dark:bg-[#050B16] dark:text-white">
+    <!-- Decorative elements -->
+    <div
+      class="pointer-events-none absolute -right-20 top-20 h-56 w-56 rounded-full bg-[#245DAA]/5 dark:bg-[#245DAA]/10">
+    </div>
+    <div
+      class="pointer-events-none absolute bottom-10 left-10 h-20 w-20 rotate-12 rounded-xl bg-yellow-400/10 dark:bg-yellow-400/5">
+    </div>
+    <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+      <!-- Section heading -->
+      <div class="mx-auto max-w-2xl text-center">
+        <div class="mb-4 flex items-center justify-center gap-3">
+          <span class="h-1 w-10 rounded-full bg-yellow-400"></span>
+          <p class="text-sm font-semibold text-[#245DAA] dark:text-[#9cc8f5]">Workshops & Events</p>
+          <span class="h-1 w-10 rounded-full bg-yellow-400"></span>
+        </div>
+        <h2 class="text-2xl font-bold leading-tight text-[#102E55] sm:text-3xl lg:text-4xl dark:text-white">
+          Live sessions beyond the <span class="text-[#245DAA] dark:text-[#9cc8f5]">core courses</span>
+        </h2>
+        <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-slate-500 sm:text-base dark:text-[#CBD5E1]">
+          Join practical workshops, portfolio reviews and creative sessions designed to help students grow beyond the
+          classroom.
+        </p>
+      </div>
+      <!-- Events -->
+      <div class="mx-auto mt-12 max-w-5xl space-y-5">
+
+        <!-- Event 1 -->
+        <article
+          class="group relative flex flex-col gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#245DAA]/30 hover:bg-white hover:shadow-xl sm:flex-row sm:items-center sm:p-6 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:bg-[#163B68] dark:hover:shadow-black/50">
+          <div
+            class="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-xl bg-[#102E55] text-white shadow-md transition-all duration-300 group-hover:bg-[#245DAA] dark:bg-[#071B3A] dark:group-hover:bg-[#245DAA]">
+            <span class="text-2xl font-bold leading-none">18</span>
+            <span class="mt-1 text-[10px] font-semibold uppercase tracking-widest text-yellow-400">Oct</span>
+          </div>
+
+          <div class="flex-1">
+            <div class="mb-2 flex flex-wrap items-center gap-3">
+              <h3 class="text-lg font-bold text-[#102E55] sm:text-xl dark:text-white"
+                style="font-family: Georgia, 'Times New Roman', serif;">
+                Portfolio Review Night
+              </h3>
+              <span
+                class="rounded-full bg-blue-100 px-3 py-1 text-[10px] font-bold text-[#245DAA] dark:bg-[#071B3A] dark:text-[#9cc8f5]">
+                ONLINE
+              </span>
+            </div>
+
+            <p class="max-w-2xl text-sm leading-6 text-slate-500 dark:text-[#CBD5E1]">
+              Open critique session for current and past students to get direct feedback on portfolio pieces.
+            </p>
+          </div>
+
+          <a href="events.html" aria-label="View Portfolio Review Night"
+            class="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-[#245DAA] transition-all duration-300 hover:border-[#245DAA] sm:flex dark:border-white/10 dark:text-[#9cc8f5] dark:hover:border-[#245DAA] dark:hover:bg-[#071B3A]">
+            <span class="text-lg transition-transform duration-300 group-hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </a>
+        </article>
+
+        <!-- Event 2 -->
+        <article
+          class="group relative flex flex-col gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#245DAA]/30 hover:bg-white hover:shadow-xl sm:flex-row sm:items-center sm:p-6 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:bg-[#163B68] dark:hover:shadow-black/50">
+
+          <div
+            class="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-xl bg-[#102E55] text-white shadow-md transition-all duration-300 group-hover:bg-[#245DAA] dark:bg-[#071B3A] dark:group-hover:bg-[#245DAA]">
+            <span class="text-2xl font-bold leading-none">02</span>
+            <span class="mt-1 text-[10px] font-semibold uppercase tracking-widest text-yellow-400">Nov</span>
+          </div>
+
+          <div class="flex-1">
+            <div class="mb-2 flex flex-wrap items-center gap-3">
+              <h3 class="text-lg font-bold text-[#102E55] sm:text-xl dark:text-white"
+                style="font-family: Georgia, 'Times New Roman', serif;">
+                02 Day Canva Workshop
+              </h3>
+              <span
+                class="rounded-full bg-blue-100 px-3 py-1 text-[10px] font-bold text-[#245DAA] dark:bg-[#071B3A] dark:text-[#9cc8f5]">
+                ONLINE
+              </span>
+            </div>
+            <p class="max-w-2xl text-sm leading-6 text-slate-500 dark:text-[#CBD5E1]">
+              A free half-day workshop on building a consistent brand kit for a small business or personal brand.
+            </p>
+          </div>
+
+          <a href="events.html" aria-label="View Canva Workshop"
+            class="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-[#245DAA] transition-all duration-300 hover:border-[#245DAA] sm:flex dark:border-white/10 dark:text-[#9cc8f5] dark:hover:border-[#245DAA] dark:hover:bg-[#071B3A]">
+            <span class="text-lg transition-transform duration-300 group-hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </a>
+
+        </article>
+
+        <!-- Event 3 -->
+        <article
+          class="group relative flex flex-col gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#245DAA]/30 hover:bg-white hover:shadow-xl sm:flex-row sm:items-center sm:p-6 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:bg-[#163B68] dark:hover:shadow-black/50">
+          <div
+            class="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-xl bg-[#102E55] text-white shadow-md transition-all duration-300 group-hover:bg-[#245DAA] dark:bg-[#071B3A] dark:group-hover:bg-[#245DAA]">
+            <span class="text-2xl font-bold leading-none">21</span>
+            <span class="mt-1 text-[10px] font-semibold uppercase tracking-widest text-yellow-400">Nov</span>
+          </div>
+
+          <div class="flex-1">
+            <div class="mb-2 flex flex-wrap items-center gap-3">
+              <h3 class="text-lg font-bold text-[#102E55] sm:text-xl dark:text-white"
+                style="font-family: Georgia, 'Times New Roman', serif;">
+                Illustrator Workshop
+              </h3>
+              <span
+                class="rounded-full bg-blue-100 px-3 py-1 text-[10px] font-bold text-[#245DAA] dark:bg-[#071B3A] dark:text-[#9cc8f5]">
+                ONLINE
+              </span>
+            </div>
+
+            <p class="max-w-2xl text-sm leading-6 text-slate-500 dark:text-[#CBD5E1]">
+              A timed, brief-driven workshop where students design a full logo concept in one sitting.
+            </p>
+          </div>
+
+          <a href="events.html" aria-label="View Illustrator Workshop"
+            class="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-[#245DAA] transition-all duration-300 hover:border-[#245DAA] sm:flex dark:border-white/10 dark:text-[#9cc8f5] dark:hover:border-[#245DAA] dark:hover:bg-[#071B3A]">
+            <span class="text-lg transition-transform duration-300 group-hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </a>
+
+        </article>
+
+        <!-- Event 4 -->
+        <article
+          class="group relative flex flex-col gap-5 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-[#245DAA]/30 hover:bg-white hover:shadow-xl sm:flex-row sm:items-center sm:p-6 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:bg-[#163B68] dark:hover:shadow-black/50">
+
+          <div
+            class="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-xl bg-[#102E55] text-white shadow-md transition-all duration-300 group-hover:bg-[#245DAA] dark:bg-[#071B3A] dark:group-hover:bg-[#245DAA]">
+            <span class="text-2xl font-bold leading-none">18</span>
+            <span class="mt-1 text-[10px] font-semibold uppercase tracking-widest text-yellow-400">Oct</span>
+          </div>
+
+          <div class="flex-1">
+            <div class="mb-2 flex flex-wrap items-center gap-3">
+              <h3 class="text-lg font-bold text-[#102E55] sm:text-xl dark:text-white"
+                style="font-family: Georgia, 'Times New Roman', serif;">
+                Poster Design Competition
+              </h3>
+              <span
+                class="rounded-full bg-blue-100 px-3 py-1 text-[10px] font-bold text-[#245DAA] dark:bg-[#071B3A] dark:text-[#9cc8f5]">
+                ONLINE
+              </span>
+            </div>
+
+            <p class="max-w-2xl text-sm leading-6 text-slate-500 dark:text-[#CBD5E1]">
+              Open competition where students showcase their creativity through original poster designs.
+            </p>
+          </div>
+          <a href="events.html" aria-label="View Poster Design Competition"
+            class="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-[#245DAA] transition-all duration-300 hover:border-[#245DAA] sm:flex dark:border-white/10 dark:text-[#9cc8f5] dark:hover:border-[#245DAA] dark:hover:bg-[#071B3A]">
+            <span class="text-lg transition-transform duration-300 group-hover:translate-x-1">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery -->
+  <section id="gallery" class="bg-[#102E55] py-10 sm:py-8 lg:py-10 overflow-hidden">
+    <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <div class="mb-4 flex items-center justify-center gap-3">
+          <span class="h-1 w-10 rounded-full bg-yellow-400"></span>
+          <p class="text-sm font-semibold text-white">Gallery</p>
+          <span class="h-1 w-10 rounded-full bg-yellow-400"></span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Moments from Online Learnify</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-sm sm:text-base leading-7 text-yellow-400 text-shadow-yellow-400">
+          A glimpse into our workshops, student activities, creative sessions and academy events.
+        </p>
+      </div>
+      <!-- Gallery Carousel -->
+      <div class="relative mx-auto max-w-6xl">
+        <div id="galleryCarousel" class="relative h-82.5 sm:h-80 md:h-100 lg:h-100">
+          <!-- Slide 1 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 01.jpeg" alt="Online Learnify workshop"
+              class="h-full w-full object-cover">
+
+          </div>
+          <!-- Slide 2 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 02.jpeg" alt="Online Learnify students"
+              class="h-full w-full object-cover">
+
+          </div>
+          <!-- Slide 3 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 03.jpeg" alt="Online Learnify live class"
+              class="h-full w-full object-cover">
+          </div>
+          <!-- Slide 4 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 04.jpeg" alt="Online Learnify student projects"
+              class="h-full w-full object-cover">
+          </div>
+          <!-- Slide 5 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 05.jpeg" alt="Online Learnify design class"
+              class="h-full w-full object-cover">
+          </div>
+          <!-- Slide 6 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 06.jpeg" alt="Online Learnify academy event"
+              class="h-full w-full object-cover">
+          </div>
+          <!-- Slide 7 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 07.jpeg" alt="Online Learnify academy event"
+              class="h-full w-full object-cover">
+          </div>
+          <!-- Slide 8 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 08.jpeg" alt="Online Learnify academy event"
+              class="h-full w-full object-cover">
+          </div>
+          <!-- Slide 9 -->
+          <div
+            class="gallery-slide absolute left-1/2 top-1/2 w-62.5 sm:w-[320px] md:w-95 lg:w-107.5 h-45 sm:h-57.5 md:h-67.5 lg:h-75 rounded-xl overflow-hidden shadow-2xl transition-all duration-700 ease-in-out">
+            <img src="assests\gallery images\group photo 09.jpeg" alt="Online Learnify academy event"
+              class="h-full w-full object-cover">
+          </div>
+        </div>
+        <!-- Previous Button -->
+        <button id="galleryPrev"
+          class="absolute left-0 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#102E55] shadow-lg transition-all duration-300 hover:-translate-y-1/2 hover:bg-yellow-400 hover:shadow-xl">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <!-- Next Button -->
+        <button id="galleryNext"
+          class="absolute right-0 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#102E55] shadow-lg transition-all duration-300 hover:-translate-y-1/2 hover:bg-yellow-400 hover:shadow-xl">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="bg-white pt-5 transition-colors duration-300 dark:bg-[#050B16]">
+    <footer class="bg-[#071B3A] text-white dark:bg-[#071B3A]">
+      <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Academy -->
+          <div>
+            <a href="#home" class="flex items-center gap-3">
+              <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo" class="h-11 w-11 object-contain">
+
+              <div class="leading-tight">
+                <span class="block text-base font-semibold">Online Learnify</span>
+                <span class="block text-xs text-blue-200">Academy</span>
+              </div>
+            </a>
+            <p class="mt-5 max-w-xs text-sm leading-7 text-blue-100 dark:text-[#CBD5E1]">
+              Practical design training built around real projects, live feedback and portfolio-ready skills.
+            </p>
+            <!-- Social Icons -->
+            <div class="mt-6 flex gap-3">
+
+              <a href="https://www.instagram.com/____online_learnify?stkn=MThmZDN2dTJuNjlyZQ==" aria-label="Instagram"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/online-learnify-3a59b3424?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                aria-label="LinkedIn"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-base font-semibold">Quick Links</h3>
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+            <ul class="mt-5 space-y-3 text-sm">
+              <li>
+                <a href="about.html"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">About Academy
+                </a>
+              </li>
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Courses
+                </a>
+              </li>
+
+              <li>
+                <a href="#students"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Our Students
+                </a>
+              </li>
+
+              <li>
+                <a href="project.html"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Projects
+                </a>
+              </li>
+
+              <li>
+                <a href="#success"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Success Stories
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Courses -->
+          <div>
+
+            <h3 class="text-base font-semibold">Our Courses</h3>
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+            <ul class="mt-5 space-y-3 text-sm">
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Graphic Designing with AI
+                </a>
+              </li>
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Web Development
+                </a>
+              </li>
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Prompt Engineering
+                </a>
+              </li>
+
+              <li>
+                <a href="events.html"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Workshops & Events
+                </a>
+              </li>
+
+              <li>
+                <a href="#gallery"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Gallery
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div id="contact">
+
+            <h3 class="text-base font-semibold">Get In Touch</h3>
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+            <div class="mt-5 space-y-4 text-sm">
+
+              <!-- Email -->
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-envelope mt-1 text-yellow-400"></i>
+
+                <a href="mailto:info@onlinelearnify.com"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">
+                  onlinelarnify03@gmail.com
+                </a>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-phone mt-1 text-yellow-400"></i>
+                <a href="tel:03110619854"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">
+                   0311 0619854
+                </a>
+              </div>
+
+              <!-- Location -->
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-location-dot mt-1 text-yellow-400"></i>
+                <p class="leading-6 text-blue-100 dark:text-[#CBD5E1]">
+                  Online Learnify Academy Bahawalpur
+                </p>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <a href="contact.html"
+              class="mt-7 inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300">
+              Join Academy
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10 dark:border-white/10">
+
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-5 text-center md:flex-row md:text-left lg:px-8">
+          <p class="text-xs text-blue-200 sm:text-sm dark:text-[#94A3B8]"><i class="fa-regular fa-copyright"></i>
+            2026 Online Learnify Academy. All rights reserved.
+          </p>
+          <div class="flex gap-5 text-xs text-blue-200 sm:text-sm dark:text-[#94A3B8]">
+            <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+              Privacy Policy
+            </a>
+            <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop"
+    class="fixed bottom-6 right-6 z-50 hidden h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" type="button" aria-label="Toggle dark mode"
+    class="fixed bottom-6 left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i id="themeIcon" class="fa-solid fa-moon"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

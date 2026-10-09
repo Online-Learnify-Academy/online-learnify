@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" href="assests\courses and logo\logo.png" />
+  <!-- Google Font - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="./output.css" rel="stylesheet" />
+  <title>
+    Student's Project - Graphic Design & Digital Skill Training
+  </title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="header" class="sticky top-0 z-50 bg-[#071B3A] text-white">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <!-- NAVBAR MAIN ROW -->
+      <div class="flex items-center justify-between h-20">
+
+        <!-- LOGO -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+            class="w-11 h-11 object-contain">
+          <div class="leading-tight">
+            <span class="block text-base sm:text-lg font-semibold tracking-tight">
+              Online Learnify
+            </span>
+            <span class="block text-[11px] sm:text-xs text-blue-200">
+              Academy
+            </span>
+          </div>
+        </a>
+        <!-- DESKTOP NAVIGATION -->
+        <div class="hidden lg:flex items-center gap-7">
+          <!-- ABOUT DROPDOWN -->
+          <div class="relative group">
+            <button type="button"
+              class="flex items-center gap-1.5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:text-yellow-400">
+              About
+              <i
+                class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+            </button>
+            <!-- Dropdown -->
+            <div
+              class="invisible absolute left-0 top-full z-50 mt-2 w-52 translate-y-2 rounded-xl bg-white p-2 opacity-0 shadow-xl ring-1 ring-black/5 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#102E55] dark:ring-white/10">
+
+              <a href="about.html"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Journey
+              </a>
+
+              <a href="index.html#founder"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+
+                Founder
+              </a>
+
+              <a href="index.html#co-founder"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+
+                Co-Founder
+              </a>
+
+              <div class="my-1 border-t border-gray-100 dark:border-white/10"></div>
+
+              <a href="inspiration.html"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-yellow-50 hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Founder's Message
+              </a>
+            </div>
+          </div>
+
+          <a href="index.html#courses"
+            class="nav-link text-sm text-blue-100 hover:text-yellow-400 transition-colors duration-200">
+            Courses
+          </a>
+
+          <a href="index.html#students"
+            class="nav-link text-sm text-blue-100 hover:text-yellow-400 transition-colors duration-200">
+            Students
+          </a>
+
+          <a href="project.html"
+            class="nav-link text-sm text-blue-100 hover:text-yellow-400 transition-colors duration-200">
+            Projects
+          </a>
+
+          <a href="index.html#success"
+            class="nav-link text-sm text-blue-100 hover:text-yellow-400 transition-colors duration-200">
+            Stories
+          </a>
+
+          <a href="events.html"
+            class="nav-link text-sm text-blue-100 hover:text-yellow-400 transition-colors duration-200">
+            Workshops & Events
+          </a>
+
+          <a href="index.html#gallery"
+            class="nav-link text-sm text-blue-100 hover:text-yellow-400 transition-colors duration-200">
+            Gallery
+          </a>
+
+        </div>
+
+        <!-- DESKTOP CTA -->
+        <a href="contact.html"
+          class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-yellow-400 text-[#071B3A] text-sm font-semibold hover:bg-yellow-300 transition-colors duration-200">
+          Join Academy
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="menuBtn" type="button"
+          class="lg:hidden flex items-center justify-center w-10 h-10 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors"
+          aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- MOBILE NAVIGATION -->
+      <div id="navMenu" class="hidden lg:hidden border-t border-white/10">
+
+        <div class="py-4 flex flex-col gap-1">
+
+          <!-- Mobile About Dropdown -->
+          <div>
+
+            <button id="mobileAboutBtn" type="button"
+              class="flex w-full items-center justify-between py-3 text-blue-100 transition hover:text-yellow-400">
+              <span>About</span>
+
+              <i id="mobileAboutIcon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+
+            <div id="mobileAboutMenu" class="hidden pl-4">
+
+              <a href="about.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Journey
+              </a>
+
+              <a href="index.html#founder" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Founder
+              </a>
+
+              <a href="index.html#co-founder"
+                class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Co-Founder
+              </a>
+
+              <a href="inspiration.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Founder's Message
+              </a>
+
+            </div>
+          </div>
+
+          <a href="index.html#courses"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Courses
+          </a>
+
+          <a href="index.html#students"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Students
+          </a>
+
+          <a href="project.html"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Projects
+          </a>
+
+          <a href="index.html#success"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Stories
+          </a>
+
+          <a href="events.html"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Workshops & Events
+          </a>
+
+          <a href="index.html#gallery"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Gallery
+          </a>
+
+          <!-- Mobile CTA -->
+          <a href="contact.html"
+            class="mobile-nav-link mt-3 mx-4 px-5 py-3 text-center rounded-md bg-yellow-400 text-[#071B3A] text-sm font-semibold hover:bg-yellow-300 transition-all duration-200">
+            Join Academy
+          </a>
+
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- PROJECTS HERO -->
+
+    <section class="relative overflow-hidden bg-[#EEF5FC] py-20 sm:py-24 dark:bg-[#050B16]">
+
+      <!-- Decorative Shapes -->
+      <div
+        class="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#9cc8f5]/30 blur-3xl dark:bg-[#245DAA]/10">
+      </div>
+
+      <div
+        class="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#245DAA]/10 blur-3xl dark:bg-[#245DAA]/20">
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-5 text-center sm:px-6 lg:px-8">
+
+        <p class="mb-4 text-sm font-semibold uppercase tracking-wider text-[#245DAA] dark:text-[#9cc8f5]">
+          Student Projects
+        </p>
+
+        <h1 class="text-4xl font-bold leading-tight text-[#071B3A] sm:text-5xl lg:text-6xl dark:text-white"
+          style="font-family: Georgia, 'Times New Roman', serif;">
+          Creativity in
+          <span class="text-[#245DAA] dark:text-[#9cc8f5]">
+            every project
+          </span>
+        </h1>
+
+        <p class="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base dark:text-[#CBD5E1]">
+          Explore creative projects developed by our students throughout their learning journey,
+          from branding and logo design to social media graphics, posters, packaging, and more.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- PROJECTS GALLERY -->
+
+    <section class="bg-[#EEF5FC] pb-20 sm:pb-24 dark:bg-[#050B16]">
+
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <!-- FILTER -->
+
+        <div class="mb-10 flex flex-wrap justify-center gap-2 sm:gap-3">
+
+          <!-- ALL -->
+          <button
+            class="project-filter rounded-full bg-[#071B3A] px-5 py-2.5 text-xs font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#245DAA] sm:text-sm dark:bg-[#245DAA] dark:hover:bg-[#102E55]"
+            data-filter="all">
+            All Projects
+          </button>
+
+          <!-- BRANDING -->
+          <button
+            class="project-filter rounded-full border border-[#9cc8f5] bg-white px-5 py-2.5 text-xs font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#245DAA] hover:bg-[#245DAA] hover:text-white sm:text-sm dark:border-[#245DAA] dark:bg-[#102E55] dark:text-white dark:hover:bg-[#245DAA]"
+            data-filter="branding">
+            Branding
+          </button>
+
+          <!-- LOGO -->
+          <button
+            class="project-filter rounded-full border border-[#9cc8f5] bg-white px-5 py-2.5 text-xs font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#245DAA] hover:bg-[#245DAA] hover:text-white sm:text-sm dark:border-[#245DAA] dark:bg-[#102E55] dark:text-white dark:hover:bg-[#245DAA]"
+            data-filter="logo">
+            Logo Design
+          </button>
+
+          <!-- SOCIAL -->
+          <button
+            class="project-filter rounded-full border border-[#9cc8f5] bg-white px-5 py-2.5 text-xs font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#245DAA] hover:bg-[#245DAA] hover:text-white sm:text-sm dark:border-[#245DAA] dark:bg-[#102E55] dark:text-white dark:hover:bg-[#245DAA]"
+            data-filter="social">
+            Social Media
+          </button>
+
+          <!-- POSTER -->
+          <button
+            class="project-filter rounded-full border border-[#9cc8f5] bg-white px-5 py-2.5 text-xs font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#245DAA] hover:bg-[#245DAA] hover:text-white sm:text-sm dark:border-[#245DAA] dark:bg-[#102E55] dark:text-white dark:hover:bg-[#245DAA]"
+            data-filter="poster">
+            Poster
+          </button>
+
+          <!-- PACKAGING -->
+          <button
+            class="project-filter rounded-full border border-[#9cc8f5] bg-white px-5 py-2.5 text-xs font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#245DAA] hover:bg-[#245DAA] hover:text-white sm:text-sm dark:border-[#245DAA] dark:bg-[#102E55] dark:text-white dark:hover:bg-[#245DAA]"
+            data-filter="packaging">
+            Packaging
+          </button>
+
+        </div>
+
+
+        <!-- PROJECTS GRID -->
+        <div id="projectsGrid" class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+
+           <!-- Project 1 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 9.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+           <!-- Project 2 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 10.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+           <!-- Project 3 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 11.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 4 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 12.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Branding
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 5 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 13.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Box Packaging
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 6 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 14.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Brand Logo
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 7 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 15.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 8 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 16.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Branding
+            </span>
+          </div>
+        </article>
+
+          <!-- PROJECT 9 -->
+          <article class="project-item group" data-category="branding">
+            <div
+              class="relative flex min-h-55 items-center justify-center overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white p-2 shadow-md transition-all duration-500 group-hover:-translate-y-2 group-hover:border-yellow-400 group-hover:shadow-xl dark:border-[#245DAA]/40 dark:bg-[#102E55]">
+              <img src="assests\Projects\project 17.webp" alt="Brand Identity Design"
+                class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+              <span
+                class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+                Social Media Post
+              </span>
+            </div>
+          </article>
+
+            <!-- Project 10 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 18.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Branding
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 11 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 19.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 12 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 20.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Packaging
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 13 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 21.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 14 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 22.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Branding
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 15 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 23.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 16 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 24.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 17 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 25.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 18 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 26.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Packaging
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 19 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 27.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 20 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 28.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Logo
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 21 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 29.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Branding
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 22 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 30.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 23 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 31.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 24 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 32.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 25 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 33.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 26 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 34.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Logo
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 27 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 35.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Box Packaging
+            </span>
+          </div>
+        </article>
+        
+          <!-- Project 28 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 36.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Box Packaging
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 29 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 37.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Packaging
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 30 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 38.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Box Packaging
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 31 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 39.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 32 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 40.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 33 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 42.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 34 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 43.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 35 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 44.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Social Media Post
+            </span>
+          </div>
+        </article>
+
+          <!-- Project 36 -->
+        <article
+          class="group relative overflow-hidden rounded-2xl border border-[#9cc8f5]/60 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-yellow-400 hover:shadow-xl dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/30 dark:hover:border-[#245DAA] dark:hover:shadow-black/50">
+          <div
+            class="relative flex h-80 items-center justify-center overflow-hidden bg-[#EEF5FC] p-4 dark:bg-[#071B3A]">
+            <img src="assests\Projects\project 45.webp" alt="Packaging Design"
+              class="max-h-full max-w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105">
+            <span
+              class="absolute left-3 top-3 rounded-full bg-[#071B3A] px-3 py-1 text-[10px] font-semibold text-white shadow-md sm:text-xs">
+              Creative Post
+            </span>
+          </div>
+        </article>
+
+        </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <div class="bg-white pt-5 dark:bg-[#050B16]">
+
+    <footer class="bg-[#071B3A] text-white">
+
+      <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- Academy -->
+
+          <div>
+
+            <a href="index.html" class="flex items-center gap-3">
+
+              <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo" class="h-11 w-11 object-contain">
+
+              <div class="leading-tight">
+
+                <span class="block text-base font-semibold">
+                  Online Learnify
+                </span>
+
+                <span class="block text-xs text-blue-200">
+                  Academy
+                </span>
+
+              </div>
+
+            </a>
+
+            <p class="mt-5 max-w-xs text-sm leading-7 text-blue-100">
+              Practical design training built around real projects, live feedback and portfolio-ready skills.
+            </p>
+
+
+            <!-- Social Icons -->
+
+            <div class="mt-6 flex gap-3">
+
+              <a href="https://www.instagram.com/____online_learnify?stkn=MThmZDN2dTJuNjlyZQ==" aria-label="Instagram"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/online-learnify-3a59b3424?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                aria-label="LinkedIn"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- QUICK LINKS -->
+
+          <div>
+
+            <h3 class="text-base font-semibold">
+              Quick Links
+            </h3>
+
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+            <ul class="mt-5 space-y-3 text-sm">
+
+              <li>
+                <a href="about.html" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Journey
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#courses" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Courses
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#students"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Our Students
+                </a>
+              </li>
+
+              <li>
+                <a href="project.html" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Projects
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#success" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Success Stories
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- COURSES -->
+
+          <div>
+
+            <h3 class="text-base font-semibold">
+              Our Courses
+            </h3>
+
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+            <ul class="mt-5 space-y-3 text-sm">
+
+              <li>
+                <a href="index.html#courses" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Graphic Designing with AI
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#courses" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Web Development
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#courses" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Prompt Engineering
+                </a>
+              </li>
+
+              <li>
+                <a href="events.html" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Workshops & Events
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#gallery" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  Gallery
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- CONTACT -->
+
+          <div id="contact">
+
+            <h3 class="text-base font-semibold">
+              Get In Touch
+            </h3>
+
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+            <div class="mt-5 space-y-4 text-sm">
+
+              <!-- Email -->
+
+              <div class="flex items-start gap-3">
+
+                <i class="fa-solid fa-envelope mt-1 text-yellow-400"></i>
+
+                <a href="mailto:info@onlinelearnify.com"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  onlinelarnify03@gmail.com
+                </a>
+
+              </div>
+
+
+              <!-- Phone -->
+
+              <div class="flex items-start gap-3">
+
+                <i class="fa-solid fa-phone mt-1 text-yellow-400"></i>
+
+                <a href="tel:0311 0619854" class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                  0311 0619854
+                </a>
+
+              </div>
+
+
+              <!-- Location -->
+
+              <div class="flex items-start gap-3">
+
+                <i class="fa-solid fa-location-dot mt-1 text-yellow-400"></i>
+
+                <p class="leading-6 text-blue-100">
+                  Online Learnify Academy Bahawalpur
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- CTA -->
+
+            <a href="contact.html"
+              class="mt-7 inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300">
+              Join Academy
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- BOTTOM FOOTER -->
+
+      <div class="border-t border-white/10">
+
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-5 text-center md:flex-row md:text-left lg:px-8">
+
+          <p class="text-xs text-blue-200 sm:text-sm">
+            <i class="fa-regular fa-copyright"></i>
+            2026 Online Learnify Academy. All rights reserved.
+          </p>
+
+          <div class="flex gap-5 text-xs text-blue-200 sm:text-sm">
+
+            <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+              Privacy Policy
+            </a>
+
+            <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+              Terms & Conditions
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop"
+    class="fixed bottom-6 right-6 z-50 hidden h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" type="button" aria-label="Toggle dark mode"
+    class="fixed bottom-6 left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i id="themeIcon" class="fa-solid fa-moon"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

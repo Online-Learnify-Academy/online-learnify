@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="assests\courses and logo\logo.png" />
+    <!-- Google Font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Journey - Graphic Design & Digital Skill Training</title>
+</head>
+
+<body>
+ <!-- HEADER -->
+
+<header id="header" class="sticky top-0 z-50 bg-[#071B3A] text-white transition-colors duration-300 dark:bg-[#050B16]">
+    <nav class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8" aria-label="Main navigation">
+
+        <!-- NAVBAR MAIN ROW -->
+        <div class="flex h-20 items-center justify-between">
+
+            <!-- LOGO -->
+            <a href="index.html" class="flex shrink-0 items-center gap-3">
+                <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo" class="h-11 w-11 object-contain">
+
+                <div class="leading-tight">
+                    <span class="block text-base font-semibold tracking-tight sm:text-lg">Online Learnify</span>
+                    <span class="block text-[11px] text-blue-200 sm:text-xs">Academy</span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAVIGATION -->
+            <div class="hidden items-center gap-7 lg:flex">
+
+                <!-- ABOUT DROPDOWN -->
+                <div class="group relative">
+
+                    <button type="button"
+                        class="flex items-center gap-1.5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:text-yellow-400">
+                        About
+                        <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+
+                    <!-- DROPDOWN -->
+                    <div
+                        class="invisible absolute left-0 top-full z-50 mt-2 w-52 translate-y-2 rounded-xl bg-white p-2 opacity-0 shadow-xl ring-1 ring-black/5 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#102E55] dark:ring-white/10">
+
+                        <a href="about.html"
+                            class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                            Journey
+                        </a>
+
+                        <a href="index.html#founder"
+                            class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                            Founder
+                        </a>
+
+                        <a href="index.html#co-founder"
+                            class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                            Co-Founder
+                        </a>
+
+                        <div class="my-1 border-t border-gray-100 dark:border-white/10"></div>
+
+                        <a href="inspiration.html"
+                            class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-yellow-50 hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                            Founder's Message
+                        </a>
+
+                    </div>
+                </div>
+
+                <a href="index.html#courses"
+                    class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                    Courses
+                </a>
+
+                <a href="index.html#students"
+                    class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                    Students
+                </a>
+
+                <a href="project.html"
+                    class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                    Projects
+                </a>
+
+                <a href="index.html#success"
+                    class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                    Stories
+                </a>
+
+                <a href="events.html"
+                    class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                    Workshops & Events
+                </a>
+
+                <a href="index.html#gallery"
+                    class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                    Gallery
+                </a>
+
+            </div>
+
+            <!-- DESKTOP CTA -->
+            <a href="contact.html"
+                class="hidden items-center justify-center rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-[#071B3A] transition-colors duration-200 hover:bg-yellow-300 lg:inline-flex">
+                Join Academy
+            </a>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button id="menuBtn" type="button"
+                class="flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400 lg:hidden"
+                aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+
+                <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+            </button>
+
+        </div>
+
+        <!-- MOBILE NAVIGATION -->
+        <div id="navMenu" class="hidden border-t border-white/10 lg:hidden">
+
+            <div class="flex flex-col gap-1 py-4">
+
+                <!-- Mobile About Dropdown -->
+        <div>
+            <button id="mobileAboutBtn" type="button" class="flex w-full items-center justify-between py-3 text-blue-100 transition hover:text-yellow-400">
+                <span>About</span>
+                <i id="mobileAboutIcon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+
+            <div id="mobileAboutMenu" class="hidden pl-4">
+
+                <a href="about.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                    <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                    Journey
+                </a>
+
+                <a href="index.html#founder" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                    <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                    Founder
+                </a>
+
+                <a href="index.html#co-founder" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                    <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                    Co-Founder
+                </a>
+
+                <a href="inspiration.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                    <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                   Founder's Message 
+                </a>
+
+            </div>
+        </div>
+
+                <a href="index.html#courses"
+                    class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                    Courses
+                </a>
+
+                <a href="index.html#students"
+                    class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                    Students
+                </a>
+
+                <a href="projects.html"
+                    class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                    Projects
+                </a>
+
+                <a href="index.html#success"
+                    class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                    Stories
+                </a>
+
+                <a href="events.html"
+                    class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                    Workshops & Events
+                </a>
+
+                <a href="index.html#gallery"
+                    class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                    Gallery
+                </a>
+
+                <!-- Mobile CTA -->
+                <a href="contact.html"
+                    class="mobile-nav-link mx-4 mt-3 rounded-md bg-yellow-400 px-5 py-3 text-center text-sm font-semibold text-[#071B3A] transition-all duration-200 hover:bg-yellow-300">
+                    Join Academy
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- ABOUT HERO / ONE YEAR STORY -->
+    <section class="bg-white text-[#071B3A] transition-colors duration-300 dark:bg-[#050B16] dark:text-white">
+
+        <!-- MAIN HEADING -->
+        <div class="bg-white px-5 py-2 text-center transition-colors duration-300 dark:bg-[#050B16] sm:px-8 sm:py-2">
+
+            <p class="mb-4 mt-1 text-sm font-normal uppercase tracking-[0.2em] text-[#3678AA] dark:text-[#9cc8f5]">
+                Our One-Year Journey
+            </p>
+
+            <h1 class="text-2xl font-bold leading-tight tracking-tight text-[#071B3A] dark:text-white sm:text-2xl lg:text-3xl">
+                One Year of
+                <span class="text-[#071B3A] dark:text-white">Learning, Growth</span>
+                <span class="text-[#F5B82E]"> & Impact</span>
+            </h1>
+
+        </div>
+
+        <!-- CONTENT + LOGO NAVY BLUE AREA -->
+        <div class="bg-[#102E55]">
+
+            <div class="mx-auto max-w-7xl px-5 py-5 sm:px-8 sm:py-5 lg:px-8 lg:py-5">
+                <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+                    <!-- LEFT CONTENT -->
+                    <div class="max-w-2xl">
+
+                        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[#9cc8f5]">
+                            Our Vision
+                        </p>
+
+                        <h2 class="text-2xl font-semibold leading-tight text-yellow-400 sm:text-2xl">
+                            From one idea to a growing community
+                        </h2>
+
+                        <p class="mt-6 text-base leading-8 text-[#CBD5E1] sm:text-lg">
+                            One year ago, <span class="font-semibold text-white">Online Learnify Academy</span> started
+                            with a simple vision — to empower students with practical digital skills and create
+                            opportunities for them to learn, grow, and build their careers. What started as an idea
+                            gradually became a growing learning community where students could
+                        </p>
+
+                        <!-- HIGHLIGHTS -->
+                        <div class="mt-8 grid max-w-sm grid-cols-1 gap-3 sm:grid-cols-2">
+
+                            <div
+                                class="flex items-center gap-3 rounded-full bg-white/10 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15">
+                                <i class="fa-solid fa-graduation-cap text-yellow-400"></i>
+                                <span class="text-sm font-semibold text-white">Learn, Practice</span>
+                            </div>
+
+                            <div
+                                class="flex items-center gap-3 rounded-full bg-white/10 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15">
+                                <i class="fa-solid fa-laptop-code text-yellow-400"></i>
+                                <span class="text-sm font-semibold text-white">Create</span>
+                            </div>
+
+                            <div
+                                class="flex items-center gap-3 rounded-full bg-white/10 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15">
+                                <i class="fa-solid fa-briefcase text-yellow-400"></i>
+                                <span class="text-sm font-semibold text-white">Work</span>
+                            </div>
+
+                            <div
+                                class="flex items-center gap-3 rounded-full bg-white/10 px-4 py-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15">
+                                <i class="fa-solid fa-users text-yellow-400"></i>
+                                <span class="text-sm font-semibold text-white">Grow</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT LOGO -->
+                    <div class="relative mx-auto flex min-h-90 w-full max-w-lg items-center justify-center lg:min-h-125">
+
+                        <div
+                            class="absolute left-4 top-4 h-20 w-20 rounded-full bg-[#071B3A] sm:left-8 sm:top-8 sm:h-24 sm:w-24">
+                        </div>
+
+                        <!-- MAIN LOGO CIRCLE -->
+                        <div
+                            class="group relative z-10 flex h-72 w-72 items-center justify-center overflow-hidden rounded-full bg-[#9cc8f5] shadow-blue-300 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_80px_rgba(0,0,0,0.55)] sm:h-97.5 sm:w-97.5 lg:h-107.5 lg:w-107.5">
+
+                            <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+                                class="relative z-10 h-full w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105">
+
+                        </div>
+
+                        <!-- YEAR BADGE -->
+                        <div
+                            class="absolute bottom-6 left-7 z-20 flex h-24 w-24 flex-col items-center justify-center rounded-full bg-yellow-400 text-center hover:shadow-yellow-100 sm:bottom-8 sm:right-4">
+
+                            <span class="text-2xl font-bold text-[#071B3A]">1</span>
+
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#102E55]">
+                                Year<br>Completed
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILDING A LEARNING COMMUNITY -->
+
+    <section class="bg-white py-8 transition-colors duration-300 dark:bg-[#071B3A] sm:py-8">
+
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+
+            <div class="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+
+                <!-- LEFT CONTENT -->
+                <div>
+
+                    <div class="mb-5 flex items-center gap-3">
+
+                        <span class="h-0.5 w-10 bg-yellow-400"></span>
+
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#3678AA] dark:text-[#9cc8f5]">
+                            Building a Learning Community
+                        </p>
+
+                    </div>
+
+                    <h2 class="text-3xl font-bold leading-tight text-[#102E55] dark:text-white sm:text-4xl">
+                        Learning that goes beyond the classroom
+                    </h2>
+
+                    <p class="mt-6 text-base leading-8 text-slate-600 dark:text-[#CBD5E1] sm:text-lg">
+                        During its first year, Online Learnify Academy focused on creating a learning environment
+                        where students could develop practical skills through courses, e-courses, workshops, training
+                        sessions, and hands-on projects.
+                    </p>
+
+                    <p class="mt-5 text-base leading-8 text-slate-600 dark:text-[#CBD5E1] sm:text-lg">
+                        Students explored creative tools and professional design practices while working on projects
+                        that helped them turn their knowledge into practical experience.
+                    </p>
+
+                </div>
+
+                <!-- RIGHT SKILLS -->
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+                    <!-- Canva -->
+                    <div
+                        class="group rounded-2xl border border-yellow-800 bg-yellow-100 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-800 hover:bg-yellow-400 hover:shadow-lg dark:border-white/10 dark:bg-[#102E55] dark:hover:bg-[#163B68]">
+
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#9cc8f5]/40 text-[#102E55] dark:text-white">
+                            <i class="fa-solid fa-pen-ruler text-xl"></i>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-bold text-[#102E55] dark:text-white">
+                            Canva
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-[#CBD5E1]">
+                            Practical social media designs, marketing materials, presentations, templates, and creative
+                            content.
+                        </p>
+
+                    </div>
+
+                    <!-- Photoshop -->
+                    <div
+                        class="group rounded-2xl border border-blue-950 bg-[#F7F9FC] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#102E55] hover:shadow-lg dark:border-white/10 dark:bg-[#102E55] dark:hover:bg-[#163B68]">
+
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#9cc8f5]/40 text-[#102E55] transition-colors duration-300 group-hover:bg-yellow-400 group-hover:text-[#102E55] dark:text-white">
+                            <i class="fa-solid fa-image text-xl"></i>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold text-[#102E55] transition-colors duration-300 group-hover:text-white dark:text-white">
+                            Adobe Photoshop
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm leading-6 text-slate-600 transition-colors duration-300 group-hover:text-white dark:text-[#CBD5E1]">
+                            Image editing, creative compositions, poster design, photo manipulation, and practical
+                            design workflows.
+                        </p>
+
+                    </div>
+
+                    <!-- Illustrator -->
+                    <div
+                        class="group rounded-2xl border border-blue-950 bg-[#F7F9FC] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#102E55] hover:shadow-lg dark:border-white/10 dark:bg-[#102E55] dark:hover:bg-[#163B68]">
+
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#9cc8f5]/40 text-[#102E55] transition-colors duration-300 group-hover:bg-yellow-400 group-hover:text-[#102E55] dark:text-white">
+                            <i class="fa-solid fa-image text-xl"></i>
+                        </div>
+
+                        <h3
+                            class="mt-5 text-lg font-bold text-[#102E55] transition-colors duration-300 group-hover:text-white dark:text-white">
+                            Adobe Illustrator
+                        </h3>
+
+                        <p
+                            class="mt-2 text-sm leading-6 text-slate-600 transition-colors duration-300 group-hover:text-white dark:text-[#CBD5E1]">
+                            Vector design, logo creation, branding, illustrations, and professional identity design.
+                        </p>
+
+                    </div>
+
+                    <!-- Portfolio -->
+                    <div
+                        class="group rounded-2xl border border-yellow-800 bg-yellow-100 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-800 hover:bg-yellow-400 hover:shadow-lg dark:border-white/10 dark:bg-[#102E55] dark:hover:bg-[#163B68]">
+
+                        <div
+                            class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#9cc8f5]/40 text-[#102E55] dark:text-white">
+                            <i class="fa-solid fa-folder-open text-xl"></i>
+                        </div>
+
+                        <h3 class="mt-5 text-lg font-bold text-[#102E55] dark:text-white">
+                            Portfolio Development
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-[#CBD5E1]">
+                            Students worked on practical projects and built portfolios that demonstrate their creative
+                            and digital skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOPS & E-COURSES -->
+
+    <section class="bg-gray-200 py-10 transition-colors duration-300 dark:bg-[#0A1628] sm:py-10">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+            <!-- SECTION HEADING -->
+            <div class="mx-auto max-w-3xl text-center">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-yellow-400">
+                    Learning Opportunities
+                </p>
+
+                <h2 class="mt-3 text-3xl font-bold text-[#102E55] dark:text-white sm:text-4xl">
+                    Workshops, Training & Online Learning
+                </h2>
+
+                <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+
+                <p class="mt-6 text-base leading-8 text-slate-600 dark:text-[#CBD5E1] sm:text-lg">
+                    Learning at Online Learnify Academy extends beyond regular courses through workshops, training
+                    sessions, and flexible online learning opportunities.
+                </p>
+
+            </div>
+
+            <!-- FEATURE BLOCKS -->
+            <div class="mt-14 grid gap-6 lg:grid-cols-2">
+
+                <!-- WORKSHOPS -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-[#102E55] p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sm:p-10">
+
+                    <div class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#245DAA]/20"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="flex items-center justify-between">
+
+                            <div
+                                class="flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-400 text-[#071B3A]">
+                                <i class="fa-solid fa-chalkboard-user text-xl"></i>
+                            </div>
+
+                            <span class="text-5xl font-bold text-white/10">01</span>
+
+                        </div>
+
+                        <h3 class="mt-8 text-2xl font-bold text-white sm:text-3xl">
+                            Workshops & Training Sessions
+                        </h3>
+
+                        <p class="mt-5 min-h-28 text-base leading-7 text-[#CBD5E1]">
+                            Throughout the year, the academy conducted free and paid workshops and training sessions
+                            designed to introduce students to practical digital skills and professional opportunities.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-3">
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-white">
+                                <i class="fa-solid fa-circle-check text-yellow-400"></i>Canva
+                            </div>
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-white">
+                                <i class="fa-solid fa-circle-check text-yellow-400"></i>Freelancing
+                            </div>
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-white">
+                                <i class="fa-solid fa-circle-check text-yellow-400"></i>Communication
+                            </div>
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-white">
+                                <i class="fa-solid fa-circle-check text-yellow-400"></i>Digital Skills
+                            </div>
+
+                        </div>
+
+                        <p class="mt-5 min-h-28 text-base leading-7 text-[#CBD5E1]">
+                            These workshops helped beginners understand graphic design and gave existing learners a
+                            chance to improve their professional skills.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- E-COURSES -->
+                <div
+                    class="group relative overflow-hidden rounded-3xl bg-white p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:bg-[#102E55] sm:p-10">
+
+                    <div class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#245DAA]/20"></div>
+
+                    <div class="relative z-10">
+
+                        <div class="flex items-center justify-between">
+
+                            <div
+                                class="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#9cc8f5] text-[#102E55]">
+                                <i class="fa-solid fa-laptop text-xl"></i>
+                            </div>
+
+                            <span class="text-5xl font-bold text-[#102E55] dark:text-white/10">
+                                02
+                            </span>
+
+                        </div>
+
+                        <h3 class="mt-8 text-2xl font-bold text-[#102E55] dark:text-white sm:text-3xl">
+                            E-Courses & Online Learning
+                        </h3>
+
+                        <p class="mt-5 min-h-28 text-sm leading-7 text-slate-600 dark:text-[#CBD5E1]">
+                            E-courses provided students with flexible learning opportunities, allowing them to learn
+                            at their own pace while completing assignments, practical projects, and activities based on
+                            professional practices.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-3">
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-[#102E55] dark:text-white">
+                                <i class="fa-solid fa-circle-check text-[#245DAA] dark:text-[#9cc8f5]"></i>
+                                Flexible Learning
+                            </div>
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-[#102E55] dark:text-white">
+                                <i class="fa-solid fa-circle-check text-[#245DAA] dark:text-[#9cc8f5]"></i>
+                                Practical Projects
+                            </div>
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-[#102E55] dark:text-white">
+                                <i class="fa-solid fa-circle-check text-[#245DAA] dark:text-[#9cc8f5]"></i>
+                                Assignments
+                            </div>
+
+                            <div class="flex items-center gap-2 text-sm font-medium text-[#102E55] dark:text-white">
+                                <i class="fa-solid fa-circle-check text-[#245DAA] dark:text-[#9cc8f5]"></i>
+                                Professional Skills
+                            </div>
+
+                        </div>
+
+                        <p class="mt-5 min-h-28 text-base leading-7 text-slate-600 dark:text-[#CBD5E1]">
+                            Our aim was to make quality learning more accessible and flexible for students.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ADMISSIONS, FREE EDUCATION & INTERNSHIPS -->
+
+    <section class="bg-[#102E55] py-15 transition-colors duration-300 dark:bg-[#071B3A] sm:py-15">
+
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+
+            <div class="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+
+                <!-- LEFT HIGHLIGHT -->
+                <div
+                    class="relative overflow-hidden rounded-3xl border-4 border-yellow-800 bg-yellow-100 p-8 shadow-2xl dark:border-yellow-400/30 dark:bg-[#102E55] sm:p-10 lg:p-12">
+
+                    <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#245DAA]/20"></div>
+                    <div class="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-[#9cc8f5]/10"></div>
+
+                    <div class="relative z-10">
+
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400 text-[#071B3A]">
+                            <i class="fa-solid fa-rocket text-2xl"></i>
+                        </div>
+
+                        <p class="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-[#071B3A] dark:text-[#9cc8f5]">
+                            Creating Opportunities
+                        </p>
+
+                        <h2 class="mt-3 text-3xl font-bold leading-tight text-[#071B3A] dark:text-white sm:text-4xl">
+                            Learning should lead to opportunity.
+                        </h2>
+
+                        <p class="mt-6 text-sm leading-7 text-[#071B3A] dark:text-[#CBD5E1] sm:text-base">
+                            During its first year, Online Learnify Academy worked to create pathways where students
+                            could move beyond learning and begin applying their skills in practical environments.
+                        </p>
+
+                        <div class="mt-8 h-1 w-20 rounded-full bg-yellow-400"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="space-y-5">
+
+                    <!-- ADMISSIONS -->
+                    <div
+                        class="group flex gap-5 rounded-2xl bg-[#F7F9FC] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#EEF5FC] hover:shadow-lg dark:bg-[#102E55] dark:hover:bg-[#163B68] sm:p-7">
+                        <div
+                            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#9cc8f5] text-[#102E55]">
+                            <i class="fa-solid fa-user-plus text-lg"></i>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-[#102E55] dark:text-white">
+                                Admissions & New Batches
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-[#CBD5E1] sm:text-base">
+                                With every new batch, more students became part of the Online Learnify community. We
+                                conducted admissions, welcomed new learners, organized structured classes, and
+                                provided students with practical assignments and projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FREE EDUCATION -->
+                    <div
+                        class="group flex gap-5 rounded-2xl bg-[#F7F9FC] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#EEF5FC] hover:shadow-lg dark:bg-[#102E55] dark:hover:bg-[#163B68] sm:p-7">
+                        <div
+                            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-[#071B3A]">
+                            <i class="fa-solid fa-hand-holding-heart text-lg"></i>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-[#102E55] dark:text-white">
+                                Free Education & Free Enrollments
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-[#CBD5E1] sm:text-base">
+                                The academy also provided free courses, workshops, and enrollment opportunities for
+                                deserving students, helping reduce financial barriers for learners with talent and motivation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- INTERNSHIPS -->
+                    <div
+                        class="group flex gap-5 rounded-2xl bg-[#F7F9FC] p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-[#EEF5FC] hover:shadow-lg dark:bg-[#102E55] dark:hover:bg-[#163B68] sm:p-7">
+                        <div
+                            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#9cc8f5] text-[#102E55]">
+                            <i class="fa-solid fa-briefcase text-lg"></i>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-[#102E55] dark:text-white">
+                                Internship Opportunities
+                            </h3>
+
+                            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-[#CBD5E1] sm:text-base">
+                                Internship opportunities allowed students to work on real tasks, understand
+                                professional workflows, strengthen their skills, and gain practical experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FROM LEARNING TO PROFESSIONAL WORK -->
+
+    <section class="bg-[#F7F9FC] py-15 transition-colors duration-300 dark:bg-[#0A1628] sm:py-15">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+            <!-- SECTION HEADING -->
+            <div class="mx-auto max-w-3xl text-center">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#245DAA] dark:text-[#9cc8f5]">
+                    From Learning to Opportunity
+                </p>
+
+                <h2 class="mt-3 text-3xl font-bold text-[#102E55] dark:text-white sm:text-4xl">
+                    From Students to Creators
+                </h2>
+
+                <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+                <p class="mt-6 text-md leading-8 text-slate-600 dark:text-[#CBD5E1] sm:text-lg">
+                    The academy's goal goes beyond teaching design tools. Students are encouraged to apply what they
+                    learn through real-world projects, professional tasks, and creative opportunities.
+                </p>
+
+            </div>
+
+            <!-- JOURNEY -->
+            <div class="relative mb-7 mt-16">
+
+                <!-- Connecting Line -->
+                <div
+                    class="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[#9cc8f5] lg:block">
+                </div>
+
+                <!-- STEP 1 -->
+                <div class="relative grid items-center gap-8 lg:grid-cols-2 lg:gap-20">
+
+                    <div class="lg:text-right">
+                        <span class="text-sm font-bold uppercase tracking-widest text-[#245DAA] dark:text-[#9cc8f5]">
+                            Step 01
+                        </span>
+
+                        <h3 class="text-2xl font-bold text-[#102E55] dark:text-white">
+                            Learn
+                        </h3>
+
+                        <p class="text-sm leading-7 text-slate-600 dark:text-[#CBD5E1] sm:text-base">
+                            Students develop practical knowledge in graphic design, digital tools, creative principles,
+                            and professional design techniques.
+                        </p>
+                    </div>
+
+                    <div class="hidden justify-start lg:flex">
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-full bg-[#102E55] text-yellow-400 shadow-lg transition-transform duration-300 hover:translate-y-2 dark:bg-[#071B3A]">
+                            <i class="fa-solid fa-book-open text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="relative mt-12 grid items-center gap-8 lg:grid-cols-2 lg:gap-20">
+                    <div class="order-2 hidden justify-end lg:flex">
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-[#102E55] shadow-lg transition-transform duration-300 hover:translate-y-2">
+                            <i class="fa-solid fa-pen-nib text-xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2">
+                        <span class="text-sm font-bold uppercase tracking-widest text-[#245DAA] dark:text-[#9cc8f5]">
+                            Step 02
+                        </span>
+
+                        <h3 class="text-2xl font-bold text-[#102E55] dark:text-white">
+                            Create
+                        </h3>
+
+                        <p class="text-sm leading-7 text-slate-600 dark:text-[#CBD5E1] sm:text-base">
+                            Through assignments and practical projects, students create logos, posters, social media
+                            designs, branding, and other real-world creative work.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="relative mt-12 grid items-center gap-8 lg:grid-cols-2 lg:gap-20">
+
+                    <div class="lg:text-right">
+                        <span class="text-sm font-bold uppercase tracking-widest text-[#245DAA] dark:text-[#9cc8f5]">
+                            Step 03
+                        </span>
+                        <h3 class="text-2xl font-bold text-[#102E55] dark:text-white">
+                            Work
+                        </h3>
+                        <p class="text-sm leading-7 text-slate-600 dark:text-[#CBD5E1] sm:text-base">
+                            Students get opportunities to understand client communication, deadlines, revisions,
+                            professional workflows, and online design work.
+                        </p>
+                    </div>
+
+                    <div class="hidden justify-start lg:flex">
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-full bg-[#102E55] text-yellow-400 shadow-lg transition-transform duration-300 hover:translate-y-2 dark:bg-[#071B3A]">
+                            <i class="fa-solid fa-briefcase text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="relative mt-12 grid items-center gap-8 lg:grid-cols-2 lg:gap-20">
+                    <div class="order-2 hidden justify-end lg:flex">
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-[#071B3A] shadow-lg transition-transform duration-300 hover:translate-y-2">
+                            <i class="fa-solid fa-chart-line text-xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="order-1 lg:order-2">
+                        <span class="text-sm font-bold uppercase tracking-widest text-[#245DAA] dark:text-[#9cc8f5]">
+                            Step 04
+                        </span>
+
+                        <h3 class="text-2xl font-bold text-[#102E55] dark:text-white">
+                            Build Careers
+                        </h3>
+
+                        <p class="text-sm leading-7 text-slate-600 dark:text-[#CBD5E1] sm:text-base">
+                            The journey from learning and creating can help students move toward freelancing,
+                            internships, online work, university opportunities, and professional growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHO IS BEHIND THE STORY -->
+
+        <section class="w-full bg-gray-100 py-15 transition-colors duration-300 dark:bg-[#071B3A] sm:py-15 lg:py-15">
+
+            <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+
+                <!-- Section Heading -->
+                <div class="mb-14 text-center">
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#3678AA] dark:text-[#9cc8f5]">
+                        The People Behind the Academy
+                    </p>
+                    <h2 class="mt-3 text-3xl font-bold text-[#102E55] dark:text-white sm:text-4xl">
+                        Who Is Behind the Vision?
+                    </h2>
+                    <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+                </div>
+
+                <!-- PEOPLE + STORY -->
+                <div class="grid items-center gap-10 lg:grid-cols-[0.8fr_1.4fr_0.8fr] lg:gap-12">
+
+                    <!-- FOUNDER -->
+                    <div class="text-center">
+
+                        <div class="group relative mx-auto max-w-xs">
+                            <div
+                                class="absolute -bottom-4 -right-4 h-full w-full rounded-3xl bg-[#9cc8f5] transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-2">
+                            </div>
+                            <div class="relative overflow-hidden rounded-3xl bg-[#102E55] shadow-2xl dark:shadow-black/50">
+
+                                <img src="assests\founder 04.jpg"
+                                    alt="Muhammad Hamza Awais - Founder and Lead Trainer"
+                                    class="aspect-4/5 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                        </div>
+                        <p class="mt-7 text-sm font-semibold uppercase tracking-[0.18em] text-[#2684E8] dark:text-[#9cc8f5]">
+                            Founder & Lead Trainer
+                        </p>
+
+                        <h3 class="mt-2 text-2xl font-bold text-[#102E55] dark:text-white">
+                            Muhammad Hamza Awais
+                        </h3>
+                    </div>
+
+                    <!-- CENTER STORY -->
+                    <div class="text-center lg:px-4">
+
+                        <p class="mt-2 text-base leading-8 text-slate-600 dark:text-[#CBD5E1]">
+                            Online Learnify Academy was created with a vision to empower students with practical creative and digital skills. The academy focuses on hands-on learning, real projects,
+                            workshops, mentorship, portfolio development, and opportunities that help students move from learning toward professional growth.
+                        </p>
+
+                        <p class="mt-2 text-base leading-8 text-slate-600 dark:text-[#CBD5E1]">
+                            Behind this journey is a team committed to building a supportive learning community where
+                            students can learn, create, gain experience, and develop the confidence to pursue their goals.
+                        </p>
+
+                        <div class="mt-8">
+                            <p class="text-2xl italic text-[#102E55] dark:text-white sm:text-3xl"
+                                style="font-family: 'Brush Script MT', 'Segoe Script', cursive;">
+                                Learn. Create. Earn. Lead.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- CO-FOUNDER -->
+                    <div class="text-center">
+
+                        <div class="group relative mx-auto max-w-xs">
+                            <div
+                                class="absolute -bottom-4 -left-4 h-full w-full rounded-3xl bg-yellow-400 transition-all duration-500 group-hover:-translate-x-2 group-hover:translate-y-2">
+                            </div>
+                            <div class="relative overflow-hidden rounded-3xl bg-[#102E55] shadow-2xl dark:shadow-black/50">
+                                <img src="assests\co founder.png"
+                                    alt="Gul Fatima - Co-Founder and Academy Coordinator"
+                                    class="aspect-4/5 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                        </div>
+
+                        <p class="mt-7 text-sm font-semibold uppercase tracking-[0.18em] text-[#2684E8] dark:text-[#9cc8f5]">
+                            Co-Founder & Academy Coordinator
+                        </p>
+
+                        <h3 class="mt-2 text-2xl font-bold text-[#102E55] dark:text-white">
+                            Gull Fatima
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MORE THAN AN ACADEMY -->
+
+        <section class="bg-white py-15 transition-colors duration-300 dark:bg-[#071B3A] sm:py-15">
+
+            <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+
+                <div class="mx-auto max-w-3xl text-center">
+
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#3678AA] dark:text-[#9cc8f5]">
+                        More Than Just an Academy
+                    </p>
+
+                    <h2 class="mt-3 text-3xl font-bold text-[#102E55] dark:text-white sm:text-4xl">
+                        A community built around growth
+                    </h2>
+
+                    <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+
+                    <p class="mt-6 text-base leading-8 text-slate-600 dark:text-[#CBD5E1] sm:text-lg">
+                        Online Learnify Academy has grown beyond courses into a community of learners, creators,
+                        interns, freelancers, and aspiring professionals.
+                    </p>
+
+                </div>
+
+                <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <div class="group p-7 text-center transition-all duration-300 hover:-translate-y-1">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#102E55] bg-[#EEF5FC] text-[#102E55] transition-all duration-300 group-hover:bg-[#102E55] group-hover:text-yellow-400 dark:border-white/10 dark:bg-[#102E55] dark:text-white dark:group-hover:bg-yellow-400 dark:group-hover:text-[#071B3A]">
+                            <i class="fa-solid fa-users text-xl"></i>
+                        </div>
+
+                        <h3 class="mt-5 font-bold text-[#102E55] dark:text-white">
+                            Learners
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-[#CBD5E1]">
+                            Students learning practical creative and digital skills.
+                        </p>
+
+                    </div>
+
+                    <div class="group p-7 text-center transition-all duration-300 hover:-translate-y-1">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#102E55] bg-[#EEF5FC] text-[#102E55] transition-all duration-300 group-hover:bg-[#102E55] group-hover:text-yellow-400 dark:border-white/10 dark:bg-[#102E55] dark:text-white dark:group-hover:bg-yellow-400 dark:group-hover:text-[#071B3A]">
+                            <i class="fa-solid fa-lightbulb text-xl"></i>
+                        </div>
+
+                        <h3 class="mt-5 font-bold text-[#102E55] dark:text-white">
+                            Creators
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-[#CBD5E1]">
+                            Students turning ideas into designs and practical projects.
+                        </p>
+
+                    </div>
+
+                    <div class="group p-7 text-center transition-all duration-300 hover:-translate-y-1">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#102E55] bg-[#EEF5FC] text-[#102E55] transition-all duration-300 group-hover:bg-[#102E55] group-hover:text-yellow-400 dark:border-white/10 dark:bg-[#102E55] dark:text-white dark:group-hover:bg-yellow-400 dark:group-hover:text-[#071B3A]">
+                            <i class="fa-solid fa-briefcase text-xl"></i>
+                        </div>
+
+                        <h3 class="mt-5 font-bold text-[#102E55] dark:text-white">
+                            Professionals
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-[#CBD5E1]">
+                            Learners exploring internships, freelancing, and online work.
+                        </p>
+
+                    </div>
+
+                    <div class="group p-7 text-center transition-all duration-300 hover:-translate-y-1">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#102E55] bg-[#EEF5FC] text-[#102E55] transition-all duration-300 group-hover:bg-[#102E55] group-hover:text-yellow-400 dark:border-white/10 dark:bg-[#102E55] dark:text-white dark:group-hover:bg-yellow-400 dark:group-hover:text-[#071B3A]">
+                            <i class="fa-solid fa-people-group text-xl"></i>
+                        </div>
+
+                        <h3 class="mt-5 font-bold text-[#102E55] dark:text-white">
+                            Community
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-[#CBD5E1]">
+                            A learning environment built through teamwork and support.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHALLENGES & GROWTH -->
+
+        <section class="bg-[#102E55] py-15 transition-colors duration-300 dark:bg-[#102E55] sm:py-15">
+
+            <div class="mx-auto max-w-5xl px-5 text-center sm:px-8">
+
+                <div
+                    class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400 text-[#071B3A]">
+                    <i class="fa-solid fa-arrow-trend-up text-2xl"></i>
+                </div>
+
+                <p class="mt-7 text-sm font-semibold uppercase tracking-[0.2em] text-[#9cc8f5]">
+                    A Year of Challenges & Growth
+                </p>
+
+                <h2 class="mt-3 text-2xl font-bold text-white sm:text-3xl">
+                    Every step became part of the journey
+                </h2>
+
+                <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+
+                <p class="mx-auto mt-7 max-w-3xl text-base leading-8 text-[#CBD5E1] sm:text-lg">
+                    Building a learning community requires consistency, dedication, and hard work. Throughout the
+                    first year, every student, workshop, course, internship, and learning opportunity became part of
+                    the academy's growth.
+                </p>
+
+                <div class="mt-12 grid gap-4 sm:grid-cols-3">
+
+                    <div class="rounded-2xl bg-white/10 p-6">
+
+                        <i class="fa-solid fa-heart text-xl text-yellow-400"></i>
+
+                        <h3 class="mt-4 font-bold text-white">
+                            Dedication
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#CBD5E1]">
+                            Staying committed to practical learning and student growth.
+                        </p>
+
+                    </div>
+
+                    <div class="rounded-2xl bg-white/10 p-6">
+
+                        <i class="fa-solid fa-people-group text-xl text-yellow-400"></i>
+
+                        <h3 class="mt-4 font-bold text-white">
+                            Community
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#CBD5E1]">
+                            Growing through learning, teaching, teamwork, and consistency.
+                        </p>
+
+                    </div>
+
+                    <div class="rounded-2xl bg-white/10 p-6">
+
+                        <i class="fa-solid fa-seedling text-xl text-yellow-400"></i>
+
+                        <h3 class="mt-4 font-bold text-white">
+                            Growth
+                        </h3>
+
+                        <p class="mt-2 text-sm leading-6 text-[#CBD5E1]">
+                            Turning experiences from the first year into a foundation for what comes next.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOOKING BACK -->
+
+        <section class="bg-white py-20 transition-colors duration-300 dark:bg-[#071B3A] sm:py-24">
+
+            <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-8">
+
+                <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+                    <!-- LEFT -->
+
+                    <div>
+
+                        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#3678AA] dark:text-[#9cc8f5]">
+                            Looking Back
+                        </p>
+
+                        <h2
+                            class="mt-3 text-3xl font-bold leading-tight text-[#102E55] dark:text-white sm:text-4xl">
+                            More than numbers,
+                            <span class="text-yellow-400">it's about people.</span>
+                        </h2>
+
+                        <div class="mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+
+                        <p class="mt-7 text-base leading-8 text-[#102E55] dark:text-[#CBD5E1] sm:text-lg">
+                            The first year of Online Learnify Academy was not simply measured by numbers. It was shaped
+                            by students, workshops, courses, free learning opportunities, internships, and experiences
+                            that helped the community grow.
+                        </p>
+
+                        <p class="mt-5 text-base leading-8 text-[#102E55] dark:text-[#CBD5E1] sm:text-lg">
+                            Every learner who joined, every project created, every workshop conducted, and every
+                            opportunity shared became part of the academy's story.
+                        </p>
+
+                    </div>
+
+                    <!-- RIGHT HIGHLIGHTS -->
+
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <div class="rounded-2xl bg-yellow-400 p-6 dark:bg-[#102E55]">
+
+                            <i class="fa-solid fa-graduation-cap text-2xl text-[#102E55] dark:text-yellow-400"></i>
+
+                            <p class="mt-4 text-2xl font-bold text-[#102E55] dark:text-white">
+                                Learning
+                            </p>
+
+                            <p class="mt-1 text-sm text-[#102E55] dark:text-[#CBD5E1]">
+                                Practical education
+                            </p>
+
+                        </div>
+
+                        <div class="rounded-2xl bg-[#102E55] p-6">
+
+                            <i class="fa-solid fa-people-group text-2xl text-yellow-400"></i>
+
+                            <p class="mt-4 text-2xl font-bold text-white">
+                                Community
+                            </p>
+
+                            <p class="mt-1 text-sm text-blue-100">
+                                Growing together
+                            </p>
+
+                        </div>
+
+                        <div class="rounded-2xl bg-[#102E55] p-6">
+
+                            <i class="fa-solid fa-lightbulb text-2xl text-yellow-400"></i>
+                            <p class="mt-4 text-2xl font-bold text-white">
+                                Creativity
+                            </p>
+                            <p class="mt-1 text-blue-100">
+                                Ideas into projects
+                            </p>
+                        </div>
+
+                        <div class="rounded-2xl bg-yellow-400 p-6 dark:bg-[#102E55]">
+                            <i class="fa-solid fa-arrow-up-right-dots text-2xl text-[#102E55] dark:text-yellow-400"></i>
+                            <p class="mt-4 text-2xl font-bold text-[#102E55] dark:text-white">
+                                Growth
+                            </p>
+
+                            <p class="mt-1 text-sm text-[#102E55] dark:text-[#CBD5E1]">
+                                Skills into opportunities
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- THE JOURNEY CONTINUES -->
+
+        <section class="relative overflow-hidden bg-[#EFF8FC] py-15 transition-colors duration-300 dark:bg-[#0A1628] sm:py-15">
+
+            <div class="absolute -left-24 top-10 h-56 w-56 rounded-full bg-[#9cc8f5]/20"></div>
+            <div class="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-[#245DAA]/10"></div>
+
+            <div class="relative mx-auto max-w-6xl px-5 text-center sm:px-8">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#3678AA] dark:text-[#9cc8f5]">
+                    The Journey Continues
+                </p>
+
+                <h2 class="mt-3 text-3xl font-bold text-[#102E55] dark:text-white sm:text-4xl">
+                    One year completed. A new chapter begins.
+                </h2>
+
+                <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+
+                <p class="mx-auto mt-7 max-w-3xl text-base leading-8 text-slate-600 dark:text-[#CBD5E1] sm:text-lg">
+                    The first year is only the beginning. Online Learnify Academy continues to look toward more
+                    workshops, courses, e-courses, free learning opportunities, internships, professional work, and
+                    career-focused growth.
+                </p>
+                <!-- JOURNEY WORDS -->
+
+                <div class="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-3">
+
+                    <span
+                        class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#102E55] shadow-sm transition-colors hover:bg-yellow-400 dark:bg-[#102E55] dark:text-white">
+                        Workshops
+                    </span>
+
+                    <span
+                        class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#102E55] shadow-sm transition-colors hover:bg-yellow-400 dark:bg-[#102E55] dark:text-white">
+                        New Courses
+                    </span>
+
+                    <span
+                        class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#102E55] shadow-sm transition-colors hover:bg-yellow-400 dark:bg-[#102E55] dark:text-white">
+                        E-Learning
+                    </span>
+
+                    <span
+                        class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#071B3A] shadow-sm transition-colors hover:bg-yellow-400 dark:bg-[#102E55] dark:text-white">
+                        Free Learning
+                    </span>
+
+                    <span
+                        class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#102E55] shadow-sm transition-colors hover:bg-yellow-400 dark:bg-[#102E55] dark:text-white">
+                        Internships
+                    </span>
+
+                    <span
+                        class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#102E55] shadow-sm transition-colors hover:bg-yellow-400 dark:bg-[#102E55] dark:text-white">
+                        Professional Work
+                    </span>
+
+                    <span
+                        class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#102E55] shadow-sm transition-colors hover:bg-yellow-400 dark:bg-[#102E55] dark:text-white">
+                        Career Growth
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ONE YEAR COMPLETED -->
+        <section class="bg-[#102E55] py-15 transition-colors duration-300 dark:bg-[#102E55] sm:py-15">
+            <div class="mx-auto max-w-5xl px-5 text-center sm:px-8">
+                <div
+                    class="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400 text-[#071B3A]">
+                    <i class="fa-solid fa-star text-2xl"></i>
+                </div>
+                <p class="mt-7 text-sm font-semibold uppercase tracking-[0.25em] text-[#9cc8f5]">
+                    Online Learnify Academy
+                </p>
+                <h2 class="mt-4 text-4xl font-bold text-white sm:text-5xl">
+                    Learn. Create. Earn. Lead.
+                </h2>
+                <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#CBD5E1] sm:text-lg">
+                    One year of teaching. One year of learning. One year of workshops. One year of opportunities.
+                    One year of growth.
+                </p>
+
+                <!-- JOURNEY STATEMENT -->
+                <div class="mx-auto mt-10 max-w-2xl space-y-3">
+                    <p class="text-lg font-medium text-white sm:text-xl">
+                        From one idea to a growing community.
+                    </p>
+                    <p class="text-lg font-medium text-yellow-400 sm:text-xl">
+                        From learning to creating.
+                    </p>
+                    <p class="text-lg font-medium text-white sm:text-xl">
+                        From creating to working.
+                    </p>
+                    <p class="text-lg font-medium text-yellow-400 sm:text-xl">
+                        From working to building careers.
+                    </p>
+                </div>
+                <div class="mx-auto h-px max-w-xs bg-white/20"></div>
+                <p class="mt-8 text-sm font-bold uppercase tracking-[0.2em] text-yellow-400 sm:text-base">
+                    One Year Completed — The Journey Continues
+                </p>
+                <a href="contact.html"
+                    class="mt-8 inline-flex items-center gap-3 rounded-lg bg-yellow-400 px-7 py-3.5 text-sm font-bold text-[#071B3A] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:shadow-xl">
+                    Join the Academy
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- OUR STORY INTRODUCTION -->
+        <section class="bg-white py-15 transition-colors duration-300 dark:bg-[#071B3A] sm:py-15">
+            <div class="mx-auto max-w-5xl px-5 text-center sm:px-8">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#3678AA] dark:text-[#9cc8f5]">
+                    Our One-Year Success Story
+                </p>
+                <h2 class="mt-3 text-2xl font-bold text-[#102E55] dark:text-white sm:text-3xl">
+                    From One Idea to a Growing Community
+                </h2>
+                <div class="mx-auto mt-5 h-1 w-20 rounded-full bg-yellow-400"></div>
+                <p class="mx-auto mt-7 max-w-4xl text-base leading-8 text-slate-600 dark:text-[#CBD5E1] sm:text-lg">
+                    What started as an idea gradually became a growing learning community where students could
+                    <strong class="text-[#102E55] dark:text-white">
+                        learn, practice, create, work, and grow together.
+                    </strong>
+                </p>
+            </div>
+        </section>
+    </section>
+</main>
+
+
+<!-- FOOTER -->
+<div class="bg-white pt-5 transition-colors duration-300 dark:bg-[#050B16]">
+    <footer class="bg-[#071B3A] text-white dark:bg-[#071B3A]">
+        <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+                <!-- Academy -->
+                <div>
+
+                    <a href="#home" class="flex items-center gap-3">
+                        <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+                            class="h-11 w-11 object-contain">
+                        <div class="leading-tight">
+
+                            <span class="block text-base font-semibold">
+                                Online Learnify
+                            </span>
+
+                            <span class="block text-xs text-blue-200">
+                                Academy
+                            </span>
+                        </div>
+
+                    </a>
+
+                    <p class="mt-5 max-w-xs text-sm leading-7 text-blue-100 dark:text-[#CBD5E1]">
+                        Practical design training built around real projects, live feedback and portfolio-ready skills.
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="mt-6 flex gap-3">
+
+                        <a href="https://www.instagram.com/____online_learnify?stkn=MThmZDN2dTJuNjlyZQ=="
+                            aria-label="Instagram"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/online-learnify-3a59b3424?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                            aria-label="LinkedIn"
+                            class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+
+                    <h3 class="text-base font-semibold">
+                        Quick Links
+                    </h3>
+                    <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+                    <ul class="mt-5 space-y-3 text-sm">
+                        <li>
+                            <a href="about.html"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Journey
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#courses"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Courses
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#students"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Our Students
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="project.html"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#success"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Success Stories
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Courses -->
+                <div>
+                    <h3 class="text-base font-semibold">
+                        Our Courses
+                    </h3>
+                    <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+                    <ul class="mt-5 space-y-3 text-sm">
+
+                        <li>
+                            <a href="index.html#courses"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Graphic Designing with AI
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#courses"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Web Development
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#courses"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Prompt Engineering
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="events.html"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Workshops & Events
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#gallery"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                Gallery
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div id="contact">
+                    <h3 class="text-base font-semibold">
+                        Get In Touch
+                    </h3>
+                    <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+                    <div class="mt-5 space-y-4 text-sm">
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-yellow-400"></i>
+                            <a href="mailto:info@onlinelearnify.com"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                onlinelarnify03@gmail.com
+                            </a>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-yellow-400"></i>
+                            <a href="tel:0311 0619854"
+                                class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                0311 0619854
+                            </a>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-yellow-400"></i>
+                            <p class="leading-6 text-blue-100 dark:text-[#CBD5E1]">Online Learnify Academy Bahawalpur
+                            </p>
+                        </div>
+                    </div>
+                    <!-- CTA -->
+                    <a href="contact.html"
+                        class="mt-7 inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300">
+                        Join Academy
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-white/10">
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-5 text-center md:flex-row md:text-left lg:px-8">
+                <p class="text-xs text-[#94A3B8] sm:text-sm">
+                    <i class="fa-regular fa-copyright"></i>2026 Online Learnify Academy. All rights reserved.
+                </p>
+                <div class="flex gap-5 text-xs text-[#94A3B8] sm:text-sm">
+                    <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+                        Privacy Policy
+                    </a>
+                    <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+                        Terms & Conditions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+     <!-- Back to Top Button -->
+  <button id="backToTop"
+    class="fixed bottom-6 right-6 z-50 hidden h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" type="button" aria-label="Toggle dark mode"
+    class="fixed bottom-6 left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i id="themeIcon" class="fa-solid fa-moon"></i>
+  </button>
+    <script src="script.js"></script>
+</body>
+
+</html>

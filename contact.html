@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" href="assests\courses and logo\logo.png" />
+    <!-- Google Font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
+    <title>Enrollment - Graphic Design & Digital Skill Training</title>
+</head>
+
+<body class="bg-white text-slate-700 transition-colors duration-300 dark:bg-[#050B16] dark:text-[#CBD5E1]">
+
+    <!-- HEADER -->
+
+    <header id="header" class="sticky top-0 z-50 bg-[#071B3A] text-white dark:bg-[#050B16]">
+        <nav class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8" aria-label="Main navigation">
+
+            <!-- NAVBAR MAIN ROW -->
+            <div class="flex h-20 items-center justify-between">
+
+                <!-- LOGO -->
+                <a href="index.html" class="flex shrink-0 items-center gap-3">
+                    <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+                        class="h-11 w-11 object-contain">
+
+                    <div class="leading-tight">
+                        <span class="block text-base font-semibold tracking-tight sm:text-lg">
+                            Online Learnify
+                        </span>
+
+                        <span class="block text-[11px] text-blue-200 sm:text-xs">
+                            Academy
+                        </span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAVIGATION -->
+                <div class="hidden items-center gap-7 lg:flex">
+
+                    <!-- About Dropdown -->
+                    <div class="group relative">
+
+                        <button type="button"
+                            class="flex items-center gap-1.5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:text-yellow-400">
+                            About
+                            <i
+                                class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div
+                            class="invisible absolute left-0 top-full z-50 mt-2 w-52 translate-y-2 rounded-xl bg-white p-2 opacity-0 shadow-xl ring-1 ring-black/5 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#102E55] dark:ring-white/10">
+
+                            <a href="about.html"
+                                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                                Journey
+                            </a>
+
+                            <a href="index.html#founder"
+                                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                                Founder
+                            </a>
+
+                            <a href="index.html#co-founder"
+                                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                                Co-Founder
+                            </a>
+
+                            <div class="my-1 border-t border-gray-100 dark:border-white/10"></div>
+
+                            <a href="inspiration.html"
+                                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-yellow-50 hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                                Founder's Message
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <a href="index.html#courses"
+                        class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                        Courses
+                    </a>
+
+                    <a href="index.html#students"
+                        class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                        Students
+                    </a>
+
+                    <a href="index.html#projects"
+                        class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                        Projects
+                    </a>
+
+                    <a href="index.html#success"
+                        class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                        Stories
+                    </a>
+
+                    <a href="events.html"
+                        class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                        Workshops & Events
+                    </a>
+
+                    <a href="index.html#gallery"
+                        class="nav-link text-sm text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                        Gallery
+                    </a>
+
+                </div>
+
+                <!-- DESKTOP CTA -->
+                <a href="contact.html"
+                    class="hidden items-center justify-center rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-[#071B3A] transition-colors duration-200 hover:bg-yellow-300 lg:inline-flex">
+                    Join Academy
+                </a>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="menuBtn" type="button"
+                    class="flex h-10 w-10 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400 lg:hidden"
+                    aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- MOBILE NAVIGATION -->
+            <div id="navMenu" class="hidden border-t border-white/10 lg:hidden">
+
+                <div class="flex flex-col gap-1 py-4">
+
+                    <!-- Mobile About -->
+                    <div>
+
+                        <button id="mobileAboutBtn" type="button"
+                            class="flex w-full items-center justify-between rounded-md px-4 py-3 text-sm text-blue-100 transition hover:bg-white/5 hover:text-yellow-400">
+                            <span>About</span>
+                            <i id="mobileAboutIcon"
+                                class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                        </button>
+
+                        <div id="mobileAboutMenu" class="hidden pl-4">
+
+                            <a href="about.html"
+                                class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                                Journey
+                            </a>
+
+                            <a href="index.html#founder"
+                                class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                                Founder
+                            </a>
+
+                            <a href="index.html#co-founder"
+                                class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                                Co-Founder
+                            </a>
+
+                            <a href="inspiration.html"
+                                class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                                Founder's Message
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <a href="index.html#courses"
+                        class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                        Courses
+                    </a>
+
+                    <a href="index.html#students"
+                        class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                        Students
+                    </a>
+
+                    <a href="project.html"
+                        class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                        Projects
+                    </a>
+
+                    <a href="index.html#success"
+                        class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                        Stories
+                    </a>
+
+                    <a href="events.html"
+                        class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                        Workshops & Events
+                    </a>
+
+                    <a href="index.html#gallery"
+                        class="mobile-nav-link rounded-md px-4 py-3 text-sm text-blue-100 transition-colors hover:bg-white/5 hover:text-white">
+                        Gallery
+                    </a>
+
+                    <a href="contact.html"
+                        class="mobile-nav-link mx-4 mt-3 rounded-md bg-yellow-400 px-5 py-3 text-center text-sm font-semibold text-[#071B3A] transition-all duration-200 hover:bg-yellow-300">
+                        Join Academy
+                    </a>
+
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTACT / ENROLLMENT -->
+
+    <main>
+
+        <!-- PAGE HERO -->
+
+        <section
+            class="bg-white px-5 py-16 transition-colors duration-300 dark:bg-[#050B16] sm:px-6 sm:py-20 lg:px-8 lg:py-10">
+
+            <div class="mx-auto max-w-3xl text-center">
+
+                <span
+                    class="inline-block rounded-full border border-yellow-700 bg-yellow-50 px-4 py-2 text-xs font-semibold text-yellow-700 dark:border-yellow-400/40 dark:bg-yellow-400/10 dark:text-yellow-400">
+                    Join Online Learnify Academy
+                </span>
+                <h1 class="mt-5 text-3xl font-bold leading-tight text-[#102E55] dark:text-white sm:text-4xl lg:text-5xl"
+                    style="font-family: Georgia, 'Times New Roman', serif;">
+                    Start your learning journey
+                </h1>
+
+                <p class="mx-auto mt-5 max-w-2xl text-sm leading-7 text-slate-500 dark:text-[#CBD5E1] sm:text-base">
+                    Choose your course, complete your payment and submit your enrollment details.
+                    Our team will verify your payment and confirm your enrollment through WhatsApp.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT AREA -->
+
+        <section
+            class="bg-[#F7F9FC] px-5 py-16 transition-colors duration-300 dark:bg-[#0A1628] sm:px-6 sm:py-20 lg:px-8 lg:py-15">
+            <div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-5">
+                <!-- CONTACT INFORMATION -->
+                <div class="lg:col-span-2">
+                    <span class="text-sm font-semibold text-[#245DAA] dark:text-[#9cc8f5]">
+                        Enrollment Process
+                    </span>
+                    <h2 class="mt-3 text-3xl font-bold leading-tight text-[#102E55] dark:text-white"
+                        style="font-family: Georgia, 'Times New Roman', serif;">
+                        Learn with us
+                    </h2>
+                    <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-[#CBD5E1]">
+                        Select your course, pay the course fee of PKR 300 and submit your payment details.
+                        Our admin team will verify your payment before approving your enrollment.
+                    </p>
+                    <!-- STEPS -->
+                    <div class="mt-8 space-y-5">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#102E55] text-sm font-bold text-yellow-400">
+                                1
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-[#102E55] dark:text-white">Choose your course</h3>
+                                <p class="mt-1 text-xs leading-6 text-slate-500 dark:text-[#CBD5E1]">
+                                    Select the course you want to join from the available programs.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#102E55] text-sm font-bold text-yellow-400">
+                                2
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-[#102E55] dark:text-white">
+                                    Pay PKR 300
+                                </h3>
+                                <p class="mt-1 text-xs leading-6 text-slate-500 dark:text-[#CBD5E1]">
+                                    Send the course fee through JazzCash or Easypaisa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div
+                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#102E55] text-sm font-bold text-yellow-400">
+                                3
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-semibold text-[#102E55] dark:text-white">
+                                    Wait for confirmation
+                                </h3>
+                                <p class="mt-1 text-xs leading-6 text-slate-500 dark:text-[#CBD5E1]">
+                                    Our admin team will verify your payment and contact you on WhatsApp.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT DETAILS -->
+                    <div class="mt-9 grid grid-cols-3 gap-2 sm:gap-4 lg:grid-cols-1 lg:space-y-5">
+                        <!-- Email -->
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#102E55] text-yellow-400">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                                    Email
+                                </p>
+                                <a href="mailto:info@onlinelearnify.com"
+                                    class="mt-1 block text-sm font-medium text-[#102E55] transition-colors hover:text-[#245DAA] dark:text-white dark:hover:text-yellow-400">
+                                    onlinelarnify03@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#102E55] text-yellow-400">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                                    Phone
+                                </p>
+
+                                <a href="tel:+923110619854"
+                                    class="mt-1 block text-sm font-medium text-[#102E55] transition-colors hover:text-[#245DAA] dark:text-white dark:hover:text-yellow-400">
+                                    +923110619854
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#102E55] text-yellow-400">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                                    Location
+                                </p>
+                                <p class="mt-1 text-sm font-medium text-[#102E55] dark:text-white">
+                                    Online Learnify Academy Bahawalpur
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL MEDIA -->
+
+                    <div class="mt-9">
+                        <p class="text-sm font-semibold text-[#102E55] dark:text-white">
+                            Follow us
+                        </p>
+                        <div class="mt-4 flex gap-3">
+                            <a href="https://www.instagram.com/____online_learnify?stkn=MThmZDN2dTJuNjlyZQ=="
+                                aria-label="Instagram"
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#102E55] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-[#071B3A]">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/online-learnify-3a59b3424?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                aria-label="LinkedIn"
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#102E55] text-white transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-[#071B3A]">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENROLLMENT FORM -->
+                <div
+                    class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-900/5 transition-colors duration-300 dark:border-white/10 dark:bg-[#102E55] dark:shadow-black/20 sm:p-8 lg:col-span-3">
+                    <div class="mb-7">
+                        <h2 class="text-2xl font-bold text-[#102E55] dark:text-white">
+                            Enrollment Form
+                        </h2>
+                        <p class="mt-2 text-sm text-slate-500 dark:text-[#CBD5E1]">
+                            Complete the form below to enroll in your selected course.
+                        </p>
+                    </div>
+
+                    <form id="enrollmentForm" enctype="multipart/form-data">
+                        <!-- NAME + EMAIL -->
+                        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+                            <div>
+
+                                <label for="fullName"
+                                    class="mb-2 block text-sm font-semibold text-[#102E55] dark:text-white">
+                                    Full Name *
+                                </label>
+
+                                <input id="fullName" name="fullName" type="text" required
+                                    placeholder="Enter your full name"
+                                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[#245DAA] focus:ring-2 focus:ring-blue-100 dark:border-white/10 dark:bg-[#071B3A] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#9cc8f5] dark:focus:ring-[#245DAA]/20">
+
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="mb-2 block text-sm font-semibold text-[#102E55] dark:text-white">
+                                    Email Address *
+                                </label>
+
+                                <input id="email" name="email" type="email" required placeholder="Enter your email"
+                                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[#245DAA] focus:ring-2 focus:ring-blue-100 dark:border-white/10 dark:bg-[#071B3A] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#9cc8f5] dark:focus:ring-[#245DAA]/20">
+                            </div>
+                        </div>
+
+                        <!-- PHONE + CITY -->
+
+                        <div class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+                            <div>
+
+                                <label for="phone"
+                                    class="mb-2 block text-sm font-semibold text-[#102E55] dark:text-white">
+                                    WhatsApp Number *
+                                </label>
+
+                                <input id="phone" name="phone" type="tel" required placeholder="03XX-XXXXXXX"
+                                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[#245DAA] focus:ring-2 focus:ring-blue-100 dark:border-white/10 dark:bg-[#071B3A] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#9cc8f5] dark:focus:ring-[#245DAA]/20">
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="city"
+                                    class="mb-2 block text-sm font-semibold text-[#102E55] dark:text-white">
+                                    City
+                                </label>
+
+                                <input id="city" name="city" type="text" placeholder="Enter your city"
+                                    class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[#245DAA] focus:ring-2 focus:ring-blue-100 dark:border-white/10 dark:bg-[#071B3A] dark:text-white dark:placeholder:text-slate-400 dark:focus:border-[#9cc8f5] dark:focus:ring-[#245DAA]/20">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- COURSE -->
+
+                        <div class="mt-5">
+
+                            <label for="course" class="mb-2 block text-sm font-semibold text-[#102E55] dark:text-white">
+                                Select Course *
+                            </label>
+
+                            <select id="course" name="course" required
+                                class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition-all duration-200 focus:border-[#245DAA] focus:ring-2 focus:ring-blue-100 dark:border-white/10 dark:bg-[#071B3A] dark:text-white dark:focus:border-[#9cc8f5] dark:focus:ring-[#245DAA]/20">
+
+                                <option value="">Choose a course</option>
+
+                                <option value="Graphic Designing with AI" data-duration="2.5 Months" data-fee="300">
+                                    Graphic Designing with AI — 2.5 Months
+                                </option>
+
+                                <option value="Web Development" data-duration="2.5 Months" data-fee="300">
+                                    Web Development — 2.5 Months
+                                </option>
+
+                                <option value="Prompt Engineering" data-duration="1 Month" data-fee="300">
+                                    Prompt Engineering — 1 Month
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- COURSE SUMMARY -->
+
+                        <div id="courseSummary"
+                            class="mt-5 hidden rounded-xl border border-blue-100 bg-[#EEF5FC] p-4 dark:border-white/10 dark:bg-[#071B3A]">
+
+                            <div class="flex items-start justify-between gap-4">
+
+                                <div>
+
+                                    <p
+                                        class="text-xs font-semibold uppercase tracking-wide text-[#245DAA] dark:text-[#9cc8f5]">
+                                        Selected Course
+                                    </p>
+
+                                    <h3 id="selectedCourseName"
+                                        class="mt-1 text-base font-semibold text-[#102E55] dark:text-white">
+                                        -
+                                    </h3>
+
+                                    <p id="selectedCourseDuration"
+                                        class="mt-1 text-xs text-slate-500 dark:text-[#CBD5E1]">
+                                        -
+                                    </p>
+
+                                </div>
+
+                                <div class="text-right">
+
+                                    <p class="text-xs text-slate-400">
+                                        Course Fee
+                                    </p>
+
+                                    <p class="mt-1 text-lg font-bold text-[#102E55] dark:text-yellow-400">
+                                        PKR <span id="selectedCourseFee">300</span>
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PAYMENT METHOD -->
+
+                        <div class="mt-6">
+
+                            <label class="mb-3 block text-sm font-semibold text-[#102E55] dark:text-white">
+                                Payment Method *
+                            </label>
+
+                            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                                <!-- Easypaisa -->
+
+                                <label class="cursor-pointer">
+
+                                    <input type="radio" name="paymentMethod" value="Easypaisa" class="peer sr-only"
+                                        required>
+
+                                    <div
+                                        class="rounded-xl border border-slate-200 bg-white p-4 transition-all duration-200 peer-checked:border-yellow-400 peer-checked:bg-yellow-50 hover:border-[#245DAA] dark:border-white/10 dark:bg-[#071B3A] dark:peer-checked:border-yellow-400 dark:peer-checked:bg-yellow-400/10 dark:hover:border-[#9cc8f5]">
+
+                                        <div class="flex items-center gap-3">
+
+                                            <div
+                                                class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#102E55] text-yellow-400">
+                                                <i class="fa-solid fa-wallet"></i>
+                                            </div>
+
+                                            <div>
+                                                <p class="text-sm font-semibold text-[#102E55] dark:text-white">
+                                                    Easypaisa
+                                                </p>
+
+                                                <p class="text-xs text-slate-400">
+                                                    Mobile payment
+                                                </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PAYMENT DETAILS -->
+
+                        <div id="paymentDetails"
+                            class="mt-5 hidden rounded-xl border border-yellow-200 bg-yellow-50 p-5 dark:border-yellow-400/20 dark:bg-yellow-400/10">
+
+                            <div class="flex items-start gap-3">
+
+                                <div
+                                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-yellow-400 text-[#071B3A]">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </div>
+
+                                <div class="min-w-0">
+
+                                    <p class="text-sm font-semibold text-[#102E55] dark:text-white">
+                                        <span id="paymentMethodName">Payment</span> Payment Details
+                                    </p>
+
+                                    <p class="mt-1 text-xs leading-5 text-slate-500 dark:text-[#CBD5E1]">
+                                        Send PKR 300 to the account below, then enter your transaction details.
+                                    </p>
+
+                                    <div class="mt-4 space-y-2">
+
+                                        <div class="flex flex-wrap items-center gap-2 text-sm">
+                                            <span class="font-medium text-slate-500 dark:text-[#CBD5E1]">
+                                                Account Name:
+                                            </span>
+
+                                            <span id="paymentAccountName"
+                                                class="font-semibold text-[#102E55] dark:text-white">
+                                                Muhammad Hamza Awais
+                                            </span>
+                                        </div>
+
+                                        <div class="flex flex-wrap items-center gap-2 text-sm">
+
+                                            <span class="font-medium text-slate-500 dark:text-[#CBD5E1]">
+                                                Account Number:
+                                            </span>
+
+                                            <span id="paymentAccountNumber"
+                                                class="font-semibold text-[#245DAA] dark:text-yellow-400">
+                                                Select a payment method
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+                        <!-- Payment Screenshot-->
+                        <div class="mt-5">
+
+                            <label for="paymentScreenshot"
+                                class="mb-2 block text-sm font-semibold text-[#102E55] dark:text-white">
+                                Payment Screenshot *
+                            </label>
+
+                            <!-- Hidden File Input -->
+                            <input id="paymentScreenshot" name="paymentScreenshot" type="file" accept="image/*" required
+                                class="hidden">
+
+                            <!-- Custom Upload Button -->
+                            <label for="paymentScreenshot"
+                                class="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-[#102E55] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#071B3A] hover:shadow-md dark:bg-yellow-400 dark:text-[#071B3A] dark:hover:bg-yellow-300">
+                                <i class="fa-solid fa-upload"></i>
+                                Upload Payment Screenshot
+                            </label>
+
+                            <!-- Selected File Name -->
+                            <p id="fileName" class="mt-3 text-xs text-slate-400 dark:text-slate-400">
+                                No file selected
+                            </p>
+
+                            <p class="mt-1 text-xs text-slate-400 dark:text-slate-400">
+                                Upload a clear screenshot of your payment confirmation.
+                            </p>
+
+                        </div>
+
+
+
+
+                        <!-- CONFIRMATION -->
+
+                        <div
+                            class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 dark:border-white/10 dark:bg-[#071B3A]">
+
+                            <label class="flex cursor-pointer items-start gap-3">
+
+                                <input id="paymentConfirmation" name="paymentConfirmation" type="checkbox" required
+                                    class="mt-1 h-4 w-4 rounded border-slate-300 text-[#245DAA] focus:ring-[#245DAA] dark:border-white/20 dark:bg-[#102E55]">
+
+                                <span class="text-xs leading-6 text-slate-500 dark:text-[#CBD5E1]">
+                                    I confirm that I have paid the course fee of
+                                    <strong class="font-semibold text-[#102E55] dark:text-white">
+                                        PKR 300
+                                    </strong>
+                                    and that the payment information provided above is correct.
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <button id="enrollmentSubmit" type="submit"
+                            class="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-[#102E55] px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-lg dark:bg-yellow-400 dark:text-[#071B3A] dark:hover:bg-yellow-300">
+
+                            Submit Enrollment
+
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                        </button>
+
+
+                        <p class="mt-4 text-center text-xs leading-5 text-slate-400 dark:text-slate-400">
+                            Your enrollment will remain pending until our admin team verifies your payment.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <div class="bg-white pt-5 transition-colors duration-300 dark:bg-[#050B16]">
+
+        <footer class="bg-[#071B3A] text-white dark:bg-[#071B3A]">
+
+            <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Academy -->
+
+                    <div>
+
+                        <a href="index.html" class="flex items-center gap-3">
+
+                            <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+                                class="h-11 w-11 object-contain">
+
+                            <div class="leading-tight">
+
+                                <span class="block text-base font-semibold">
+                                    Online Learnify
+                                </span>
+
+                                <span class="block text-xs text-blue-200">
+                                    Academy
+                                </span>
+
+                            </div>
+
+                        </a>
+
+                        <p class="mt-5 max-w-xs text-sm leading-7 text-blue-100 dark:text-[#CBD5E1]">
+                            Practical digital skills training built around real learning, practical projects and useful
+                            skills.
+                        </p>
+
+
+                        <!-- Social Icons -->
+
+                        <div class="mt-6 flex gap-3">
+
+                            <a href="https://www.instagram.com/____online_learnify?stkn=MThmZDN2dTJuNjlyZQ=="
+                                aria-label="Instagram"
+                                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/online-learnify-3a59b3424?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                aria-label="LinkedIn"
+                                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Quick Links -->
+
+                    <div>
+
+                        <h3 class="text-base font-semibold">
+                            Quick Links
+                        </h3>
+
+                        <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+                        <ul class="mt-5 space-y-3 text-sm">
+
+                            <li>
+                                <a href="about.html"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Journey
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="index.html#courses"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Courses
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="index.html#students"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Our Students
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="project.html"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Projects
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="index.html#success"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Success Stories
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Courses -->
+
+                    <div>
+
+                        <h3 class="text-base font-semibold">
+                            Our Courses
+                        </h3>
+
+                        <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+                        <ul class="mt-5 space-y-3 text-sm">
+
+                            <li>
+                                <a href="index.html#courses"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Graphic Designing with AI
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="index.html#courses"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Web Development
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="index.html#courses"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Prompt Engineering
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="events.html"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Workshops & Events
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="index.html#gallery"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    Gallery
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Contact -->
+
+                    <div id="contact">
+
+                        <h3 class="text-base font-semibold">
+                            Get In Touch
+                        </h3>
+
+                        <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+                        <div class="mt-5 space-y-4 text-sm">
+
+                            <div class="flex items-start gap-3">
+
+                                <i class="fa-solid fa-envelope mt-1 text-yellow-400"></i>
+
+                                <a href="mailto:info@onlinelearnify.com"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    onlinelarnify03@gmail.com
+                                </a>
+
+                            </div>
+
+
+                            <div class="flex items-start gap-3">
+
+                                <i class="fa-solid fa-phone mt-1 text-yellow-400"></i>
+
+                                <a href="tel:0311 0619854"
+                                    class="text-blue-100 transition-colors duration-200 hover:text-yellow-400">
+                                    0311 0619854
+                                </a>
+
+                            </div>
+
+
+                            <div class="flex items-start gap-3">
+
+                                <i class="fa-solid fa-location-dot mt-1 text-yellow-400"></i>
+
+                                <p class="leading-6 text-blue-100">
+                                    Online Learnify Academy Bahawalpur
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <a href="contact.html"
+                            class="mt-7 inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300">
+                            Join Academy
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTTOM FOOTER -->
+
+            <div class="border-t border-white/10">
+
+                <div
+                    class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-5 text-center md:flex-row md:text-left lg:px-8">
+
+                    <p class="text-xs text-blue-200 dark:text-[#CBD5E1] sm:text-sm">
+                        <i class="fa-regular fa-copyright"></i>
+                        2026 Online Learnify Academy. All rights reserved.
+                    </p>
+
+                    <div class="flex gap-5 text-xs text-blue-200 dark:text-[#CBD5E1] sm:text-sm">
+
+                        <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+                            Privacy Policy
+                        </a>
+
+                        <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+                            Terms & Conditions
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- BACK TO TOP -->
+
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 z-50 hidden h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- THEME TOGGLE -->
+
+    <button id="themeToggle" type="button" aria-label="Toggle dark mode"
+        class="fixed bottom-6 left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
+    </button>
+
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
