@@ -92,6 +92,128 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  const slider = document.getElementById("hero-slider");
+  const track = document.getElementById("hero-track");
+  const slides = Array.from(
+    track.querySelectorAll(".hero-slide")
+  );
+
+  const dots = Array.from(
+    slider.querySelectorAll(".hero-dot")
+  );
+
+  const prevButton = document.getElementById("hero-prev");
+  const nextButton = document.getElementById("hero-next");
+
+  let currentSlide = 0;
+  let autoSlide = null;
+
+  const delay = 6000;
+
+  // Show the selected slide
+  function showSlide(index) {
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    track.style.transform =
+      `translateX(-${currentSlide * 100}%)`;
+
+    dots.forEach((dot, i) => {
+
+      const active = i === currentSlide;
+
+      dot.classList.toggle("bg-[#F5B82E]", active);
+      dot.classList.toggle("w-7", active);
+
+      dot.classList.toggle("bg-white/70", !active);
+      dot.classList.toggle("w-2.5", !active);
+
+      dot.setAttribute(
+        "aria-current",
+        active ? "true" : "false"
+      );
+    });
+  }
+
+  // Stop automatic sliding
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = null;
+  }
+
+  // Start automatic sliding
+  function startAutoSlide() {
+    stopAutoSlide();
+
+    autoSlide = setInterval(function () {
+      showSlide(currentSlide + 1);
+    }, delay);
+  }
+
+  // Previous button
+  prevButton.addEventListener("click", function () {
+    showSlide(currentSlide - 1);
+    startAutoSlide();
+  });
+
+  // Next button
+  nextButton.addEventListener("click", function () {
+    showSlide(currentSlide + 1);
+    startAutoSlide();
+  });
+
+  // Indicator buttons
+  dots.forEach(function (dot, index) {
+
+    dot.addEventListener("click", function () {
+      showSlide(index);
+      startAutoSlide();
+    });
+
+  });
+
+  // Pause while hovering
+  slider.addEventListener("mouseenter", stopAutoSlide);
+  slider.addEventListener("mouseleave", startAutoSlide);
+
+  // Pause while navigating with keyboard
+  slider.addEventListener("focusin", stopAutoSlide);
+  slider.addEventListener("focusout", function (event) {
+    if (!slider.contains(event.relatedTarget)) {
+      startAutoSlide();
+    }
+  });
+
+  // Mobile touch swipe
+  let touchStartX = 0;
+
+  slider.addEventListener("touchstart", function (event) {
+    touchStartX = event.changedTouches[0].clientX;
+  }, { passive: true });
+
+  slider.addEventListener("touchend", function (event) {
+
+    const touchEndX = event.changedTouches[0].clientX;
+    const difference = touchStartX - touchEndX;
+
+    if (Math.abs(difference) > 50) {
+      showSlide(
+        currentSlide + (difference > 0 ? 1 : -1)
+      );
+
+      startAutoSlide();
+    }
+
+  }, { passive: true });
+
+  // Initialize slider on the first slide
+  showSlide(0);
+  startAutoSlide();
+
+});
+
 // Mobile About Dropdown
 const mobileAboutBtn = document.getElementById("mobileAboutBtn");
 const mobileAboutMenu = document.getElementById("mobileAboutMenu");
@@ -560,7 +682,7 @@ document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio
     }).catch(function () {});
 
     var errors = { invalid_name: "Please enter your full name (2-100 characters).", invalid_email: "Please enter a valid email address.",
-        invalid_phone: "Please enter a valid WhatsApp number.", invalid_city: "City name is too long.", invalid_payment_method: "Please select a payment method.",
+        invalid_phone: "Please enter a valid WhatsApp number.", invalid_city: "City name is too long.", invalid_university: "Please enter your university/institute name.", invalid_semester: "Please enter your semester/class.", invalid_payment_method: "Please select a payment method.",
         invalid_screenshot: "Please upload your payment screenshot again.", invalid_course: "Please choose a course from the list.",
         rate_limited: "You've submitted several applications recently. Please try again later." };
     var busy = false, original = btn.innerHTML;
@@ -568,12 +690,12 @@ document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio
     form.addEventListener("submit", function (ev) {
         ev.preventDefault(); if (busy) return;
         var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
-        var name = v("fullName"), email = v("email"), phone = v("phone"), city = v("city");
+        var name = v("fullName"), email = v("email"), phone = v("phone"), city = v("city"), university = v("university"), semester = v("semester");
         var course = byName[(select.value || "").toLowerCase()];
         var pm = form.querySelector('input[name="paymentMethod"]:checked');
         var file = fileInput && fileInput.files[0];
         var confirmBox = document.getElementById("paymentConfirmation");
-        if (!name || !email || !phone || !select.value) return msg("Please fill in all required fields.", "error");
+        if (!name || !email || !phone || !university || !semester || !select.value) return msg("Please fill in all required fields.", "error");
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return msg(errors.invalid_email, "error");
         if (!/^\+?[0-9 ()-]{7,20}$/.test(phone)) return msg(errors.invalid_phone, "error");
         if (!course) return msg("Courses are still loading. Please choose your course again in a moment.", "error");
@@ -588,7 +710,7 @@ document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio
         busy = true; btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
         fetch(API + "/storage/v1/object/payment-receipts/" + path, { method: "POST", headers: { apikey: KEY, "Content-Type": file.type }, body: file })
             .then(function (r) { if (!r.ok) throw new Error("upload"); })
-            .then(function () { return rpc("submit_paid_enrollment", { _full_name: name.slice(0, 100), _email: email.slice(0, 255), _phone: phone.slice(0, 20), _city: city.slice(0, 80), _course_id: course.id, _payment_method: pm.value, _screenshot_path: path }); })
+            .then(function () { return rpc("submit_paid_enrollment", { _full_name: name.slice(0, 100), _email: email.slice(0, 255), _phone: phone.slice(0, 20), _city: city.slice(0, 80), _course_id: course.id, _payment_method: pm.value, _screenshot_path: path, _university_name: university.slice(0, 120), _semester: semester.slice(0, 40) }); })
             .then(function (res) {
                 if (res === "ok") { form.reset(); if (fileName) fileName.textContent = "No file selected"; msg(SUCCESS, "success", 12000); }
                 else msg(errors[res] || "Something went wrong. Please try again.", "error");
