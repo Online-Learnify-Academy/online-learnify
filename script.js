@@ -535,199 +535,7 @@ if (projectFilters.length > 0 && projectItems.length > 0) {
     });
 }
 
-const galleryEvents = [
-    {
-        id: "annual-meetup",
-        title: "Annual Meetup & Batch 01 Passout Ceremony",
-        description: "Celebrating the achievements and memories of our first batch.",
-        folder: "assests/gallery images/annual meetup",
-        cover: "group photo 01.jpeg",
-        photos: Array.from({ length: 11 }, (_, i) =>
-            `group photo ${String(i + 1).padStart(2, "0")}.jpeg`
-        )
-    },
-    {
-    id: "first-anniversary",
-    title: "1 Year Celebration & Website Launching Ceremony",
-    description: "Celebrating one year of learning, creativity, and growth.",
-    folder: "assests/gallery images/1st anniversary",
-    cover: "picture 2.jpeg",
-    photos: Array.from({ length: 33 }, (_, i) =>
-        `picture ${i + 1}.jpeg`
-        )
-    },
-];
 
-const eventsView = document.getElementById("eventsView");
-const photoView = document.getElementById("photoView");
-const eventCards = document.getElementById("eventCards");
-const galleryGrid = document.getElementById("galleryGrid");
-
-const lightbox = document.getElementById("lightbox");
-const lightboxImage = document.getElementById("lightboxImage");
-const lightboxCaption = document.getElementById("lightboxCaption");
-const lightboxCounter = document.getElementById("lightboxCounter");
-
-let activeEvent = null;
-let activeIndex = 0;
-
-
-// RENDER EVENT CARDS
-galleryEvents.forEach(event => {
-    const card = document.createElement("article");
-
-    card.className =
-        "overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-gray-800 dark:bg-[#0A1628]";
-
-    card.innerHTML = `
-        <button type="button" class="block w-full text-left">
-            <div class="aspect-4/3 overflow-hidden bg-gray-200 dark:bg-gray-800">
-                <img src="${event.folder}/${event.cover}"
-                     alt="${event.title}"
-                     class="h-full w-full object-cover transition duration-500 hover:scale-105"
-                     loading="lazy">
-            </div>
-
-            <div class="p-5 sm:p-6">
-                
-
-                <h3 class="mb-3 text-lg font-bold sm:text-xl">
-                    ${event.title}
-                </h3>
-
-                <p class="mb-5 text-sm leading-6 text-gray-600 dark:text-gray-400">
-                    ${event.description}
-                </p>
-
-                <span class="font-semibold text-[#245DAA] dark:text-[#9cc8f5]">
-                    View Gallery <i class="fa-solid fa-arrow-right ml-2"></i>
-                </span>
-            </div>
-        </button>
-    `;
-
-    card.querySelector("button").addEventListener("click", () => {
-        openGallery(event);
-    });
-
-    eventCards.appendChild(card);
-});
-
-
-// OPEN SELECTED EVENT
-function openGallery(event) {
-    activeEvent = event;
-
-    eventsView.hidden = true;
-    photoView.hidden = false;
-
-    document.getElementById("galleryHeading").textContent = event.title;
-    document.getElementById("galleryDescription").textContent = event.description;
-    
-
-    galleryGrid.innerHTML = "";
-
-    event.photos.forEach((photo, index) => {
-        const image = document.createElement("img");
-        const button = document.createElement("button");
-
-        image.src = `${event.folder}/${photo}`;
-        image.alt = `${event.title} - Photo ${index + 1}`;
-        image.loading = "lazy";
-
-        image.className =
-            "h-full w-full object-cover transition duration-300 group-hover:scale-105";
-
-        button.type = "button";
-        button.className =
-            "group aspect-square overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800";
-
-        button.appendChild(image);
-
-        image.addEventListener("error", () => {
-            button.remove();
-        });
-
-        button.addEventListener("click", () => openLightbox(index));
-
-        galleryGrid.appendChild(button);
-    });
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-
-// OPEN IMAGE PREVIEW
-function openLightbox(index) {
-    activeIndex = index;
-    updateLightbox();
-
-    lightbox.hidden = false;
-    document.body.classList.add("overflow-hidden");
-}
-
-function updateLightbox() {
-    const photo = activeEvent.photos[activeIndex];
-
-    lightboxImage.src = `${activeEvent.folder}/${photo}`;
-    lightboxImage.alt = `${activeEvent.title} - Photo ${activeIndex + 1}`;
-    lightboxCaption.textContent = activeEvent.title;
-    lightboxCounter.textContent =
-        `${activeIndex + 1} / ${activeEvent.photos.length}`;
-}
-
-
-// PREVIOUS / NEXT
-document.getElementById("prevPhoto").addEventListener("click", () => {
-    activeIndex = (activeIndex - 1 + activeEvent.photos.length)
-        % activeEvent.photos.length;
-    updateLightbox();
-});
-
-document.getElementById("nextPhoto").addEventListener("click", () => {
-    activeIndex = (activeIndex + 1) % activeEvent.photos.length;
-    updateLightbox();
-});
-
-
-// CLOSE LIGHTBOX
-function closeLightbox() {
-    lightbox.hidden = true;
-    lightboxImage.src = "";
-    document.body.classList.remove("overflow-hidden");
-}
-
-document.getElementById("closeLightbox").addEventListener("click", closeLightbox);
-
-lightbox.addEventListener("click", event => {
-    if (event.target === lightbox) closeLightbox();
-});
-
-document.addEventListener("keydown", event => {
-    if (lightbox.hidden) return;
-
-    if (event.key === "Escape") closeLightbox();
-
-    if (event.key === "ArrowRight") {
-        activeIndex = (activeIndex + 1) % activeEvent.photos.length;
-        updateLightbox();
-    }
-
-    if (event.key === "ArrowLeft") {
-        activeIndex = (activeIndex - 1 + activeEvent.photos.length)
-            % activeEvent.photos.length;
-        updateLightbox();
-    }
-});
-
-
-// BACK TO EVENTS
-document.getElementById("backToEvents").addEventListener("click", () => {
-    photoView.hidden = true;
-    eventsView.hidden = false;
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
 
 // Back To Top
 const backToTop = document.getElementById("backToTop");
@@ -915,3 +723,196 @@ document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio
     });
 })();
 
+const galleryEvents = [
+    {
+        id: "annual-meetup",
+        title: "Annual Meetup & Batch 01 Passout Ceremony",
+        description: "Celebrating the achievements and memories of our first batch.",
+        folder: "assests/gallery images/annual meetup",
+        cover: "group photo 01.jpg",
+        photos: Array.from({ length: 11 }, (_, i) =>
+            `group photo ${String(i + 1).padStart(2, "0")}.jpg`
+        )
+    },
+    {
+    id: "first-anniversary",
+    title: "1 Year Celebration & Website Launching Ceremony",
+    description: "Celebrating one year of learning, creativity, and growth.",
+    folder: "assests/gallery images/1st anniversary",
+    cover: "picture 2.jpg",
+    photos: Array.from({ length: 33 }, (_, i) =>
+        `picture ${i + 1}.jpg`
+        )
+    },
+];
+
+const eventsView = document.getElementById("eventsView");
+const photoView = document.getElementById("photoView");
+const eventCards = document.getElementById("eventCards");
+const galleryGrid = document.getElementById("galleryGrid");
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const lightboxCounter = document.getElementById("lightboxCounter");
+
+let activeEvent = null;
+let activeIndex = 0;
+
+
+// RENDER EVENT CARDS
+galleryEvents.forEach(event => {
+    const card = document.createElement("article");
+
+    card.className =
+        "overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-gray-800 dark:bg-[#0A1628]";
+
+    card.innerHTML = `
+        <button type="button" class="block w-full text-left">
+            <div class="aspect-4/3 overflow-hidden bg-gray-200 dark:bg-gray-800">
+                <img src="${event.folder}/${event.cover}"
+                     alt="${event.title}"
+                     class="h-full w-full object-cover transition duration-500 hover:scale-105"
+                     loading="lazy">
+            </div>
+
+            <div class="p-5 sm:p-6">
+                
+
+                <h3 class="mb-3 text-lg font-bold sm:text-xl">
+                    ${event.title}
+                </h3>
+
+                <p class="mb-5 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    ${event.description}
+                </p>
+
+                <span class="font-semibold text-[#245DAA] dark:text-[#9cc8f5]">
+                    View Gallery <i class="fa-solid fa-arrow-right ml-2"></i>
+                </span>
+            </div>
+        </button>
+    `;
+
+    card.querySelector("button").addEventListener("click", () => {
+        openGallery(event);
+    });
+
+    eventCards.appendChild(card);
+});
+
+
+// OPEN SELECTED EVENT
+function openGallery(event) {
+    activeEvent = event;
+
+    eventsView.hidden = true;
+    photoView.hidden = false;
+
+    document.getElementById("galleryHeading").textContent = event.title;
+    document.getElementById("galleryDescription").textContent = event.description;
+    
+
+    galleryGrid.innerHTML = "";
+
+    event.photos.forEach((photo, index) => {
+        const image = document.createElement("img");
+        const button = document.createElement("button");
+
+        image.src = `${event.folder}/${photo}`;
+        image.alt = `${event.title} - Photo ${index + 1}`;
+        image.loading = "lazy";
+
+        image.className =
+            "h-full w-full object-cover transition duration-300 group-hover:scale-105";
+
+        button.type = "button";
+        button.className =
+            "group aspect-square overflow-hidden rounded-xl bg-gray-200 dark:bg-gray-800";
+
+        button.appendChild(image);
+
+        image.addEventListener("error", () => {
+            button.remove();
+        });
+
+        button.addEventListener("click", () => openLightbox(index));
+
+        galleryGrid.appendChild(button);
+    });
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+
+// OPEN IMAGE PREVIEW
+function openLightbox(index) {
+    activeIndex = index;
+    updateLightbox();
+
+    lightbox.hidden = false;
+    document.body.classList.add("overflow-hidden");
+}
+
+function updateLightbox() {
+    const photo = activeEvent.photos[activeIndex];
+
+    lightboxImage.src = `${activeEvent.folder}/${photo}`;
+    lightboxImage.alt = `${activeEvent.title} - Photo ${activeIndex + 1}`;
+    lightboxCaption.textContent = activeEvent.title;
+    lightboxCounter.textContent =
+        `${activeIndex + 1} / ${activeEvent.photos.length}`;
+}
+
+
+// PREVIOUS / NEXT
+document.getElementById("prevPhoto").addEventListener("click", () => {
+    activeIndex = (activeIndex - 1 + activeEvent.photos.length)
+        % activeEvent.photos.length;
+    updateLightbox();
+});
+
+document.getElementById("nextPhoto").addEventListener("click", () => {
+    activeIndex = (activeIndex + 1) % activeEvent.photos.length;
+    updateLightbox();
+});
+
+
+// CLOSE LIGHTBOX
+function closeLightbox() {
+    lightbox.hidden = true;
+    lightboxImage.src = "";
+    document.body.classList.remove("overflow-hidden");
+}
+
+document.getElementById("closeLightbox").addEventListener("click", closeLightbox);
+
+lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown", event => {
+    if (lightbox.hidden) return;
+
+    if (event.key === "Escape") closeLightbox();
+
+    if (event.key === "ArrowRight") {
+        activeIndex = (activeIndex + 1) % activeEvent.photos.length;
+        updateLightbox();
+    }
+
+    if (event.key === "ArrowLeft") {
+        activeIndex = (activeIndex - 1 + activeEvent.photos.length)
+            % activeEvent.photos.length;
+        updateLightbox();
+    }
+});
+
+
+// BACK TO EVENTS
+document.getElementById("backToEvents").addEventListener("click", () => {
+    photoView.hidden = true;
+    eventsView.hidden = false;
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
