@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="icon" href="assests\courses and logo\logo.png" />
+  <!-- Google Font - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="./output.css" rel="stylesheet" />
+  <title>
+    Online Learnify Academy - Graphic Design & Digital Skills Training
+  </title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header id="header" class="sticky top-0 z-50 bg-[#071B3A] text-white dark:bg-[#050B16]">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8" aria-label="Main navigation">
+      <!-- NAVBAR MAIN ROW -->
+      <div class="flex items-center justify-between h-20">
+        <!-- LOGO -->
+        <a href="index.html" class="flex items-center gap-3 shrink-0">
+          <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+            class="w-11 h-11 object-contain" />
+          <div class="leading-tight">
+            <span class="block text-base sm:text-lg font-semibold tracking-tight text-white">Online Learnify</span>
+            <span class="block text-[11px] sm:text-xs text-blue-200 dark:text-blue-300">Academy</span>
+          </div>
+        </a>
+        <!-- DESKTOP NAVIGATION -->
+        <div class="hidden lg:flex items-center gap-7">
+          <!-- About Dropdown -->
+          <div class="relative group">
+            <!-- About Button -->
+            <button type="button"
+              class="flex items-center gap-1.5 py-2 text-sm font-medium text-white transition-colors duration-200 hover:text-yellow-400">
+              About<i
+                class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:rotate-180"></i>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="invisible absolute left-0 top-full z-50 mt-2 w-52 translate-y-2 rounded-xl bg-white p-2 opacity-0 shadow-xl ring-1 ring-black/5 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 dark:bg-[#102E55] dark:ring-white/10">
+              <a href="about.html"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Journey
+              </a>
+              <a href="index.html#founder"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Founder
+              </a>
+              <a href="index.html#co-founder"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-[#EEF5FC] hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Co-Founder
+              </a>
+              <div class="my-1 border-t border-gray-100 dark:border-white/10"></div>
+              <a href="inspiration.html"
+                class="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[#071B3A] transition-all duration-200 hover:bg-yellow-50 hover:text-[#245DAA] dark:text-white dark:hover:bg-[#071B3A] dark:hover:text-yellow-400">
+                Fonders' Message
+              </a>
+            </div>
+          </div>
+          <a href="#courses"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Courses
+          </a>
+          <a href="#students"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Students
+          </a>
+          <a href="project.html"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Projects
+          </a>
+          <a href="#success"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Stories
+          </a>
+          <a href="events.html"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Workshops
+            & Events
+          </a>
+          <a href="#gallery"
+            class="nav-link text-sm text-blue-100 dark:text-blue-200 hover:text-yellow-400 transition-colors duration-200">Gallery
+          </a>
+        </div>
+        <!-- DESKTOP CTA -->
+        <a href="contact.html"
+          class="hidden lg:inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-yellow-400 text-[#071B3A] dark:bg-yellow-400 dark:text-[#071B3A] text-sm font-semibold hover:bg-yellow-300 transition-colors duration-200">
+          Join Academy
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button id="menuBtn" type="button"
+          class="lg:hidden flex items-center justify-center w-10 h-10 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors"
+          aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+
+          <!-- Hamburger -->
+          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE NAVIGATION -->
+      <div id="navMenu" class="hidden lg:hidden border-t border-white/10 dark:border-white/10">
+        <div class="py-4 flex flex-col gap-1">
+
+          <!-- Mobile About Dropdown -->
+          <div>
+            <button id="mobileAboutBtn" type="button"
+              class="flex w-full items-center justify-between py-3 text-blue-100 transition hover:text-yellow-400">
+              <span>About</span>
+              <i id="mobileAboutIcon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+            </button>
+            <div id="mobileAboutMenu" class="hidden pl-4">
+              <a href="about.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Journey
+              </a>
+
+              <a href="index.html#founder" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Founder
+              </a>
+
+              <a href="index.html#co-founder"
+                class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Co-Founder
+              </a>
+
+              <a href="inspiration.html" class="block py-2.5 text-sm text-blue-200 transition hover:text-yellow-400">
+                <i class="fa-solid fa-arrow-right mr-2 text-xs"></i>
+                Founder's Message
+              </a>
+
+            </div>
+          </div>
+
+          <a href="#courses"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Courses
+          </a>
+
+          <a href="#students"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Students
+          </a>
+
+          <a href="project.html"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Projects
+          </a>
+
+          <a href="#success"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Stories
+          </a>
+
+          <a href="events.html"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Workshops & Events
+          </a>
+
+          <a href="#gallery"
+            class="mobile-nav-link px-4 py-3 text-sm text-blue-100 dark:text-blue-200 hover:text-white hover:bg-white/5 rounded-md transition-colors">
+            Gallery
+          </a>
+
+          <!-- Mobile CTA -->
+          <a href="contact.html"
+            class="mobile-nav-link mt-3 mx-4 px-5 py-3 text-center rounded-md bg-yellow-400 text-[#071B3A] text-sm font-semibold hover:bg-yellow-300 transition-all duration-200">
+            Join Academy
+          </a>
+
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  
+<main class="min-h-screen bg-[#F7F9FC] px-5 py-16 text-[#0A1628] dark:bg-[#050B16] dark:text-white sm:py-20 lg:px-8">
+<!-- GALLERY HERO -->
+  <section class="relative mb-12 overflow-hidden rounded-3xl bg-[#102E55] px-6 py-14 text-center sm:py-16 md:py-20">
+
+    <!-- Decorative Elements -->
+    <div class="absolute -left-10 -top-10 h-32 w-32 rounded-full bg-[#245DAA]/20"></div>
+    <div class="absolute -bottom-12 -right-8 h-40 w-40 rounded-full bg-[#245DAA]/20"></div>
+
+    <!-- Hero Content -->
+    <div class="relative mx-auto max-w-3xl">
+
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-yellow-400 px-4 py-2 text-sm font-semibold text-[#071B3A]">
+            <i class="fa-solid fa-images"></i>
+            Our Memories & Milestones
+        </span>
+
+        <h1 class="mb-5 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
+            Moments That
+            <span class="text-yellow-400">Inspire</span>
+        </h1>
+
+        <p class="mx-auto max-w-2xl text-sm leading-7 text-gray-300 sm:text-base">
+            Explore the special moments, achievements, and celebrations
+            that have shaped our journey at Online Learnify Academy.
+        </p>
+
+    </div>
+</section>
+    <div class="mx-auto max-w-7xl">
+        <!-- EVENT CARDS VIEW -->
+        <section id="eventsView">
+            <h2 class="mb-8 text-2xl font-bold sm:text-3xl">
+                Explore Our Events
+            </h2>
+
+            <div id="eventCards" class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <!-- Event cards are generated by gallery.js -->
+            </div>
+        </section>
+
+
+        <!-- EVENT PHOTOS VIEW -->
+        <section id="photoView" hidden>
+
+            <button id="backToEvents" type="button"
+                class="mb-8 inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 text-sm transition hover:border-[#245DAA] dark:border-gray-700">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Events
+            </button>
+
+            <div class="mb-8">
+                <h2 id="galleryHeading" class="mb-3 text-2xl font-bold sm:text-4xl">
+                    Event Gallery
+                </h2>
+
+                <p id="galleryDescription" class="text-sm leading-7 text-gray-600 dark:text-gray-400"></p>
+
+                <p id="photoCount" class="mt-4 text-sm font-medium text-[#245DAA] dark:text-[#9cc8f5]"></p>
+            </div>
+
+            <div id="galleryGrid" class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
+                <!-- Selected event photos are generated by gallery.js -->
+            </div>
+
+        </section>
+
+    </div>
+</main>
+
+
+<!-- IMAGE LIGHTBOX -->
+<div id="lightbox" hidden
+    class="fixed inset-0 z-100 flex items-center justify-center bg-black/95 p-4">
+
+    <button id="closeLightbox" type="button"
+        aria-label="Close image"
+        class="absolute right-5 top-5 text-3xl text-white">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <button id="prevPhoto" type="button"
+        aria-label="Previous photo"
+        class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/10 px-4 py-3 text-white">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="flex max-h-full max-w-5xl flex-col items-center">
+        <img id="lightboxImage" src="" alt=""
+            class="max-h-[75vh] max-w-full rounded-lg object-contain">
+
+        <p id="lightboxCaption" class="mt-4 text-center text-sm text-white"></p>
+        <p id="lightboxCounter" class="mt-2 text-xs text-gray-400"></p>
+    </div>
+
+    <button id="nextPhoto" type="button"
+        aria-label="Next photo"
+        class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/10 px-4 py-3 text-white">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+
+  <!-- Footer -->
+  <div class="bg-white pt-5 transition-colors duration-300 dark:bg-[#050B16]">
+    <footer class="bg-[#071B3A] text-white dark:bg-[#071B3A]">
+      <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Academy -->
+          <div>
+            <a href="#home" class="flex items-center gap-3">
+              <img src="assests\courses and logo\logo.png" alt="Online Learnify Academy Logo"
+                class="h-11 w-11 object-contain">
+
+              <div class="leading-tight">
+                <span class="block text-base font-semibold">Online Learnify</span>
+                <span class="block text-xs text-blue-200">Academy</span>
+              </div>
+            </a>
+            <p class="mt-5 max-w-xs text-sm leading-7 text-blue-100 dark:text-[#CBD5E1]">
+              Practical design training built around real projects, live feedback and portfolio-ready skills.
+            </p>
+            <!-- Social Icons -->
+            <div class="mt-6 flex gap-3">
+
+              <a href="https://www.instagram.com/____online_learnify?stkn=MThmZDN2dTJuNjlyZQ==" aria-label="Instagram"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/online-learnify-3a59b3424?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                aria-label="LinkedIn"
+                class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-sm transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#071B3A]">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-base font-semibold">Quick Links</h3>
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+            <ul class="mt-5 space-y-3 text-sm">
+              <li>
+                <a href="about.html"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">About
+                  Academy
+                </a>
+              </li>
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Courses
+                </a>
+              </li>
+
+              <li>
+                <a href="#students"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Our
+                  Students
+                </a>
+              </li>
+
+              <li>
+                <a href="project.html"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Projects
+                </a>
+              </li>
+
+              <li>
+                <a href="#success"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Success
+                  Stories
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Courses -->
+          <div>
+
+            <h3 class="text-base font-semibold">Our Courses</h3>
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+            <ul class="mt-5 space-y-3 text-sm">
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Graphic
+                  Designing with AI
+                </a>
+              </li>
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Web
+                  Development
+                </a>
+              </li>
+
+              <li>
+                <a href="#courses"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Prompt
+                  Engineering
+                </a>
+              </li>
+
+              <li>
+                <a href="events.html"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Workshops
+                  & Events
+                </a>
+              </li>
+
+              <li>
+                <a href="#gallery"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">Gallery
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div id="contact">
+
+            <h3 class="text-base font-semibold">Get In Touch</h3>
+            <div class="mt-4 h-1 w-8 rounded-full bg-yellow-400"></div>
+
+            <div class="mt-5 space-y-4 text-sm">
+
+              <!-- Email -->
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-envelope mt-1 text-yellow-400"></i>
+
+                <a href="mailto:info@onlinelearnify.com"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">
+                  onlinelarnify03@gmail.com
+                </a>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-phone mt-1 text-yellow-400"></i>
+                <a href="tel:03110619854"
+                  class="text-blue-100 transition-colors duration-200 hover:text-yellow-400 dark:text-[#CBD5E1]">
+                  0311 0619854
+                </a>
+              </div>
+
+              <!-- Location -->
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-location-dot mt-1 text-yellow-400"></i>
+                <p class="leading-6 text-blue-100 dark:text-[#CBD5E1]">
+                  Online Learnify Academy Bahawalpur
+                </p>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <a href="contact.html"
+              class="mt-7 inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-[#071B3A] transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-300">
+              Join Academy
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10 dark:border-white/10">
+
+        <div
+          class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-5 text-center md:flex-row md:text-left lg:px-8">
+          <p class="text-xs text-blue-200 sm:text-sm dark:text-[#94A3B8]"><i class="fa-regular fa-copyright"></i>
+            2026 Online Learnify Academy. All rights reserved.
+          </p>
+          <div class="flex gap-5 text-xs text-blue-200 sm:text-sm dark:text-[#94A3B8]">
+            <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+              Privacy Policy
+            </a>
+            <a href="#" class="transition-colors duration-200 hover:text-yellow-400">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop"
+    class="fixed bottom-6 right-6 z-50 hidden h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Theme Toggle -->
+  <button id="themeToggle" type="button" aria-label="Toggle dark mode"
+    class="fixed bottom-6 left-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#102E55] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#071B3A] hover:shadow-xl">
+    <i id="themeIcon" class="fa-solid fa-moon"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
