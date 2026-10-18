@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const slider = document.getElementById("hero-slider");
   const track = document.getElementById("hero-track");
+  if (!slider || !track) return;
   const slides = Array.from(
     track.querySelectorAll(".hero-slide")
   );
@@ -535,194 +536,6 @@ if (projectFilters.length > 0 && projectItems.length > 0) {
     });
 }
 
-
-
-// Back To Top
-const backToTop = document.getElementById("backToTop");
-
-if (backToTop) {
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
-            backToTop.classList.remove("hidden");
-            backToTop.classList.add("flex");
-        } else {
-            backToTop.classList.add("hidden");
-            backToTop.classList.remove("flex");
-        }
-    });
-
-    backToTop.addEventListener("click", function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-}
-
-
-// Dark / Light Mode
-const themeToggle = document.getElementById("themeToggle");
-const themeIcon = document.getElementById("themeIcon");
-
-if (themeToggle && themeIcon) {
-    const savedTheme = localStorage.getItem("theme");
-
-    // Apply saved theme
-    if (savedTheme === "dark") {
-        document.documentElement.classList.add("dark");
-        themeIcon.classList.remove("fa-moon");
-        themeIcon.classList.add("fa-sun");
-    } else {
-        document.documentElement.classList.remove("dark");
-        themeIcon.classList.remove("fa-sun");
-        themeIcon.classList.add("fa-moon");
-    }
-
-    // Toggle theme
-    themeToggle.addEventListener("click", function () {
-        document.documentElement.classList.toggle("dark");
-
-        const isDark = document.documentElement.classList.contains("dark");
-
-        if (isDark) {
-            localStorage.setItem("theme", "dark");
-
-            themeIcon.classList.remove("fa-moon");
-            themeIcon.classList.add("fa-sun");
-        } else {
-            localStorage.setItem("theme", "light");
-
-            themeIcon.classList.remove("fa-sun");
-            themeIcon.classList.add("fa-moon");
-        }
-    });
-}
-
-// Course information
-const courseSelect = document.getElementById("course");
-const courseSummary = document.getElementById("courseSummary");
-const selectedCourseName = document.getElementById("selectedCourseName");
-const selectedCourseDuration = document.getElementById("selectedCourseDuration");
-const selectedCourseFee = document.getElementById("selectedCourseFee");
-courseSelect.addEventListener("change", function () {
-    const selectedOption = this.options[this.selectedIndex];
-    if (!this.value) {
-        courseSummary.classList.add("hidden");
-        return;
-    }
-    selectedCourseName.textContent = selectedOption.value;
-    selectedCourseDuration.textContent = selectedOption.dataset.duration;
-    selectedCourseFee.textContent = selectedOption.dataset.fee;
-    courseSummary.classList.remove("hidden");
-});
-// Payment method
-const paymentDetails = document.getElementById("paymentDetails");
-const paymentMethodName = document.getElementById("paymentMethodName");
-const paymentAccountNumber = document.getElementById("paymentAccountNumber");
-const paymentAccountName = document.getElementById("paymentAccountName");
-const paymentAccounts = {
-    Easypaisa: "0311 0619854"
-};
-document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio) {
-    radio.addEventListener("change", function () {
-        const method = this.value;
-        paymentMethodName.textContent = method;
-        paymentAccountNumber.textContent = paymentAccounts[method] || "";
-        paymentDetails.classList.remove("hidden");
-    });
-});
-
-
-// ===== Enrollment Form (connected to Learnify backend) =====
-(function () {
-    var API = "https://ybbvakeaixihtjwrlknj.supabase.co";
-    var KEY = "sb_publishable_gYx40fREmy1wRellfyqdiA_iTbaC-zt";
-    var SUCCESS = "Thank you! Your enrollment application and payment screenshot have been submitted. Our team is verifying your payment. Once approved, you will receive your WhatsApp group link.";
-    var form = document.getElementById("enrollmentForm");
-    var btn = document.getElementById("enrollmentSubmit");
-    if (!form || !btn) return;
-    var fileInput = document.getElementById("paymentScreenshot");
-    var fileName = document.getElementById("fileName");
-    if (fileInput && fileName) fileInput.addEventListener("change", function () {
-        fileName.textContent = fileInput.files[0] ? fileInput.files[0].name : "No file selected";
-    });
-
-    function rpc(fn, body) {
-        return fetch(API + "/rest/v1/rpc/" + fn, { method: "POST", headers: { "Content-Type": "application/json", apikey: KEY }, body: JSON.stringify(body || {}) })
-            .then(function (r) { if (!r.ok) throw new Error("x"); return r.json(); });
-    }
-    function msg(text, type, ms) {
-        var old = document.getElementById("formMessage"); if (old) old.remove();
-        var p = document.createElement("p"); p.id = "formMessage"; p.textContent = text;
-        p.className = type === "success" ? "mt-4 rounded-lg bg-green-50 px-4 py-3 text-center text-sm font-medium text-green-700" : "mt-4 rounded-lg bg-red-50 px-4 py-3 text-center text-sm font-medium text-red-700";
-        form.appendChild(p); setTimeout(function () { p.remove(); }, ms || 6000);
-    }
-
-    // Payment account details (editable from the admin portal)
-    rpc("get_payment_account").then(function (rows) {
-        var acc = Array.isArray(rows) ? rows[0] : rows;
-        if (!acc) return;
-        if (acc.account_number) paymentAccounts.Easypaisa = acc.account_number;
-        if (acc.account_name && paymentAccountName) paymentAccountName.textContent = acc.account_name;
-        var checked = form.querySelector('input[name="paymentMethod"]:checked');
-        if (checked && paymentAccountNumber) paymentAccountNumber.textContent = paymentAccounts[checked.value] || "";
-    }).catch(function () {});
-
-    var select = document.getElementById("course");
-    var byName = {};
-    rpc("get_active_courses").then(function (list) {
-        if (!Array.isArray(list) || !list.length) return;
-        list.forEach(function (c) { byName[c.name.toLowerCase()] = c; });
-        // Keep the existing options' look; update data from the database
-        var keep = select.querySelector('option[value=""]');
-        select.innerHTML = ""; if (keep) select.appendChild(keep);
-        list.forEach(function (c) {
-            var o = document.createElement("option");
-            o.value = c.name; o.textContent = c.name + (c.duration ? " - " + c.duration : "");
-            o.dataset.duration = c.duration || ""; o.dataset.fee = c.fee != null ? c.fee : "";
-            select.appendChild(o);
-        });
-    }).catch(function () {});
-
-    var errors = { invalid_name: "Please enter your full name (2-100 characters).", invalid_email: "Please enter a valid email address.",
-        invalid_phone: "Please enter a valid WhatsApp number.", invalid_city: "City name is too long.", invalid_university: "Please enter your university/institute name.", invalid_semester: "Please enter your semester/class.", invalid_payment_method: "Please select a payment method.",
-        invalid_screenshot: "Please upload your payment screenshot again.", invalid_course: "Please choose a course from the list.",
-        rate_limited: "You've submitted several applications recently. Please try again later." };
-    var busy = false, original = btn.innerHTML;
-
-    form.addEventListener("submit", function (ev) {
-        ev.preventDefault(); if (busy) return;
-        var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
-        var name = v("fullName"), email = v("email"), phone = v("phone"), city = v("city"), university = v("university"), semester = v("semester");
-        var course = byName[(select.value || "").toLowerCase()];
-        var pm = form.querySelector('input[name="paymentMethod"]:checked');
-        var file = fileInput && fileInput.files[0];
-        var confirmBox = document.getElementById("paymentConfirmation");
-        if (!name || !email || !phone || !university || !semester || !select.value) return msg("Please fill in all required fields.", "error");
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return msg(errors.invalid_email, "error");
-        if (!/^\+?[0-9 ()-]{7,20}$/.test(phone)) return msg(errors.invalid_phone, "error");
-        if (!course) return msg("Courses are still loading. Please choose your course again in a moment.", "error");
-        if (!pm) return msg(errors.invalid_payment_method, "error");
-        if (!file) return msg("Please upload your payment screenshot.", "error");
-        if (!/^image\//.test(file.type) || file.size > 5 * 1024 * 1024) return msg("Please upload an image file under 5 MB.", "error");
-        if (confirmBox && !confirmBox.checked) return msg("Please confirm your payment details.", "error");
-        var ext = (file.name.split(".").pop() || "jpg").toLowerCase();
-        if (["jpg","jpeg","png","webp","gif","heic"].indexOf(ext) === -1) ext = "jpg";
-        var path = "receipts/" + crypto.randomUUID() + "." + ext;
-
-        busy = true; btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
-        fetch(API + "/storage/v1/object/payment-receipts/" + path, { method: "POST", headers: { apikey: KEY, "Content-Type": file.type }, body: file })
-            .then(function (r) { if (!r.ok) throw new Error("upload"); })
-            .then(function () { return rpc("submit_paid_enrollment", { _full_name: name.slice(0, 100), _email: email.slice(0, 255), _phone: phone.slice(0, 20), _city: city.slice(0, 80), _course_id: course.id, _payment_method: pm.value, _screenshot_path: path, _university_name: university.slice(0, 120), _semester: semester.slice(0, 40) }); })
-            .then(function (res) {
-                if (res === "ok") { form.reset(); if (fileName) fileName.textContent = "No file selected"; msg(SUCCESS, "success", 12000); }
-                else msg(errors[res] || "Something went wrong. Please try again.", "error");
-            })
-            .catch(function () { msg("We couldn't submit your application right now. Please check your connection and try again.", "error"); })
-            .finally(function () { busy = false; btn.disabled = false; btn.innerHTML = original; });
-    });
-})();
-
 const galleryEvents = [
     {
         id: "annual-meetup",
@@ -759,6 +572,8 @@ const lightboxCounter = document.getElementById("lightboxCounter");
 let activeEvent = null;
 let activeIndex = 0;
 
+// Gallery page only: skip this whole block on pages without the gallery markup.
+if (eventsView && photoView && eventCards && galleryGrid && lightbox) {
 
 // RENDER EVENT CARDS
 galleryEvents.forEach(event => {
@@ -916,3 +731,192 @@ document.getElementById("backToEvents").addEventListener("click", () => {
 
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+} // end gallery-only block
+
+// Back To Top
+const backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            backToTop.classList.remove("hidden");
+            backToTop.classList.add("flex");
+        } else {
+            backToTop.classList.add("hidden");
+            backToTop.classList.remove("flex");
+        }
+    });
+
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+
+
+// Dark / Light Mode
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+if (themeToggle && themeIcon) {
+    const savedTheme = localStorage.getItem("theme");
+
+    // Apply saved theme
+    if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+    } else {
+        document.documentElement.classList.remove("dark");
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
+    }
+
+    // Toggle theme
+    themeToggle.addEventListener("click", function () {
+        document.documentElement.classList.toggle("dark");
+
+        const isDark = document.documentElement.classList.contains("dark");
+
+        if (isDark) {
+            localStorage.setItem("theme", "dark");
+
+            themeIcon.classList.remove("fa-moon");
+            themeIcon.classList.add("fa-sun");
+        } else {
+            localStorage.setItem("theme", "light");
+
+            themeIcon.classList.remove("fa-sun");
+            themeIcon.classList.add("fa-moon");
+        }
+    });
+}
+
+// Course information
+const courseSelect = document.getElementById("course");
+const courseSummary = document.getElementById("courseSummary");
+const selectedCourseName = document.getElementById("selectedCourseName");
+const selectedCourseDuration = document.getElementById("selectedCourseDuration");
+const selectedCourseFee = document.getElementById("selectedCourseFee");
+if (courseSelect) courseSelect.addEventListener("change", function () {
+    const selectedOption = this.options[this.selectedIndex];
+    if (!this.value) {
+        courseSummary.classList.add("hidden");
+        return;
+    }
+    selectedCourseName.textContent = selectedOption.value;
+    selectedCourseDuration.textContent = selectedOption.dataset.duration;
+    selectedCourseFee.textContent = selectedOption.dataset.fee;
+    courseSummary.classList.remove("hidden");
+});
+// Payment method
+const paymentDetails = document.getElementById("paymentDetails");
+const paymentMethodName = document.getElementById("paymentMethodName");
+const paymentAccountNumber = document.getElementById("paymentAccountNumber");
+const paymentAccountName = document.getElementById("paymentAccountName");
+const paymentAccounts = {
+    Easypaisa: "0311 0619854"
+};
+document.querySelectorAll('input[name="paymentMethod"]').forEach(function (radio) {
+    radio.addEventListener("change", function () {
+        const method = this.value;
+        paymentMethodName.textContent = method;
+        paymentAccountNumber.textContent = paymentAccounts[method] || "";
+        paymentDetails.classList.remove("hidden");
+    });
+});
+
+
+// ===== Enrollment Form (connected to Learnify backend) =====
+(function () {
+    var API = "https://ybbvakeaixihtjwrlknj.supabase.co";
+    var KEY = "sb_publishable_gYx40fREmy1wRellfyqdiA_iTbaC-zt";
+    var SUCCESS = "Thank you! Your enrollment application and payment screenshot have been submitted. Our team is verifying your payment. Once approved, you will receive your WhatsApp group link.";
+    var form = document.getElementById("enrollmentForm");
+    var btn = document.getElementById("enrollmentSubmit");
+    if (!form || !btn) return;
+    var fileInput = document.getElementById("paymentScreenshot");
+    var fileName = document.getElementById("fileName");
+    if (fileInput && fileName) fileInput.addEventListener("change", function () {
+        fileName.textContent = fileInput.files[0] ? fileInput.files[0].name : "No file selected";
+    });
+
+    function rpc(fn, body) {
+        return fetch(API + "/rest/v1/rpc/" + fn, { method: "POST", headers: { "Content-Type": "application/json", apikey: KEY }, body: JSON.stringify(body || {}) })
+            .then(function (r) { if (!r.ok) throw new Error("x"); return r.json(); });
+    }
+    function msg(text, type, ms) {
+        var old = document.getElementById("formMessage"); if (old) old.remove();
+        var p = document.createElement("p"); p.id = "formMessage"; p.textContent = text;
+        p.className = type === "success" ? "mt-4 rounded-lg bg-green-50 px-4 py-3 text-center text-sm font-medium text-green-700" : "mt-4 rounded-lg bg-red-50 px-4 py-3 text-center text-sm font-medium text-red-700";
+        form.appendChild(p); setTimeout(function () { p.remove(); }, ms || 6000);
+    }
+
+    // Payment account details (editable from the admin portal)
+    rpc("get_payment_account").then(function (rows) {
+        var acc = Array.isArray(rows) ? rows[0] : rows;
+        if (!acc) return;
+        if (acc.account_number) paymentAccounts.Easypaisa = acc.account_number;
+        if (acc.account_name && paymentAccountName) paymentAccountName.textContent = acc.account_name;
+        var checked = form.querySelector('input[name="paymentMethod"]:checked');
+        if (checked && paymentAccountNumber) paymentAccountNumber.textContent = paymentAccounts[checked.value] || "";
+    }).catch(function () {});
+
+    var select = document.getElementById("course");
+    var byName = {};
+    rpc("get_active_courses").then(function (list) {
+        if (!Array.isArray(list) || !list.length) return;
+        list.forEach(function (c) { byName[c.name.toLowerCase()] = c; });
+        // Keep the existing options' look; update data from the database
+        var keep = select.querySelector('option[value=""]');
+        select.innerHTML = ""; if (keep) select.appendChild(keep);
+        list.forEach(function (c) {
+            var o = document.createElement("option");
+            o.value = c.name; o.textContent = c.name + (c.duration ? " - " + c.duration : "");
+            o.dataset.duration = c.duration || ""; o.dataset.fee = c.fee != null ? c.fee : "";
+            select.appendChild(o);
+        });
+    }).catch(function () {});
+
+    var errors = { invalid_name: "Please enter your full name (2-100 characters).", invalid_email: "Please enter a valid email address.",
+        invalid_phone: "Please enter a valid WhatsApp number.", invalid_city: "City name is too long.", invalid_university: "Please enter your university/institute name.", invalid_semester: "Please enter your semester/class.", invalid_payment_method: "Please select a payment method.",
+        invalid_screenshot: "Please upload your payment screenshot again.", invalid_course: "Please choose a course from the list.",
+        rate_limited: "You've submitted several applications recently. Please try again later." };
+    var busy = false, original = btn.innerHTML;
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault(); if (busy) return;
+        var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ""; };
+        var name = v("fullName"), email = v("email"), phone = v("phone"), city = v("city"), university = v("university"), semester = v("semester");
+        var course = byName[(select.value || "").toLowerCase()];
+        var pm = form.querySelector('input[name="paymentMethod"]:checked');
+        var file = fileInput && fileInput.files[0];
+        var confirmBox = document.getElementById("paymentConfirmation");
+        if (!name || !email || !phone || !university || !semester || !select.value) return msg("Please fill in all required fields.", "error");
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return msg(errors.invalid_email, "error");
+        if (!/^\+?[0-9 ()-]{7,20}$/.test(phone)) return msg(errors.invalid_phone, "error");
+        if (!course) return msg("Courses are still loading. Please choose your course again in a moment.", "error");
+        if (!pm) return msg(errors.invalid_payment_method, "error");
+        if (!file) return msg("Please upload your payment screenshot.", "error");
+        if (!/^image\//.test(file.type) || file.size > 5 * 1024 * 1024) return msg("Please upload an image file under 5 MB.", "error");
+        if (confirmBox && !confirmBox.checked) return msg("Please confirm your payment details.", "error");
+        var ext = (file.name.split(".").pop() || "jpg").toLowerCase();
+        if (["jpg","jpeg","png","webp","gif","heic"].indexOf(ext) === -1) ext = "jpg";
+        var path = "receipts/" + crypto.randomUUID() + "." + ext;
+
+        busy = true; btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+        fetch(API + "/storage/v1/object/payment-receipts/" + path, { method: "POST", headers: { apikey: KEY, "Content-Type": file.type }, body: file })
+            .then(function (r) { if (!r.ok) throw new Error("upload"); })
+            .then(function () { return rpc("submit_paid_enrollment", { _full_name: name.slice(0, 100), _email: email.slice(0, 255), _phone: phone.slice(0, 20), _city: city.slice(0, 80), _course_id: course.id, _payment_method: pm.value, _screenshot_path: path, _university_name: university.slice(0, 120), _semester: semester.slice(0, 40) }); })
+            .then(function (res) {
+                if (res === "ok") { form.reset(); if (fileName) fileName.textContent = "No file selected"; msg(SUCCESS, "success", 12000); }
+                else msg(errors[res] || "Something went wrong. Please try again.", "error");
+            })
+            .catch(function () { msg("We couldn't submit your application right now. Please check your connection and try again.", "error"); })
+            .finally(function () { busy = false; btn.disabled = false; btn.innerHTML = original; });
+    });
+})();
+
